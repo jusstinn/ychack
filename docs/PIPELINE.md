@@ -3,6 +3,17 @@
 > Status: v1 draft, Sat 12:45 PM. Will be merged with an independent expert review and a verified tool/API list (v2).
 > Rules reminder: everything is built inside Emergent. **Hosted APIs called from the app are fine. Do not write or host our own GPU code.**
 
+## Decision (Sat ~1 PM): proof of concept, not 1:1
+The demo renders must **look high quality**, but the twin doesn't have to match the room exactly.
+
+**Build path:**
+- the **compositional twin**: room shell from about 6 measurements plus the evacuation map, AI object inventory, one asset per unique type, approximate placement, a premium-looking renderer
+- the **AI showcase render** for photoreal marketing images
+
+**Skipped unless time allows:** photo-based geometry reconstruction (structure from motion, Gaussian splats) and exact 3D lifting.
+
+Step-by-step build prompts: `docs/EMERGENT_PROMPTS.md`. Lite capture: top of `docs/CAPTURE_PROTOCOL.md`.
+
 ## Core principle
 **The scene graph is the product; the pixels are a skin.**
 

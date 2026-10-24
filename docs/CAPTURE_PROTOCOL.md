@@ -1,7 +1,39 @@
 # Capture Protocol: filming the venue for a high-quality 3D twin
 
 > A field checklist. Print it or keep it open on the second phone.
-> Goal: one capture that supports both (a) photoreal reconstruction (splat or mesh) and (b) a clean, editable twin (room shell + one 3D asset per *unique* object type).
+
+## ⭐ LITE version (use this one): proof of concept, big venue, ~20 min
+The demo twin must **look** high quality, but it does **not** have to match the room 1:1. So we skip exact photo-based reconstruction. The room is built from a few measurements, the objects from photos.
+
+1. **Measure about 6 numbers. You don't need to measure everything.**
+   - room length
+   - room width
+   - ceiling height
+   - one door width
+   - one table (W×D×H)
+   - one chair (W×D×H)
+
+   **How to measure a big space:**
+   - **Laser distance meter (best).** About $30–40 at a hardware store; it measures 30–50 m in a second.
+   - **Count ceiling or floor tiles.** US drop-ceiling tiles are usually 2×2 ft or 2×4 ft, and carpet tiles are often 24×24 in. Confirm one tile with the tape, then count.
+   - **Tape** along one wall.
+   - **Pace it:** measure 10 of your steps once, then count.
+   - **Sanity check** against standard sizes (doors are usually 36 in × 80 in) and the building footprint on a map.
+2. **Photograph the evacuation map** and the **max occupancy sign** if posted: a free floor plan and exits.
+3. **Walkthrough videos: 2–3 videos of 1–2 min each.** Walk the room's edge facing inward, plus one walk through the middle. Slow and steady, chest height, exposure locked, 1× lens.
+4. **Overview photos: 15–25.** From each corner and each entrance, facing into the room. **Note where you stood**; the app asks you to tap that spot on the floor plan, which helps the AI place objects.
+5. **Each unique object type** (one example only; just count the copies):
+   - 4–6 photos: front, back, both sides, a 45° view, one from above
+   - one clean shot against a plain background if you can
+   - one material close-up
+6. **Optional:** a 360° panorama from the center (nicer lighting in renders), plus 5 "hero" photos for the real-vs-3D comparison.
+
+Work as a pair: one films, one keeps people out of frame and logs numbers. The detailed protocol below is only needed if we later try photoreal reconstruction (Gaussian splats).
+
+---
+
+## FULL version (only if we attempt photoreal reconstruction)
+Goal: one capture that supports both (a) photoreal reconstruction (splat or mesh) and (b) a clean, editable twin (room shell + one 3D asset per *unique* object type).
 
 ## 0. Before you film (10 min)
 - [ ] **Ask the organizers for permission** to scan a specific area. Builders may only use the **ground and first floors**.

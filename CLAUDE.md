@@ -23,4 +23,6 @@ We are 2 students competing at VibeCon 2026 (YC × Emergent), Oct 24–25. **Sub
   - `docs/BRIEF.md`: rules, idea, scope, research, team split
   - `docs/CAPTURE_PROTOCOL.md`: exactly what to film and photograph
   - `docs/PIPELINE.md`: pipeline design, build tiers, optimization ideas, where the GPU work happens
+  - `docs/EMERGENT_PROMPTS.md`: how the APIs plug into Emergent + the step-by-step build prompts (P0–P13)
+- Decision: proof of concept. Renders must look great but needn't match the room 1:1. Use the LITE capture.
 - To verify first: track fit with the organizers (Property & rental?), permission to scan the venue, and which reconstruction / image-to-3D APIs are live (PIPELINE "Open questions").
