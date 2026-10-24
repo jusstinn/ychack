@@ -43,10 +43,29 @@
 - Never paste code into Emergent.
 - Only one teammate prompts at a time.
 
-**Fill in before starting:**
-- `[LLM]`: Claude or OpenAI, plus the model. Suggested: a strong vision model for inventory and placement, a cheap one for small tasks.
-- `[IMG3D]`: the image-to-3D provider. Pending verification; pick one with a simple HTTP API that returns a GLB.
-- `[IMGGEN]`: the image-generation model for showcase renders.
+## Verified stack (checked Sat Oct 24, ~1 PM; confirm exact model IDs in each provider's console)
+
+| Slot | Primary | Fallback | Notes |
+|---|---|---|---|
+| `[LLM]` vision + reasoning | **Claude Opus 5.5** (`claude-opus-5-5`) with structured JSON outputs | **GPT-6 Astra** (`gpt-6-astra`); Claude Sonnet 5.5 for speed; Haiku 5.5 for cheap bulk tagging | Claude: up to 600 images per request (≤2000 px each when sending >20). Its boxes are approximate. No video input; send frames. **The Astra API outputs text only, not 3D files.** |
+| `[SEG]` masks per object type | **fal SAM 3** (`fal-ai/sam-3/image-rle`), prompted with each type's name | Roboflow SAM 3; Grounding DINO (Replicate) | ~$0.005 per image. Raise `max_masks` (default 3) to count many chairs. |
+| `[IMG3D]` asset per unique type | **fal SAM 3D Objects**: full frame + the object's box; handles partly hidden objects | **fal TRELLIS.2** at 1024 on a background-removed crop (best quality, PBR); Rodin v2.5 fast; Hunyuan3D 3.1 Rapid | SAM 3D ≈ $0.02, no PBR materials. TRELLIS.2 ≈ $0.30, ~17 s. Download every GLB into our storage. |
+| `[GEO]` (Tier 1) camera poses / depth / points | **MapAnything** (Replicate): real-world scale | fal VGGT (scale is arbitrary; weights are non-commercial) | ~$0.022 and ~23 s per run, plus cold start. |
+| `[SPLAT]` (optional "Reality" view) | **World Labs World API**: video or photos → splat (SPZ) + collider GLB | KIRI Engine API (faithful splat from ≤3-min video; 10 free scans; testing stage) | World Labs **invents unseen areas**: fine for visuals, never for capacity math. ~$1.28 per video, ~5 min. |
+| `[IMGGEN]` showcase renders | **OpenAI `gpt-image-2.5-flare`** | Imagen 4 / Gemini through Emergent's universal key | ~$0.05 per high-quality image; up to ~2 min, so run it as a background job. |
+| 3D in the browser | **@react-three/fiber v9 + drei v10**, plus **Spark 2.4** for splats | drei `<Splat>` (.splat only) | Emergent apps ship **React 19.2.x**, so r3f v9 / drei v10 are the matching versions. Spark needs three ≥ 0.180. **Pin versions.** |
+
+**Estimated cost per venue:** about **$5–10** (10 types × ~$0.30 + segmentation + an optional splat + ~$1 of LLM calls). A good number for the pitch.
+
+## Emergent platform constraints (verified). Put these in P0.
+- **Requests are cut at about 125 s** (Cloudflare). Every AI or 3D step must be a **background job** with status saved in the database and the frontend polling for progress. Never wait for an API inside a single request.
+- **Built-in storage is 5 GB and files can't be deleted; the container disk is wiped on restart.**
+  - Store everything in the built-in storage or database, never on local disk.
+  - Keep files small: frames ≤2000 px JPEG, compressed GLBs, **no raw videos** (the browser extracts frames).
+- **No GPU** (up to 4 vCPU / 16 GB). Avoid heavy Python libraries (open3d, bpy); they may break once deployed.
+- **API keys:**
+  - Emergent has a **Universal LLM key**. Check whether it spends your Emergent credits and whether Opus 5.5 / Astra are listed. Using our **own Anthropic/OpenAI keys** for heavy vision calls is safer.
+  - We also need **fal.ai** and **Replicate** keys, and optionally **World Labs** or **KIRI**.
 
 ---
 
@@ -68,6 +87,12 @@
 > **Pages:** Venues list, Venue setup (upload + room), Twin editor, Catalog, Inquiries, Quotes.
 >
 > **Style:** clean and modern, readable by a non-technical venue owner.
+>
+> **Architecture rules for the whole project:**
+> - Every call to an AI or 3D service runs as a **background job**: save the job and its status in the database, return immediately, and the frontend polls for progress. Requests time out after ~2 minutes.
+> - Store all files in the built-in storage, never on local disk (it's wiped on restart). Keep files small.
+> - Keep API keys only in backend environment variables.
+> - For 3D, use @react-three/fiber v9 and @react-three/drei v10 (matching our React 19), pinned.
 >
 > **Done when:** I can create a venue and a room, the pages navigate, and data persists after refresh.
 
@@ -92,7 +117,10 @@
 > Add an **"Analyze objects"** backend job.
 > - It sends the overview and object photos (in batches) to the `[LLM]` vision API and asks for **distinct object types only**. Identical chairs count as ONE type with a count, not separate objects.
 > - **For each type, return JSON with:** name, category, short visual description (color, material, shape), estimated width/depth/height in meters, estimated count in the room, the best photo for that type, and a crop box around one clean example in that photo.
+> - Use the API's **structured JSON output** with a fixed schema, so parsing never fails.
 > - **Merge** results across batches (same type → one entry, using the descriptions and photos), and save them as ObjectTypes.
+> - **Contact-sheet check:** combine the candidate crops into one numbered image grid, and ask the `[LLM]` once to group the numbers that show the same product model. Use that to confirm merges.
+> - **Optional precise masks and counts:** for each type, call `[SEG]` (fal SAM 3) on the keyframes with the type's name as the text prompt and max masks set high. Save the masks, the best crop, and a per-frame count.
 > - **Review screen:** cards with the crop image, name, dimensions, count and a confidence flag. Let me edit, merge two types, split one, or delete.
 > - Show job progress live. Cache results so re-running doesn't re-pay for the same photos.
 >
@@ -102,10 +130,11 @@
 > For each ObjectType, create a 3D asset.
 > - **Parametric (default for simple furniture):** tables (round/rectangular), counters, bars, stages/risers, dance floors, rugs, shelves, boxes. Ask the `[LLM]` to pick a template and fill its parameters from the photo and dimensions (top shape and size, thickness, leg style and count, colors, materials). The frontend builds the geometry from those parameters.
 > - **Generated (complex items like chairs, sofas, plants):**
->   1. Remove the background from the crop.
->   2. Send it to the `[IMG3D]` image-to-3D API and get a GLB.
->   3. Download it into our storage.
->   4. Center it on the floor and scale it to the type's dimensions.
+>   1. **Primary:** send the full photo plus the object's box to **fal SAM 3D Objects**. It handles partly hidden objects and returns a GLB.
+>   2. **For the 2–3 most visible types:** also run **fal TRELLIS.2** (1024 resolution) on a background-removed crop. Render both results from the photo's viewpoint and let the `[LLM]` pick the closer match.
+>   3. **Fallback:** Rodin fast, then a colored box.
+>   4. Download every GLB into our storage (provider links expire).
+>   5. Normalize it: rest it upright on the floor, center it, scale to the type's dimensions, keep it under ~20k triangles. If the model has no materials, apply the type's color and material.
 > - Show status per type (queued / generating / ready / failed). While an asset isn't ready, show a correctly sized colored box, and swap in the real model when it arrives.
 > - Run asset jobs in parallel. Allow "retry" and "use box instead."
 >
@@ -123,6 +152,19 @@
 > **UI:** a top-down plan plus 3D. I can drag to fix items. Save the result as the layout **"As captured."**
 >
 > **Done when:** the room looks plausibly like my photos and nothing overlaps or floats.
+
+### P5+ (Tier 1, optional) — Automatic measuring from the video
+> Add an **"Auto-measure"** job. Send 30–60 keyframes to **MapAnything** on Replicate, which returns camera poses and a point cloud at real-world scale.
+> - Fit the floor plane and the main walls, and suggest a room outline for me to accept.
+> - For each object mask from P3, project its center into 3D to get its floor position, then group nearby detections of the same type into one instance.
+> - Check the scale against my tape measurements and show the error ("±4%").
+> - Then run the same cleanup as P5.
+
+### P5b (optional) — Photoreal "Reality" view
+> Add a **"Create photoreal scan"** job. Send one continuous walkthrough video (≤3 min) to the **World Labs World API** (fallback: KIRI Engine API), and get a Gaussian splat (SPZ).
+> - Render it with **Spark** (sparkjs) in the same react-three-fiber scene, aligned to the twin: I click 2 matching points in each and see the alignment error.
+> - Toggle **Reality ↔ Twin**, with a crossfade.
+> - Label the view "AI reconstruction: areas the camera didn't see may be invented." Never use it for capacity or egress math.
 
 ### P6 — High-quality 3D editor
 > Make the Twin editor the centerpiece.
@@ -182,7 +224,7 @@
 ### P10 — AI showcase render ("make it photoreal")
 > Add a **"Showcase render"** button in the editor.
 > 1. Capture the current 3D view as an image.
-> 2. Send it to `[IMGGEN]` with an instruction like: "photorealistic interior photograph of this exact room and furniture layout, styled for [event type], natural lighting; keep the layout and proportions."
+> 2. Send it to `[IMGGEN]` (OpenAI `gpt-image-2.5-flare`, as a background job, since it can take up to ~2 min) with an instruction like: "photorealistic interior photograph of this exact room and furniture layout, styled for [event type], natural lighting; keep the layout and proportions."
 > 3. Save the results to a gallery labeled "AI visualization."
 >
 > **Done when:** one click turns a layout into a marketing-quality image.

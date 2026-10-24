@@ -31,7 +31,7 @@ The demo twin must **look** high quality, but it does **not** have to match the 
 7. **Optional photoreal layer (~15 min, high wow):**
    - Scan the hero zone with **Scaniverse**, a free phone app that processes on the phone and doesn't need LiDAR. Export **SPZ/PLY**.
    - The app can show it as a photoreal "Reality" view behind the editable twin.
-   - **First ask Emergent staff** whether a third-party scan is OK as an input asset. The in-app route is the KIRI Engine API (video → splat), pending verification.
+   - **First ask Emergent staff** whether a third-party scan is OK as an input asset. In-app routes (verified): World Labs World API (video → splat; invents unseen areas) or KIRI Engine API (faithful splat; one continuous video ≤3 min; 10 free scans).
    - **For best results:**
      - screens off or showing static black, all lights on and unchanged
      - painter's-tape X's on large glass so it reads as a surface

@@ -14,7 +14,7 @@ The demo renders must **look high quality**, but the twin doesn't have to match 
 
 Step-by-step build prompts: `docs/EMERGENT_PROMPTS.md`. Lite capture: top of `docs/CAPTURE_PROTOCOL.md`.
 
-## v2: merged from an independent 3D-vision expert review (Sat ~1:30 PM)
+## v2: merged from an independent 3D-vision expert review (Sat ~1 PM)
 
 ### Architecture
 - **Main build: the compositional twin.** A JSON scene graph is the source of truth: shell, object types, instances (with SKU/price). Edits, simulations and auto-layout only need the graph.
@@ -259,8 +259,29 @@ Each stage has a **Fast option (build first)** and an **Ambitious option (upgrad
 - **Tier 2, photoreal (overnight, if an API works):** the Reality ↔ Twin toggle and the match-view slider.
 - **Tier 3, simulations and AI:** sightline and egress heatmaps, natural-language editing, render-compare-refine, AR export.
 
-## Open questions (being verified)
-- Is the **GPT-6 Astra API** available, at what price and latency, and what does it output?
-- Which hosted **image-to-3D**, **segmentation** and **depth/pose** endpoints are live today, and what do they cost?
-- Is there a **room reconstruction / splat API** we can call from the app (World Labs, KIRI, Luma, Polycam...)?
-- **Emergent limits:** upload size, file storage for GLB and splat files, long-running jobs, which Python packages can be installed.
+## Answers from the tool check (Sat ~1 PM)
+Full table with prices: `docs/EMERGENT_PROMPTS.md` → "Verified stack."
+
+- **GPT-6 Astra:** available as `gpt-6-astra`, but the **API outputs text only**. There's no OpenAI 3D-generation API and no video input. It can still write scene JSON or parametric descriptions.
+- **Claude:** Opus 5.5 / Sonnet 5.5 / Haiku 5.5. Up to 600 images per request; structured JSON outputs; boxes are approximate.
+- **Segmentation:** fal SAM 3 (~$0.005 per image).
+- **Image-to-3D:** fal SAM 3D Objects (~$0.02, works on objects in real scenes) as primary; fal TRELLIS.2 (~$0.30, PBR) for hero types.
+- **Geometry:**
+  - MapAnything (Replicate): real-world scale, ~$0.022 per run.
+  - fal VGGT: arbitrary scale, non-commercial weights.
+- **Splat / room:**
+  - World Labs World API (~$1.28 per video, ~5 min; invents unseen areas).
+  - KIRI API (faithful; 10 free scans; testing stage).
+  - Not usable: Polycam (enterprise only), Scaniverse (no API), Luma (no 3D API).
+- **Browser:**
+  - r3f v9 + drei v10, matching Emergent's React 19.2.x.
+  - Spark 2.4 for splats (three ≥ 0.180).
+  - Avoid GaussianSplats3D, gsplat.js and luma-web.
+- **Emergent limits:**
+  - ~125 s request cutoff, so use background jobs.
+  - 5 GB storage, files can't be deleted.
+  - Container disk wiped on restart.
+  - No GPU.
+  - Heavy Python libraries are risky.
+  - A Universal LLM key exists (check whether it spends Emergent credits).
+- **Estimated cost per venue:** ~$5–10.

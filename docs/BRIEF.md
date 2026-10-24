@@ -135,12 +135,19 @@ Mirror the DoBu pattern:
 ## 5. Known risks and open questions — verify FIRST
 
 1. **Track fit.** Ask the organizer / Emergent desk explicitly: "Does an event venue that rents by the day count as Property & rental?" An app that misses its track can't advance.
-2. **Reconstruction API.** Is GPT-6 Astra (or any photo/video → 3D service) callable via API today? What are the cost and latency? Can the Emergent app display the output format (GLB / glTF / splat)?
-   - **Fallback:** reconstruct the demo venue once and upload the model as a design asset. Each venue is reconstructed once, so latency doesn't matter.
+2. **Reconstruction API: RESOLVED (Sat ~1 PM).**
+   - **GPT-6 Astra's API outputs text only, with no 3D files.** Use it or Claude as the "brain."
+   - Use **fal SAM 3 / SAM 3D Objects / TRELLIS.2** for masks and per-type 3D assets.
+   - Use **World Labs or KIRI** for an optional photoreal splat.
+   - Details: `docs/EMERGENT_PROMPTS.md` → "Verified stack."
    - Never paste generated *code* into Emergent.
 3. **Scale accuracy** from photos. Require one known measurement; show "estimated" labels.
 4. **Mobile 3D performance.** Keep models small (decimate, compressed GLB). Test on a real phone early.
-5. **react-three-fiber version** must match Emergent's React version (r3f v8 for React 18, v9 for React 19). A mismatch causes credit-burning fix loops.
+5. **react-three-fiber version:** Emergent apps ship **React 19.2.x**, so use **r3f v9 + drei v10** (pinned). A mismatch causes credit-burning fix loops.
+7. **Emergent limits:**
+   - ~125 s request cutoff, so every AI step must be a background job with polling.
+   - 5 GB storage, files can't be deleted, so keep files small and never store raw videos.
+   - Container disk wiped on restart.
 6. **Credits:** about 2–3k total. Small, specific prompts; don't rebuild from scratch.
 
 ## 6. Scope for 26 hours
