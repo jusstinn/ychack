@@ -3,6 +3,23 @@
 > Rule: **Emergent's agent writes 100% of the code.** We (and Claude) only write plain-language instructions.
 > Calling external APIs (Claude, OpenAI, image-to-3D, Stripe) **from inside the app** is explicitly allowed.
 
+## ▶ START HERE (Sat ~4:30 PM; ~19 h left)
+**Keys to have ready:**
+- **Anthropic** (or OpenAI) API key
+- **fal.ai** API key
+- **Stripe test keys**
+- Replicate and World Labs are only needed for the optional prompts.
+
+**Build order (test in the preview after each one):**
+1. **Must (tonight):** P0 → P1 → P2 → P3 → P4 → P6 → P7 → P8 → P9
+2. **Strongly recommended:** **P5L** (we already have a good LiDAR scan of the venue; it gives true-scale walls and exact positions). If it fights you, fall back to **P5** (AI-guessed placement + drag to fix).
+3. **High wow, after the core loop works:** **P6b** (Blueprint → Clay → Real reveal), **P10** (photoreal showcase render)
+4. **Stretch:** P11, P12
+5. **Skip unless spare time:** P5+, P5b
+6. **Sunday morning:** **P13** (demo mode with cached results). Record the backup video by 9 AM; code freeze 10 AM.
+
+If a prompt breaks something, describe the exact bug (what you clicked, saw, expected). Never paste code.
+
 ## How the integration works
 
 ```
@@ -160,19 +177,29 @@
 > - Check the scale against my tape measurements and show the error ("±4%").
 > - Then run the same cleanup as P5.
 
-### P5L (Tier 1, recommended with an iPhone Pro) — Import a LiDAR scan with phone positions
-> Add **"Import LiDAR scan."** It uploads the zip exported by the **Stray Scanner** iPhone app. Expected contents (verify against the first real export): `rgb.mp4`, `depth/NNNNNN.png` (16-bit, millimeters, ~256×192), `confidence/NNNNNN.png` (0–2), `odometry.csv` (per frame: timestamp, frame, x, y, z, qx, qy, qz, qw = the phone's position and rotation), `camera_matrix.csv` (3×3 intrinsics at RGB resolution).
+### P5L (Tier 1, RECOMMENDED: we already have the scan) — Import a LiDAR scan with phone positions
+> Add **"Import LiDAR scan"** for zips exported by the **Stray Scanner** iPhone app. **Verified on our real export:**
+> - `odometry.csv` has a header row and one row per video frame: `timestamp, frame, x, y, z, qx, qy, qz, qw, fx, fy, cx, cy` (+2 empty columns). Position is in meters and the quaternion is the camera-to-world rotation. **fx, fy, cx, cy are per-frame intrinsics at RGB resolution 1920×1440.**
+> - `depth/NNNNNN.png`: 16-bit, **256×192**, millimeters. `confidence/NNNNNN.png`: values 0/1/2 (use only 2). **A few depth frames are missing; skip them.**
+> - `rgb.mp4` has exactly one video frame per odometry row. Also `camera_matrix.csv` and `imu.csv` (unused).
 >
-> Background job, numpy only (no heavy 3D libraries), processed in chunks:
-> 1. Take every ~10th frame: its depth image, its pose, and the intrinsics scaled down to the depth resolution.
-> 2. Back-project high-confidence depth pixels into world points in meters. Poses use ARKit's camera convention (camera looks down −Z, Y is up), so flip Y and Z when going from pixel coordinates to camera coordinates.
-> 3. Merge everything into a 5 cm voxel grid.
-> 4. Find the floor (the largest low horizontal plane) and the ceiling height. Find the main walls (vertical planes) and propose a right-angle room outline for me to accept.
-> 5. In the browser, extract RGB keyframes at the same frame numbers for object detection (P3). For each detected object, use depth + pose to get its 3D floor position. Group same-type detections within ~40 cm into one instance.
-> 6. Show the scan as an optional faint point-cloud layer in the 3D editor, aligned with the twin.
-> 7. Report the scale check against my tape measurements.
+> **The zip is large (~450 MB for a 3-minute scan), so do NOT upload it.** In the browser:
+> 1. Open the zip locally (JSZip).
+> 2. Upload only `odometry.csv`, every 10th depth + confidence PNG, and ~60 JPEG keyframes grabbed from `rgb.mp4` at the matching frame times.
+> 3. Keep the total under ~40 MB, uploaded in chunks.
 >
-> **Done when:** a 2–3 minute scan of a room produces a correct-size outline and objects placed within ~20 cm of reality.
+> Backend background job (numpy + Pillow only), processed in chunks:
+> 1. For each used frame, scale the intrinsics to depth resolution (multiply fx, fy, cx, cy by 256/1920). Back-project high-confidence pixels with depth 0.25–5 m: `X = (u − cx)·d / fx`, `Y = (v − cy)·d / fy`, `Z = d`.
+> 2. **IMPORTANT: Stray Scanner poses use OpenCV camera axes (x right, y down, z forward). Do NOT flip Y or Z.** World point = R(quaternion) · [X, Y, Z] + [x, y, z]. World up is +y.
+> 3. Merge into a 3–5 cm voxel grid (average position and color per voxel). Color comes from the matching keyframe pixel (depth pixel × 7.5).
+> 4. Floor = the strongest histogram peak of y below the median phone height. Ceiling = the strongest peak above it.
+> 5. Align to the room: try yaw angles 0–90° in 0.25° steps and pick the one where wall points (1.6–2.6 m above the floor) give the sharpest x/z histograms. Main walls = the strongest histogram peaks. Propose a right-angle outline for me to accept.
+> 6. For each object detected in the keyframes (P3/SAM 3), take the median 3D point of its mask to get its floor position. Group same-type detections within ~40 cm into one instance.
+> 7. Show the scan as an optional point-cloud layer in the 3D editor, aligned with the twin. Report the scale check against tape measurements.
+>
+> **Sanity check with our venue scan:** floor-to-ceiling ≈ **3.68 m**, phone height ≈ 1.45 m above the floor, main hall ≈ **19.8 × 13.8 m**, and table runs show up as 0.8 m-wide strips.
+>
+> **Done when:** our venue scan produces that outline and height, and placed tables land within ~20 cm of the scan.
 
 ### P5b (optional) — Photoreal "Reality" view
 > Add a **"Create photoreal scan"** job. Send one continuous walkthrough video (≤3 min) to the **World Labs World API** (fallback: KIRI Engine API), and get a Gaussian splat (SPZ).
