@@ -160,6 +160,20 @@
 > - Check the scale against my tape measurements and show the error ("±4%").
 > - Then run the same cleanup as P5.
 
+### P5L (Tier 1, recommended with an iPhone Pro) — Import a LiDAR scan with phone positions
+> Add **"Import LiDAR scan."** It uploads the zip exported by the **Stray Scanner** iPhone app. Expected contents (verify against the first real export): `rgb.mp4`, `depth/NNNNNN.png` (16-bit, millimeters, ~256×192), `confidence/NNNNNN.png` (0–2), `odometry.csv` (per frame: timestamp, frame, x, y, z, qx, qy, qz, qw = the phone's position and rotation), `camera_matrix.csv` (3×3 intrinsics at RGB resolution).
+>
+> Background job, numpy only (no heavy 3D libraries), processed in chunks:
+> 1. Take every ~10th frame: its depth image, its pose, and the intrinsics scaled down to the depth resolution.
+> 2. Back-project high-confidence depth pixels into world points in meters. Poses use ARKit's camera convention (camera looks down −Z, Y is up), so flip Y and Z when going from pixel coordinates to camera coordinates.
+> 3. Merge everything into a 5 cm voxel grid.
+> 4. Find the floor (the largest low horizontal plane) and the ceiling height. Find the main walls (vertical planes) and propose a right-angle room outline for me to accept.
+> 5. In the browser, extract RGB keyframes at the same frame numbers for object detection (P3). For each detected object, use depth + pose to get its 3D floor position. Group same-type detections within ~40 cm into one instance.
+> 6. Show the scan as an optional faint point-cloud layer in the 3D editor, aligned with the twin.
+> 7. Report the scale check against my tape measurements.
+>
+> **Done when:** a 2–3 minute scan of a room produces a correct-size outline and objects placed within ~20 cm of reality.
+
 ### P5b (optional) — Photoreal "Reality" view
 > Add a **"Create photoreal scan"** job. Send one continuous walkthrough video (≤3 min) to the **World Labs World API** (fallback: KIRI Engine API), and get a Gaussian splat (SPZ).
 > - Render it with **Spark** (sparkjs) in the same react-three-fiber scene, aligned to the twin: I click 2 matching points in each and see the alignment error.

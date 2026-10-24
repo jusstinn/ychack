@@ -43,6 +43,23 @@ Work as a pair: one films, one keeps people out of frame and logs numbers. The d
 
 ---
 
+## 📱 LiDAR + phone-position capture (best accuracy, iPhone Pro)
+A normal video has no idea where the phone was. An AR scanner app records **every frame's exact phone position and rotation** (from ARKit) plus **LiDAR depth**. That gives a true-scale 3D point cloud of the room with no GPU needed.
+
+- **App:** **Stray Scanner** (free; check it's still on the App Store). It exports video + depth + per-frame poses as plain files. Alternatives: Record3D, 3D Scanner App.
+- **One continuous take per area, 2–4 min.** Each recording has its own coordinate system, so don't stop and start in the same area.
+- **Walking:**
+  - Walk slowly with the phone at chest height.
+  - Do the perimeter loop first, then one pass down the middle.
+  - Point at the walls from 1.5–3 m away (LiDAR range is ~5 m).
+  - End where you started.
+  - Tilt up once for the ceiling and beams, and down once for the floor.
+- **Before you start:** lights on, screens static. People moving are OK if they're few (they become noise we filter out).
+- **Export:** Files app → zip the recording folder → AirDrop or Drive (originals, not WhatsApp).
+- **Size:** about 100–300 MB per 3-minute take. The app only uploads poses, depth and a few keyframes, never the full video.
+
+---
+
 ## FULL version (only if we attempt photoreal reconstruction)
 Goal: one capture that supports both (a) photoreal reconstruction (splat or mesh) and (b) a clean, editable twin (room shell + one 3D asset per *unique* object type).
 

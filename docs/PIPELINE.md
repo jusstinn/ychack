@@ -94,6 +94,13 @@ What makes the Loop site (three.js) look premium, and the react-three-fiber / dr
 
 **Why the reveal fits:** the venue first appears as an architect's line drawing (a nod to the DoBu "blueprint"), becomes a clay massing model, then real materials bleed in. It's the perfect 5-second opener for the demo video and makes the AI processing feel intentional, not like a loading spinner.
 
+## Update (Sat ~1:40 PM): LiDAR + pose capture
+- If an iPhone Pro is available, **Stray Scanner** (free) records per-frame phone position + rotation (ARKit) and LiDAR depth.
+- That gives a **true-scale point cloud**, and from it the floor, walls, room outline and exact object positions. The app does this in plain numpy on CPU (prompt **P5L**).
+- It replaces the riskier VGGT/MapAnything path for our demo venue.
+- Normal users can still use photos + measurements (Tier 0).
+- **Don't build a native iOS app:** no time, and anything in the product must be built in Emergent. iPhone browsers can't get the phone's position, only tilt.
+
 ## Core principle
 **The scene graph is the product; the pixels are a skin.**
 
