@@ -14,6 +14,64 @@ The demo renders must **look high quality**, but the twin doesn't have to match 
 
 Step-by-step build prompts: `docs/EMERGENT_PROMPTS.md`. Lite capture: top of `docs/CAPTURE_PROTOCOL.md`.
 
+## v2: merged from an independent 3D-vision expert review (Sat ~1:30 PM)
+
+### Architecture
+- **Main build: the compositional twin.** A JSON scene graph is the source of truth: shell, object types, instances (with SKU/price). Edits, simulations and auto-layout only need the graph.
+- **Optional "splat skin" (Reality view):** a photoreal Gaussian splat of the room behind the graph. Movable furniture is erased from the splat and replaced by meshes.
+  - Fast source: a Scaniverse phone scan exported as SPZ/PLY (ask Emergent staff if OK).
+  - In-app source: KIRI Engine API.
+  - Browser renderer: **Spark** (three.js).
+- **Skip generative "world" models** (e.g. World Labs Marble) for the twin. Invented geometry breaks capacity and egress math. Fine for pure marketing images only.
+
+### New tricks worth adopting
+1. **Dedupe cascade:** category → dimension gates → embedding pre-groups → **one VLM call on a numbered "contact sheet"** of crops ("group these by product model") → a human merge/split gallery with counts. Cheap and accurate.
+2. **Hero canonicalization:** pick the sharpest, least-occluded still (blur score × mask area). An image-edit model cleans it onto a white background before image-to-3D. Heavily occluded in-room crops go to **SAM 3D Objects** (fal), which is built for objects in real scenes.
+3. **Best-of-N assets:** run 2–3 image-to-3D providers in parallel (e.g. TRELLIS.2 / Hunyuan3D / Tripo). Render each from the photo's viewpoint and let the VLM pick the best. The reviewer estimates ~$1 per type; verify pricing.
+4. **Normalize every asset:** stable resting pose, yaw matched to the footprint, scaled to measured dimensions, **≤20k triangles**, compressed textures.
+5. **Orientation priors:** chairs face tables, rows face the stage. This fixes 180° flips without extra AI calls.
+6. **One simulation grid** (10 cm occupancy grid, run in a web worker, <50 ms per drag):
+   - distance transform → **aisle widths**
+   - fast marching → **egress distance plus a flow field**
+   - ray-marching → **sightlines**
+
+   This is what makes live red/green feedback while dragging possible.
+7. **Browser as GPU:** render plan views, crops and lighting cubemaps client-side. The backend does CPU geometry and API calls only.
+8. **Async job graph:** content-hash cache, provider fallbacks, model routing (cheap model for bulk tagging, strong model for judging and merging). Proxies hot-swap as assets arrive.
+9. **If using the splat:**
+   - Use the splat's points to find floor and walls.
+   - Do **plan-view segmentation**: render a top-down view and run SAM 3 text prompts ("chair," "table") on tiles to get footprints in meters.
+   - **Erase** splats inside instance boxes and lay an inpainted **floor decal** underneath, so moved chairs reveal carpet, not ghosts.
+   - Use a splat-rendered cubemap as the PBR lighting environment.
+
+### Simulations, ranked by wow-per-hour (for the 2-minute video)
+
+| # | Feature | What it does | Est. time |
+|---|---|---|---|
+| 1 | Seat POV + sightlines | Click a chair to drop to seated eye height. Seats are colored by how much of the stage they can see. | ~1.5 h |
+| 2 | Live egress while dragging | Shove a table into an aisle and it turns red as the heatmap and capacity update. | ~2 h |
+| 3 | Inquiry → auto-layout | The LLM writes only constraint JSON; a GA or lattice packer solves it, with the convergence animated. Gives 3 options with capacity, egress pass/fail and quote. **Justin's strength.** | ~4 h |
+| 4 | Evacuation agents | ~150 agents follow the flow field; shows bottlenecks and time-to-clear before and after an edit. | ~2 h on top of #2 |
+| 5 | Capacity by setup | Uses occupant-load factors of **7 / 15 / 5 net ft² per person** (chairs only / tables and chairs / standing), capped by exit width at **~0.2 in per person**. Verify against current IBC; the venue's posted occupancy overrides; label as an estimate. | ~1 h |
+| 6 | Quote / bill of materials | Owned vs. rented counts, totals, links. | ~1 h |
+
+### Failure modes and mitigations
+- **Scale and axis errors:** one convention everywhere (**meters, Y-up, floor at y = 0**). Two-point calibration ("this distance is 1.83 m") that shows the residual error.
+- **Wrong dedupe:** dimension gates, low-confidence flags, one-click merge/split.
+- **Floating or intersecting objects:** floor snap, stacking on support surfaces, overlap resolution.
+- **Slow APIs:** job queue, parallelism, timeouts, fallbacks. Never block the UI.
+- **Huge files:** app backends cap request size, so upload directly to storage, extract frames in the browser, and compress splats (SPZ) and meshes.
+- **Mobile performance:** level-of-detail budgets, a mesh-only plan mode, and testing on the oldest phone tonight.
+- **Demo breakage** (regenerations, credits, Wi-Fi):
+  - Save checkpoints often and serve the pre-baked scene statically.
+  - **Record the backup demo video by 9 AM Sunday. Code freeze at 10 AM.**
+
+### References found by the reviewer (pricing and limits pending verification)
+- [Spark 2.0](https://sparkjs.dev/docs/new-features-2.0/) · [Spark splat editing](https://sparkjs.dev/docs/splat-editing/)
+- [fal SAM 3](https://fal.ai/models/fal-ai/sam-3/image/api) · [fal SAM 3D Objects](https://fal.ai/models/fal-ai/sam-3/3d-objects/api)
+- [KIRI 3DGS video upload API](http://docs.kiriengine.app/3dgs-scan/video-upload/) · [Scaniverse](https://radiancefields.com/platforms/scaniverse)
+- [VGGT on Replicate](https://dev.to/aimodels-fyi/a-beginners-guide-to-the-vggt-1b-depth-model-by-vufinder-on-replicate-2fai)
+
 ## Core principle
 **The scene graph is the product; the pixels are a skin.**
 

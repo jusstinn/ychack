@@ -24,9 +24,20 @@ The demo twin must **look** high quality, but it does **not** have to match the 
 4. **Overview photos: 15–25.** From each corner and each entrance, facing into the room. **Note where you stood**; the app asks you to tap that spot on the floor plan, which helps the AI place objects.
 5. **Each unique object type** (one example only; just count the copies):
    - 4–6 photos: front, back, both sides, a 45° view, one from above
+   - **a photo of the manufacturer label or model number** if visible (often under the seat or table). A model number lets us look up exact spec dimensions for free.
    - one clean shot against a plain background if you can
    - one material close-up
 6. **Optional:** a 360° panorama from the center (nicer lighting in renders), plus 5 "hero" photos for the real-vs-3D comparison.
+7. **Optional photoreal layer (~15 min, high wow):**
+   - Scan the hero zone with **Scaniverse**, a free phone app that processes on the phone and doesn't need LiDAR. Export **SPZ/PLY**.
+   - The app can show it as a photoreal "Reality" view behind the editable twin.
+   - **First ask Emergent staff** whether a third-party scan is OK as an input asset. The in-app route is the KIRI Engine API (video → splat), pending verification.
+   - **For best results:**
+     - screens off or showing static black, all lights on and unchanged
+     - painter's-tape X's on large glass so it reads as a surface
+     - add an **overhead pass**: phone raised high (~2.3 m) and pitched 45–60° down
+
+**Timing:** do a quick dev capture now and the hero capture when the floor is emptiest.
 
 Work as a pair: one films, one keeps people out of frame and logs numbers. The detailed protocol below is only needed if we later try photoreal reconstruction (Gaussian splats).
 
@@ -66,7 +77,7 @@ Goal: one capture that supports both (a) photoreal reconstruction (splat or mesh
   - Turn HDR video off if your phone allows it.
 - **Lock exposure and focus:** long-press a mid-gray area until it shows **AE/AF LOCK**.
 - **Better: Blackmagic Camera** (free iOS app).
-  - Shutter **1/125–1/250 s** to avoid motion blur.
+  - Shutter **1/120 s** (or 1/60 s if dark). US lights flicker on a 60 Hz cycle, so other speeds such as 1/250 can show **banding** under LEDs. Walk slowly to avoid blur, and raise ISO instead of slowing the shutter.
   - Fixed white balance, fixed focus, ISO as needed.
 - **Photos:** full resolution; Night mode off, Live Photos off, never Portrait mode.
 - Turn the **grid** on and keep the horizon level.
