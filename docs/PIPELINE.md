@@ -72,6 +72,28 @@ Step-by-step build prompts: `docs/EMERGENT_PROMPTS.md`. Lite capture: top of `do
 - [KIRI 3DGS video upload API](http://docs.kiriengine.app/3dgs-scan/video-upload/) · [Scaniverse](https://radiancefields.com/platforms/scaniverse)
 - [VGGT on Replicate](https://dev.to/aimodels-fyi/a-beginners-guide-to-the-vggt-1b-depth-model-by-vufinder-on-replicate-2fai)
 
+## Render look: techniques from Justin's Loop projects
+
+> **Rule:** no Loop code or files go into Emergent. They were written before kickoff and outside Emergent.
+> We reuse the **techniques**, described in plain language, and Emergent's agent rebuilds them.
+> Loop is a separate company, so keep its private material out of this public project.
+
+What makes the Loop site (three.js) look premium, and the react-three-fiber / drei equivalent Emergent can use:
+
+| Loop technique | Why it looks good | Ask Emergent for |
+|---|---|---|
+| **"Photographer's studio" environment for reflections:** warm-grey sweep, big overhead softbox, a long strip light on each side, dim floor bounce | Long soft highlights on metal and gloss instead of generic reflections | drei `<Environment>` built from `<Lightformer>` softboxes and strips (or the venue's 360° panorama) |
+| **N8AO ambient occlusion** | Contact darkening that grounds objects | `N8AO` effect from @react-three/postprocessing |
+| **Khronos PBR Neutral tone mapping** | True colors without the washed-out look | `NeutralToneMapping` |
+| **Soft PCF shadows** | Grounded, not floating | Soft shadows; for a static scene, drei `<AccumulativeShadows>` + `<RandomizedLight>` (baked, very soft), or `<ContactShadows>` |
+| **Decimated, meshopt-compressed GLBs with crease-split normals** | Crisp edges, small files, fast load | Meshopt/Draco compression; ≤20k triangles per asset |
+| **Quality tiers:** shadows and AO toggled by device, pause rendering when the tab is hidden | Smooth on phones | drei `<PerformanceMonitor>` / `<AdaptiveDpr>`, DPR ≤ 1.5 on mobile |
+| **"Drafting board comes to life":** crease and silhouette lines with hidden lines removed, drawn like a draughtsman (long lines first), then the model **turns to clay**, then **materials bleed in from seed points like ink in wet paper** | A signature reveal people remember | The **Blueprint → Clay → Real** reveal (prompt P6b). Simplified build: drei `<Edges>` with a crease angle, depth pre-pass so hidden lines are hidden by the GPU, animated stroke drawing, then a noise-dissolve shader from clay to textured materials. |
+| **Splat background + meshes composited with correct depth** (`loop_render`): static room as a splat, movable things as meshes; fiducial alignment with a residual report | Photoreal room, editable objects | The optional splat "Reality" view (Spark renders splats inside three.js). Align with 2+ known points and show the residual. |
+| **Seeded, reproducible placement** (`loop_scene`): same scene state + seed gives the same placement | Repeatable demo, comparable runs | Auto-layout takes a seed: same inquiry + seed gives the same layout. "Shuffle" picks a new seed. |
+
+**Why the reveal fits:** the venue first appears as an architect's line drawing (a nod to the DoBu "blueprint"), becomes a clay massing model, then real materials bleed in. It's the perfect 5-second opener for the demo video and makes the AI processing feel intentional, not like a loading spinner.
+
 ## Core principle
 **The scene graph is the product; the pixels are a skin.**
 

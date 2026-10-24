@@ -126,12 +126,29 @@
 
 ### P6 — High-quality 3D editor
 > Make the Twin editor the centerpiece.
-> - **Rendering:** react-three-fiber, one instanced mesh per object type (fast with hundreds of chairs), soft shadows, ambient occlusion, good tone mapping, and an environment map (use my uploaded 360° panorama if present, otherwise a tasteful default). Make it look like a premium architectural visualization.
+> - **Rendering:** react-three-fiber with drei. Make it look like a premium architectural visualization:
+>   - one instanced mesh per object type (fast with hundreds of chairs)
+>   - **studio-style environment lighting**: drei `Environment` built from `Lightformer` softboxes (a big overhead softbox, a long strip light on each side, a dim warm floor bounce). If I uploaded a 360° panorama of the venue, offer it as an alternative environment.
+>   - **N8AO ambient occlusion** (@react-three/postprocessing)
+>   - **Neutral tone mapping** (`NeutralToneMapping`)
+>   - **soft shadows** (`AccumulativeShadows` with `RandomizedLight` while the scene is still, `ContactShadows` while dragging)
+>   - compressed GLB loading (meshopt/Draco)
+>   - quality tiers via `PerformanceMonitor`: shadows and AO off on weak devices, pixel ratio ≤ 1.5 on phones, pause rendering when the tab is hidden
 > - **Editing:** select, move and rotate with a gizmo; snap to floor, walls and a grid; highlight collisions in red; multi-select; duplicate; "arrange in rows" tool; undo/redo.
 > - **Views:** camera presets (top-down plan, entrance view, corner views, first-person walk).
 > - **Performance:** must stay smooth on a laptop and a phone.
 >
 > **Done when:** I can rearrange the room smoothly, and it looks good enough for a marketing screenshot.
+
+### P6b — Signature reveal: Blueprint → Clay → Real (high wow, ~2–3 h)
+> When a twin finishes processing, or when I press **"Reveal,"** play a 6–8 second animation:
+> 1. **Blueprint:** the room and furniture appear as an architect's line drawing on a warm paper background, built from the models' crease and silhouette edges (drei `Edges`, crease angle about 35–40°). Hidden lines must not show; use a depth pre-pass so the GPU hides back edges. Lines draw in progressively like a draughtsman: long structural lines (walls, floor outline) first, furniture details after.
+> 2. **Clay:** the drawing fills into a matte warm-white clay model with soft shadows and ambient occlusion.
+> 3. **Real:** real materials spread across surfaces from a few seed points, like ink in wet paper (noise-driven dissolve with a thin darker rim at the edge of the spreading front), until everything has its final materials.
+>
+> Use one shared animation timeline so every material transitions in sync. Add a "replay" button.
+>
+> **Done when:** the reveal runs smoothly on a laptop, and hidden lines never appear.
 
 ### P7 — Catalog (owned inventory + partner products with links)
 > Add a Catalog drawer in the editor.
@@ -152,6 +169,8 @@
 > - places must-haves sensibly (stage at a short wall, dance floor in front of the stage, buffet near a door)
 >
 > **Show violations live.** When I drag something into an aisle or exit zone, it turns red and explains why.
+>
+> **Make generation reproducible:** each layout stores a random seed, so the same inquiry and seed always produce the same layout. A "Shuffle" button tries a new seed, and "Show 3 options" returns three seeds side by side.
 >
 > **Done when:** "150 guests, banquet, dance floor, stage" produces a clean layout in seconds, and "250 guests" in a 180-person room is flagged with alternatives.
 
