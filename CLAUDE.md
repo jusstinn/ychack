@@ -17,4 +17,10 @@ We are 2 students competing at VibeCon 2026 (YC × Emergent), Oct 24–25. **Sub
 ## Status
 
 - Idea chosen: 3D digital twin + auto-layout + quote for small event venues (see BRIEF §3).
-- To verify first: track fit with the organizers (Property & rental?), and reconstruction API availability (BRIEF §5).
+- **Demo venue = the actual VibeCon venue.** The Emergent team suggested reconstructing the room we're in, with editable objects.
+- Workflow: videos/photos → AI finds objects → **dedupe into unique object types** (one 3D asset per type; instances are placements) → editable 3D twin → catalog, layouts, simulations, quote.
+- Docs:
+  - `docs/BRIEF.md`: rules, idea, scope, research, team split
+  - `docs/CAPTURE_PROTOCOL.md`: exactly what to film and photograph
+  - `docs/PIPELINE.md`: pipeline design, build tiers, optimization ideas, where the GPU work happens
+- To verify first: track fit with the organizers (Property & rental?), permission to scan the venue, and which reconstruction / image-to-3D APIs are live (PIPELINE "Open questions").
