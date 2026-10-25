@@ -36,6 +36,7 @@ Both scenes use the same format. Coordinates are in meters; see `coordinate_syst
   - **Set pieces / props:** sofa, armchair, coffee table, area rug, floor lamp, bookshelf, scenic flat (wallpapered set wall). Sofas and armchairs come in teal, mustard, grey or burgundy.
 
 ## Media
+- `media/hero.mp4` (10.5 s, 1600×1000, H.264) + `hero_poster.jpg`: the landing hero sequence. The hall's blueprint draws itself, an eraser wipes it, the theater layout redraws, then it turns into 3D (clay, then real) as the camera swoops to the overview. It's the fallback for the in-app SceneReveal.
 - `media/pipeline_1_scan.jpg` … `pipeline_5_twin.jpg`: the how-it-works story for the scanned hall.
 - `media/scene_theater_overview.jpg`, `scene_theater_seat.jpg` (view from seat E10), `scene_theater_stage.jpg`, `scene_theater_blueprint.jpg`, `scene_theater_clay.jpg`: the theater's look targets. `scene_theater_livingroom_seat.jpg` shows the stage after "dress the stage as a living room".
 - `media/wedding_*.jpg`, `twin_overview.jpg`, `hall_theater_setup_eye.jpg`: look targets for edits in the hall.

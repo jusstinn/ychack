@@ -44,7 +44,7 @@
 - Shadows: only on floating menus (`0 8px 24px rgba(0,0,0,.25)`).
 
 ### Landing ( / ), see `design_landing.png`
-- Full-bleed **SceneReveal** hero on paper.
+- Full-bleed **SceneReveal** hero on paper. The reference and fallback is `assets/media/hero.mp4`, with `hero_poster.jpg` as its poster.
 - Left column (max 520 px): eyebrow "AI VENUE PLANNER" (mono, ink-soft, letter-spacing 2px), H1, subline, primary button (orange) "Open the demo venue", ghost button "How it works".
 - Thin vertical drafting lines at the page edges, plus dimension ticks.
 - Below the fold: three benefit cards in a row (icon line drawing + title + one sentence), then a footer.

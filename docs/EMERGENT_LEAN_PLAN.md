@@ -165,7 +165,7 @@
 >    Respect `prefers-reduced-motion` (show the final frame). The hero shows the VibeCon Hall; a "Replay" link restarts it.
 >
 > **Landing ( / ):**
-> - `SceneReveal` as a full-bleed hero (fallback: `media/hero.mp4` if WebGL is unavailable).
+> - `SceneReveal` as a full-bleed hero. Fallback if WebGL is unavailable: the video `media/hero.mp4` (10.5 s, the same draw → erase → redraw → 3D sequence), with `media/hero_poster.jpg` as its poster image.
 > - Headline: **"Your venue, as a living blueprint."**
 > - Subline: "Scan once. Rearrange, redecorate and quote any event in seconds, just by asking."
 > - Buttons "Open the demo venue" / "How it works."
@@ -174,7 +174,7 @@
 > **How it works ( /how ):** a vertical story with `media/pipeline_1_scan.jpg` … `pipeline_5_twin.jpg`, one line each (scan → vision agents → true scale → blueprint/clay/real → edit by talking), plus the honest note "This venue was reconstructed with our scan pipeline and imported into the app."
 >
 > **Done when:** the hero plays the full draw → erase → redraw → grow-into-3D sequence smoothly on a laptop, opening a scene in the editor plays the reveal (skippable), and both pages match the mockups.
-> **Budget tip:** if credits run low, keep steps 1 and 4 and drop the eraser and redraw.
+> **Budget tip:** if credits run low, keep steps 1 and 4 and drop the eraser and redraw. If credits run out, use `media/hero.mp4` (autoplay, muted, loop) as the landing hero; it already shows the whole sequence.
 
 ## L6 (only if credits remain) — pick one
 - **Product link → 3D:** paste a URL; the backend extracts name, price, size and image via Claude, then runs image-to-3D via fal.ai TRELLIS.2 (I'll paste `FAL_KEY`), scales the model to size, and adds it to the catalog as a partner item the agent can place.
