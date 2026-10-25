@@ -11,10 +11,10 @@
 - Replicate and World Labs are only needed for the optional prompts.
 
 **Build order (test in the preview after each one):**
-1. **Must (tonight):** P0 → P1 → P2 → P3 → P4 → P6 → P7 → P8 → P9
+1. **Must (tonight):** P0 → P1 → P2 → P3 → P4 → P6 (incl. blueprint mode) → P7 → **P11 edit agent** → P7b kits → P8 → P9, then **P7c** (product link → 3D)
 2. **Strongly recommended:** **P5L** (we already have a good LiDAR scan of the venue; it gives true-scale walls and exact positions). If it fights you, fall back to **P5** (AI-guessed placement + drag to fix).
 3. **High wow, after the core loop works:** **P6b** (Blueprint → Clay → Real reveal), **P10** (photoreal showcase render)
-4. **Stretch:** P11, P12
+4. **Stretch:** P12 (sightline/egress overlays)
 5. **Skip unless spare time:** P5+, P5b
 6. **Sunday morning:** **P13** (demo mode with cached results). Record the backup video by 9 AM; code freeze 10 AM.
 
@@ -221,7 +221,16 @@ If a prompt breaks something, describe the exact bug (what you clicked, saw, exp
 > - **Views:** camera presets (top-down plan, entrance view, corner views, first-person walk).
 > - **Performance:** must stay smooth on a laptop and a phone.
 >
-> **Done when:** I can rearrange the room smoothly, and it looks good enough for a marketing screenshot.
+> - **Blueprint mode (2D plan editor, like DoBu's site-plan editor):**
+>   - A top-down plan drawn like an architect's blueprint, with a visible **grid** (default 0.25 m squares; toggle 0.5 m or 1 ft).
+>   - **Select:** click, shift-click, drag a box, or "select all of this type."
+>   - **Move by dragging** (snaps to the grid), or **nudge with the arrow keys: one square per press** (Shift = 4 squares).
+>   - **Rotate:** R = 90°, Q/E = 15°.
+>   - Delete, duplicate (Cmd/Ctrl+D), undo/redo (Cmd/Ctrl+Z / Shift+Z).
+>   - **Live metrics panel with before → after deltas** (DoBu-style): seats, tables and chairs used vs. owned, capacity vs. the occupancy limit, aisle/exit violations, quote total. Example: "Seats 148 → 154 (+6), Quote $2,310 → $2,370."
+>   - The 2D plan and the 3D view edit the same scene data, so changes show in both instantly.
+>
+> **Done when:** I can rearrange the room smoothly (dragging in 3D, or nudging tables one square at a time in blueprint mode with the metrics updating live), and it looks good enough for a marketing screenshot.
 
 ### P6b — Signature reveal: Blueprint → Clay → Real (high wow, ~2–3 h)
 > When a twin finishes processing, or when I press **"Reveal,"** play a 6–8 second animation:
@@ -240,6 +249,35 @@ If a prompt breaks something, describe the exact bug (what you clicked, saw, exp
 > - I can drag catalog items into the scene. Dragging a partner item adds it to the quote.
 >
 > **Done when:** I can swap all office chairs for partner chiavari chairs and see the cost change.
+
+### P7b — Decoration kits (seed for the demo)
+> Add **kits**: named bundles of catalog items plus placement rules, applied in one undoable step and removable as a group.
+> - **Wedding:**
+>   - white floor-length linens on every table, floral centerpiece + 3 candles per table
+>   - a **dance floor** (checkered panels) in the largest open area in front of the stage
+>   - a **flower arch** on the stage
+>   - **string lights** draped between the pendant lamps
+>   - optional chair swap to gold chiavari chairs
+> - **Theater:**
+>   - chairs in rows facing the stage (uses P8's theater layout)
+>   - black pleated **curtain backdrop** behind the stage
+>   - two **spotlight stands**
+>   - a red **aisle runner** down the center aisle
+> - **Conference:** classroom rows, podium, two screens.
+>
+> Placement rules are relative to existing things (each table, the stage, the open floor area, walls). They must respect aisles and exits (P8 checks), and each kit's items are added to the quote.
+>
+> **Done when:** "Wedding" transforms our venue in one click, and "remove kit" restores it exactly.
+
+### P7c — Product link → 3D model → into the room
+> In the Catalog, add **"Add from link."** I paste a product URL (e.g., a rental chair or decor item).
+> 1. Background job: fetch the page server-side. Ask the `[LLM]` to extract name, price, dimensions (W×D×H), and the main product image (use `og:image` when present). Return structured JSON.
+> 2. Remove the background from the image and run image-to-3D (`[IMG3D]`: TRELLIS.2, fallback SAM 3D Objects). Normalize: upright, centered, **scaled to the extracted dimensions**, ≤20k triangles.
+> 3. Save it as a **partner catalog item with the link and price**. I can drag it into the scene; the quote updates.
+> 4. Fallback when a site blocks fetching: let me upload the product photo and type the dimensions.
+> 5. Show progress: fetching → modeling → ready (~30–90 s).
+>
+> **Done when:** pasting a product link produces a correctly sized 3D item I can place, with its price in the quote.
 
 ### P8 — Inquiry → auto-layout with safety checks
 > Add an **Inquiry** form: date, guest count, event type (banquet / theater / classroom / cocktail / wedding), must-haves (dance floor, stage, buffet, bar, head table, lounge).
@@ -270,8 +308,22 @@ If a prompt breaks something, describe the exact bug (what you clicked, saw, exp
 >
 > **Done when:** one click turns a layout into a marketing-quality image.
 
-### P11 (stretch) — Natural-language editing
-> Add a chat panel. The `[LLM]` receives the scene as JSON and may only respond with edit operations: add, move, remove, arrange in rows, swap type, generate layout. We apply them with undo. Example: "Set up a banquet for 120 with a dance floor by the stage and move the bar to the east wall."
+### P11 (MUST: core feature) — The edit agent ("tell the room what to do")
+> Add an **Edit chat** beside the 3D/blueprint view. Send the `[LLM]` the scene as compact JSON (types, instances with ids/positions/rotations, materials, room outline, open areas, catalog, kits) plus the user's request. It answers **only with tool calls**, which we execute as **one undoable transaction**:
+> - `select(type?, area?, near?, ids?)` → ids
+> - `move(ids, dx_squares, dz_squares)` / `move_to(ids, x, z)`
+> - `rotate(ids, degrees)`
+> - `set_material(type or ids, preset or color)`, e.g. tables black / walnut / linen-covered, chairs white / black / gold
+> - `add_items(catalog_id, count, rule: rows | around_each_table | along_wall | on_stage | in_open_area)`
+> - `apply_kit(name)` / `remove_kit(name)`
+> - `generate_layout(setup, guests, must_haves)` (P8)
+> - `remove(ids)`
+> - `undo()`
+>
+> After executing, the agent replies in one sentence and the changed items flash. It never invents items that aren't in the catalog, and asks when a request is ambiguous.
+> - **Demo commands that must work:** "make all the tables black," "add wedding decorations," "theater setup for 150 with a center aisle," "move the left table run one square right," "add 6 of the chairs from this link: <url>" (uses P7c).
+>
+> **Done when:** each demo command produces the right change in under ~10 s and can be undone.
 
 ### P12 (stretch) — Simulations
 > Add overlay toggles:
