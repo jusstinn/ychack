@@ -17,6 +17,7 @@ We are 2 students competing at VibeCon 2026 (YC × Emergent), Oct 24–25. **Sub
 
 ## ⚡ Current plan (Sat ~8:15 PM): `docs/EMERGENT_LEAN_PLAN.md`
 - **6 prompts (L1–L6)**, demo-first.
+- **Two venues** import at L1: the scanned VibeCon Hall and a modeled 152-seat Studio Theater (added Sat ~10 PM).
 - We provide the venue twin plus 3D models and media as **data and design assets**. The app built in Emergent imports them and does all the interactive work: the 3D view, the blueprint editor, the AI edit agent, the kits, and the landing and how-it-works pages.
 - Be transparent about this in the video. Confirm the asset question with the Emergent desk.
 
@@ -30,5 +31,8 @@ We are 2 students competing at VibeCon 2026 (YC × Emergent), Oct 24–25. **Sub
   - `docs/CAPTURE_PROTOCOL.md`: exactly what to film and photograph
   - `docs/PIPELINE.md`: pipeline design, build tiers, optimization ideas, where the GPU work happens
   - `docs/EMERGENT_PROMPTS.md`: how the APIs plug into Emergent + the step-by-step build prompts (P0–P13)
+  - `docs/EMERGENT_LEAN_PLAN.md`: **the current build plan (L1–L6)**: the prompts we actually send
+  - `docs/DESIGN.md` + `assets/design/*.png`: design system and UI mockups (landing, editor, how it works)
+  - `assets/`: two importable scenes (VibeCon Hall scanned, Studio Theater modeled), catalog (49 types), kits, 49 GLB models, media
 - Decision: proof of concept. Renders must look great but needn't match the room 1:1. Use the LITE capture.
 - To verify first: track fit with the organizers (Property & rental?), permission to scan the venue, and which reconstruction / image-to-3D APIs are live (PIPELINE "Open questions").

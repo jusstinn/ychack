@@ -34,6 +34,17 @@
     "chair",
     "podium"
    ]
+  },
+  {
+   "name": "cabaret",
+   "label": "Cabaret / gala",
+   "recipe": "Cabaret or gala night on the open floor. Remove loose chairs (type chair) from the open floor in front of the stage; never touch fixed seating on risers. Place round tables (round_table, 1.76 m with linen) in a staggered grid on the open floor: table edges at least 1.5 m from the stage front, about 2.7 m center to center, 44-in aisles from every door to the stage steps, and nothing on stage steps or aisle steps. Put 8 chairs around each table (6 if space is tight), evenly spaced at 0.95 m from the table center, each facing the table center. One candle at each table center. Optional: string lights over the floor. Stop at the requested guest count.",
+   "uses": [
+    "round_table",
+    "chair",
+    "candle",
+    "string_lights"
+   ]
   }
  ]
 }

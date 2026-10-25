@@ -67,6 +67,7 @@
   - suggestion chips: "Add wedding decorations", "Theater for 150", "Make tables black", "Remove wedding"
   - input with send button (orange)
 - **"+ Add" palette:** a popover of catalog cards (thumbnail, name, size, price, owned count).
+- **View from seat:** clicking a seat moves the camera to that seat. A pill at the top-left of the 3D canvas shows "Seat E10" (in mono), with a ghost button "Back to overview". The look target is `assets/media/scene_theater_seat.jpg`.
 
 ### How it works ( /how ), see `design_how.png`
 - Paper background, H2 "From a 3-minute scan to a living twin."
@@ -96,6 +97,8 @@
   - floor dark varnished wood, clearcoat
   - pendant lamp shades emissive warm `#FFE2BD`, low intensity
   - inferred items at 70% opacity
+- **Per-venue room colors** come from the scene's `style`. The hall has warm white walls and a dark wood floor. The theater is a black box: matte black walls and a black floor. Keep the same lighting there. The cyc gradient, stage-light lenses, exit signs and step lights are emissive in the models, so they glow by themselves. The look targets are `scene_theater_overview.jpg` and `scene_theater_stage.jpg`.
+- In dollhouse mode, draw a thin light cap (`#9FA2AA`) on top of cut walls so dark rooms keep a readable outline.
 - **Performance:**
   - one InstancedMesh per model type
   - device pixel ratio ≤ 1.5 on phones

@@ -1,0 +1,2739 @@
+{
+ "venue": "Studio Theater (sample venue)",
+ "units": "meters",
+ "coordinate_system": "x along the stage (north) wall, z toward the back (south); y up; floor y=0; rot = radians about the vertical axis (three.js rotation.y); every model's front faces +z at rot=0. y (when present) = elevation of the model origin: items on the stage or risers carry it explicitly; ceiling-mounted types hang from the ceiling.",
+ "room": {
+  "outline": [
+   [
+    -7.5,
+    -8.5
+   ],
+   [
+    7.5,
+    -8.5
+   ],
+   [
+    7.5,
+    7.5
+   ],
+   [
+    -7.5,
+    7.5
+   ]
+  ],
+  "ceiling_height": 6.4,
+  "floor": "black painted hardboard",
+  "walls": "matte black",
+  "style": {
+   "wall_color": "#1B1B1E",
+   "floor_color": "#151517",
+   "ceiling_color": "#0e0e10"
+  }
+ },
+ "seats": 152,
+ "aisles": {
+  "center_x": [
+   -0.6,
+   0.6
+  ],
+  "side_x": [
+   [
+    -7.5,
+    -6.1
+   ],
+   [
+    6.1,
+    7.5
+   ]
+  ],
+  "cross_aisle_z": [
+   -1.25,
+   0.75
+  ]
+ },
+ "stage": {
+  "type": "stage_deck",
+  "front_z": -4.3,
+  "height": 0.6,
+  "center": [
+   0.0,
+   -6.4
+  ]
+ },
+ "inventory": {
+  "chair": 80,
+  "theater_seat": 120,
+  "round_table": 0,
+  "table": 0,
+  "stage_deck": 1,
+  "riser": 7
+ },
+ "cameras": {
+  "overview": {
+   "pos": [
+    -12.5,
+    10.5,
+    14.5
+   ],
+   "target": [
+    0.3,
+    0.6,
+    -1.6
+   ],
+   "fov": 46
+  },
+  "eye": {
+   "pos": [
+    -0.875,
+    2.05,
+    3.55
+   ],
+   "target": [
+    0.0,
+    2.0,
+    -6.4
+   ],
+   "fov": 60,
+   "label": "View from seat E10"
+  },
+  "stage": {
+   "pos": [
+    1.2,
+    2.4,
+    -6.6
+   ],
+   "target": [
+    -0.4,
+    1.5,
+    5.0
+   ],
+   "fov": 62
+  }
+ },
+ "counts": {
+  "stage_deck": 1,
+  "stage_steps": 2,
+  "cyc": 1,
+  "drape": 6,
+  "house_curtain": 2,
+  "valance": 1,
+  "pa_speaker": 2,
+  "batten": 9,
+  "stage_light": 33,
+  "house_light": 12,
+  "chair": 32,
+  "riser": 7,
+  "aisle_step": 21,
+  "theater_seat": 120,
+  "theater_door": 6,
+  "exit_sign": 6,
+  "booth_window": 1,
+  "bin": 2
+ },
+ "items": [
+  {
+   "id": "stage_deck_001",
+   "type": "stage_deck",
+   "x": 0.0,
+   "z": -6.4,
+   "rot": 0.0,
+   "w": 11.0,
+   "d": 4.2,
+   "h": 0.6,
+   "inferred": false
+  },
+  {
+   "id": "stage_steps_001",
+   "type": "stage_steps",
+   "x": -4.75,
+   "z": -3.925,
+   "rot": 0.0,
+   "y": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_steps_002",
+   "type": "stage_steps",
+   "x": 4.75,
+   "z": -3.925,
+   "rot": 0.0,
+   "y": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "cyc_001",
+   "type": "cyc",
+   "x": 0.0,
+   "z": -8.3,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 10.4,
+   "h": 5.2,
+   "inferred": false
+  },
+  {
+   "id": "drape_001",
+   "type": "drape",
+   "x": -4.95,
+   "z": -7.4,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.0,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "drape_002",
+   "type": "drape",
+   "x": 4.95,
+   "z": -7.4,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.0,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "drape_003",
+   "type": "drape",
+   "x": -4.95,
+   "z": -6.2,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.0,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "drape_004",
+   "type": "drape",
+   "x": 4.95,
+   "z": -6.2,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.0,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "drape_005",
+   "type": "drape",
+   "x": -4.95,
+   "z": -5.0,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.0,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "drape_006",
+   "type": "drape",
+   "x": 4.95,
+   "z": -5.0,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.0,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "house_curtain_001",
+   "type": "house_curtain",
+   "x": -4.6,
+   "z": -4.55,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.8,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "house_curtain_002",
+   "type": "house_curtain",
+   "x": 4.6,
+   "z": -4.55,
+   "rot": 0.0,
+   "y": 0.6,
+   "w": 1.8,
+   "h": 5.4,
+   "inferred": false
+  },
+  {
+   "id": "valance_001",
+   "type": "valance",
+   "x": 0.0,
+   "z": -4.42,
+   "rot": 0.0,
+   "w": 11.2,
+   "inferred": false
+  },
+  {
+   "id": "pa_speaker_001",
+   "type": "pa_speaker",
+   "x": -6.5,
+   "z": -4.6,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pa_speaker_002",
+   "type": "pa_speaker",
+   "x": 6.5,
+   "z": -4.6,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "batten_001",
+   "type": "batten",
+   "x": 0.0,
+   "z": -7.4,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_002",
+   "type": "batten",
+   "x": 0.0,
+   "z": -6.2,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_003",
+   "type": "batten",
+   "x": 0.0,
+   "z": -5.0,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_004",
+   "type": "batten",
+   "x": 0.0,
+   "z": -3.2,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_005",
+   "type": "batten",
+   "x": 0.0,
+   "z": -1.4,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_006",
+   "type": "batten",
+   "x": 0.0,
+   "z": 0.4,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_007",
+   "type": "batten",
+   "x": 0.0,
+   "z": 2.2,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_008",
+   "type": "batten",
+   "x": 0.0,
+   "z": 4.0,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "batten_009",
+   "type": "batten",
+   "x": 0.0,
+   "z": 5.8,
+   "rot": 0.0,
+   "w": 14.6,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_001",
+   "type": "stage_light",
+   "x": -4.5,
+   "z": -3.2,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_002",
+   "type": "stage_light",
+   "x": -2.7,
+   "z": -3.2,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_003",
+   "type": "stage_light",
+   "x": -0.9,
+   "z": -3.2,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_004",
+   "type": "stage_light",
+   "x": 0.9,
+   "z": -3.2,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_005",
+   "type": "stage_light",
+   "x": 2.7,
+   "z": -3.2,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_006",
+   "type": "stage_light",
+   "x": 4.5,
+   "z": -3.2,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_007",
+   "type": "stage_light",
+   "x": -4.5,
+   "z": -1.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_008",
+   "type": "stage_light",
+   "x": -2.7,
+   "z": -1.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_009",
+   "type": "stage_light",
+   "x": -0.9,
+   "z": -1.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_010",
+   "type": "stage_light",
+   "x": 0.9,
+   "z": -1.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_011",
+   "type": "stage_light",
+   "x": 2.7,
+   "z": -1.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_012",
+   "type": "stage_light",
+   "x": 4.5,
+   "z": -1.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_013",
+   "type": "stage_light",
+   "x": -4.5,
+   "z": 0.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_014",
+   "type": "stage_light",
+   "x": -2.7,
+   "z": 0.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_015",
+   "type": "stage_light",
+   "x": -0.9,
+   "z": 0.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_016",
+   "type": "stage_light",
+   "x": 0.9,
+   "z": 0.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_017",
+   "type": "stage_light",
+   "x": 2.7,
+   "z": 0.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_018",
+   "type": "stage_light",
+   "x": 4.5,
+   "z": 0.4,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_019",
+   "type": "stage_light",
+   "x": -4.0,
+   "z": -7.4,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_020",
+   "type": "stage_light",
+   "x": -2.0,
+   "z": -7.4,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_021",
+   "type": "stage_light",
+   "x": 0.0,
+   "z": -7.4,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_022",
+   "type": "stage_light",
+   "x": 2.0,
+   "z": -7.4,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_023",
+   "type": "stage_light",
+   "x": 4.0,
+   "z": -7.4,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_024",
+   "type": "stage_light",
+   "x": -4.0,
+   "z": -6.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_025",
+   "type": "stage_light",
+   "x": -2.0,
+   "z": -6.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_026",
+   "type": "stage_light",
+   "x": 0.0,
+   "z": -6.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_027",
+   "type": "stage_light",
+   "x": 2.0,
+   "z": -6.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_028",
+   "type": "stage_light",
+   "x": 4.0,
+   "z": -6.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_029",
+   "type": "stage_light",
+   "x": -4.0,
+   "z": -5.0,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_030",
+   "type": "stage_light",
+   "x": -2.0,
+   "z": -5.0,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_031",
+   "type": "stage_light",
+   "x": 0.0,
+   "z": -5.0,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_032",
+   "type": "stage_light",
+   "x": 2.0,
+   "z": -5.0,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "stage_light_033",
+   "type": "stage_light",
+   "x": 4.0,
+   "z": -5.0,
+   "rot": 3.1416,
+   "inferred": false
+  },
+  {
+   "id": "house_light_001",
+   "type": "house_light",
+   "x": -5.4,
+   "z": 2.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_002",
+   "type": "house_light",
+   "x": -1.8,
+   "z": 2.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_003",
+   "type": "house_light",
+   "x": 1.8,
+   "z": 2.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_004",
+   "type": "house_light",
+   "x": 5.4,
+   "z": 2.2,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_005",
+   "type": "house_light",
+   "x": -5.4,
+   "z": 4.0,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_006",
+   "type": "house_light",
+   "x": -1.8,
+   "z": 4.0,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_007",
+   "type": "house_light",
+   "x": 1.8,
+   "z": 4.0,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_008",
+   "type": "house_light",
+   "x": 5.4,
+   "z": 4.0,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_009",
+   "type": "house_light",
+   "x": -5.4,
+   "z": 5.8,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_010",
+   "type": "house_light",
+   "x": -1.8,
+   "z": 5.8,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_011",
+   "type": "house_light",
+   "x": 1.8,
+   "z": 5.8,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "house_light_012",
+   "type": "house_light",
+   "x": 5.4,
+   "z": 5.8,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "chair_001",
+   "type": "chair",
+   "x": -4.68,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A1",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_002",
+   "type": "chair",
+   "x": -4.13,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A2",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_003",
+   "type": "chair",
+   "x": -3.58,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A3",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_004",
+   "type": "chair",
+   "x": -3.03,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A4",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_005",
+   "type": "chair",
+   "x": -2.48,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A5",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_006",
+   "type": "chair",
+   "x": -1.93,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A6",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_007",
+   "type": "chair",
+   "x": -1.38,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A7",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_008",
+   "type": "chair",
+   "x": -0.83,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A8",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_009",
+   "type": "chair",
+   "x": 0.83,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A9",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_010",
+   "type": "chair",
+   "x": 1.38,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A10",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_011",
+   "type": "chair",
+   "x": 1.93,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A11",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_012",
+   "type": "chair",
+   "x": 2.48,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A12",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_013",
+   "type": "chair",
+   "x": 3.03,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A13",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_014",
+   "type": "chair",
+   "x": 3.58,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A14",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_015",
+   "type": "chair",
+   "x": 4.13,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A15",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_016",
+   "type": "chair",
+   "x": 4.68,
+   "z": -2.4,
+   "rot": 3.1416,
+   "label": "A16",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_017",
+   "type": "chair",
+   "x": -4.68,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B1",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_018",
+   "type": "chair",
+   "x": -4.13,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B2",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_019",
+   "type": "chair",
+   "x": -3.58,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B3",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_020",
+   "type": "chair",
+   "x": -3.03,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B4",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_021",
+   "type": "chair",
+   "x": -2.48,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B5",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_022",
+   "type": "chair",
+   "x": -1.93,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B6",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_023",
+   "type": "chair",
+   "x": -1.38,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B7",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_024",
+   "type": "chair",
+   "x": -0.83,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B8",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_025",
+   "type": "chair",
+   "x": 0.83,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B9",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_026",
+   "type": "chair",
+   "x": 1.38,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B10",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_027",
+   "type": "chair",
+   "x": 1.93,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B11",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_028",
+   "type": "chair",
+   "x": 2.48,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B12",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_029",
+   "type": "chair",
+   "x": 3.03,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B13",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_030",
+   "type": "chair",
+   "x": 3.58,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B14",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_031",
+   "type": "chair",
+   "x": 4.13,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B15",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "chair_032",
+   "type": "chair",
+   "x": 4.68,
+   "z": -1.5,
+   "rot": 3.1416,
+   "label": "B16",
+   "material": "black",
+   "inferred": false
+  },
+  {
+   "id": "riser_001",
+   "type": "riser",
+   "x": 0.0,
+   "z": 1.65,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 15.0,
+   "d": 0.9,
+   "h": 0.3,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_001",
+   "type": "aisle_step",
+   "x": 0.0,
+   "z": 0.975,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.2,
+   "d": 0.45,
+   "h": 0.15,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_002",
+   "type": "aisle_step",
+   "x": -6.8,
+   "z": 0.975,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 0.15,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_003",
+   "type": "aisle_step",
+   "x": 6.8,
+   "z": 0.975,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 0.15,
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_001",
+   "type": "theater_seat",
+   "x": -5.825,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C1",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_002",
+   "type": "theater_seat",
+   "x": -5.275,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C2",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_003",
+   "type": "theater_seat",
+   "x": -4.725,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C3",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_004",
+   "type": "theater_seat",
+   "x": -4.175,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C4",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_005",
+   "type": "theater_seat",
+   "x": -3.625,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C5",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_006",
+   "type": "theater_seat",
+   "x": -3.075,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C6",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_007",
+   "type": "theater_seat",
+   "x": -2.525,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C7",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_008",
+   "type": "theater_seat",
+   "x": -1.975,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C8",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_009",
+   "type": "theater_seat",
+   "x": -1.425,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C9",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_010",
+   "type": "theater_seat",
+   "x": -0.875,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C10",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_011",
+   "type": "theater_seat",
+   "x": 0.875,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C11",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_012",
+   "type": "theater_seat",
+   "x": 1.425,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C12",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_013",
+   "type": "theater_seat",
+   "x": 1.975,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C13",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_014",
+   "type": "theater_seat",
+   "x": 2.525,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C14",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_015",
+   "type": "theater_seat",
+   "x": 3.075,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C15",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_016",
+   "type": "theater_seat",
+   "x": 3.625,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C16",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_017",
+   "type": "theater_seat",
+   "x": 4.175,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C17",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_018",
+   "type": "theater_seat",
+   "x": 4.725,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C18",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_019",
+   "type": "theater_seat",
+   "x": 5.275,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C19",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_020",
+   "type": "theater_seat",
+   "x": 5.825,
+   "z": 1.7,
+   "rot": 3.1416,
+   "y": 0.3,
+   "label": "C20",
+   "inferred": false
+  },
+  {
+   "id": "riser_002",
+   "type": "riser",
+   "x": 0.0,
+   "z": 2.55,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 15.0,
+   "d": 0.9,
+   "h": 0.6,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_004",
+   "type": "aisle_step",
+   "x": 0.0,
+   "z": 1.875,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.2,
+   "d": 0.45,
+   "h": 0.45,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_005",
+   "type": "aisle_step",
+   "x": -6.8,
+   "z": 1.875,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 0.45,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_006",
+   "type": "aisle_step",
+   "x": 6.8,
+   "z": 1.875,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 0.45,
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_021",
+   "type": "theater_seat",
+   "x": -5.825,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D1",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_022",
+   "type": "theater_seat",
+   "x": -5.275,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D2",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_023",
+   "type": "theater_seat",
+   "x": -4.725,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D3",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_024",
+   "type": "theater_seat",
+   "x": -4.175,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D4",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_025",
+   "type": "theater_seat",
+   "x": -3.625,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D5",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_026",
+   "type": "theater_seat",
+   "x": -3.075,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D6",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_027",
+   "type": "theater_seat",
+   "x": -2.525,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D7",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_028",
+   "type": "theater_seat",
+   "x": -1.975,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D8",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_029",
+   "type": "theater_seat",
+   "x": -1.425,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D9",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_030",
+   "type": "theater_seat",
+   "x": -0.875,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D10",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_031",
+   "type": "theater_seat",
+   "x": 0.875,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D11",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_032",
+   "type": "theater_seat",
+   "x": 1.425,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D12",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_033",
+   "type": "theater_seat",
+   "x": 1.975,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D13",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_034",
+   "type": "theater_seat",
+   "x": 2.525,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D14",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_035",
+   "type": "theater_seat",
+   "x": 3.075,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D15",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_036",
+   "type": "theater_seat",
+   "x": 3.625,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D16",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_037",
+   "type": "theater_seat",
+   "x": 4.175,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D17",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_038",
+   "type": "theater_seat",
+   "x": 4.725,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D18",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_039",
+   "type": "theater_seat",
+   "x": 5.275,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D19",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_040",
+   "type": "theater_seat",
+   "x": 5.825,
+   "z": 2.6,
+   "rot": 3.1416,
+   "y": 0.6,
+   "label": "D20",
+   "inferred": false
+  },
+  {
+   "id": "riser_003",
+   "type": "riser",
+   "x": 0.0,
+   "z": 3.45,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 15.0,
+   "d": 0.9,
+   "h": 0.9,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_007",
+   "type": "aisle_step",
+   "x": 0.0,
+   "z": 2.775,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.2,
+   "d": 0.45,
+   "h": 0.75,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_008",
+   "type": "aisle_step",
+   "x": -6.8,
+   "z": 2.775,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 0.75,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_009",
+   "type": "aisle_step",
+   "x": 6.8,
+   "z": 2.775,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 0.75,
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_041",
+   "type": "theater_seat",
+   "x": -5.825,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E1",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_042",
+   "type": "theater_seat",
+   "x": -5.275,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E2",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_043",
+   "type": "theater_seat",
+   "x": -4.725,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E3",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_044",
+   "type": "theater_seat",
+   "x": -4.175,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E4",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_045",
+   "type": "theater_seat",
+   "x": -3.625,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E5",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_046",
+   "type": "theater_seat",
+   "x": -3.075,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E6",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_047",
+   "type": "theater_seat",
+   "x": -2.525,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E7",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_048",
+   "type": "theater_seat",
+   "x": -1.975,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E8",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_049",
+   "type": "theater_seat",
+   "x": -1.425,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E9",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_050",
+   "type": "theater_seat",
+   "x": -0.875,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E10",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_051",
+   "type": "theater_seat",
+   "x": 0.875,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E11",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_052",
+   "type": "theater_seat",
+   "x": 1.425,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E12",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_053",
+   "type": "theater_seat",
+   "x": 1.975,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E13",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_054",
+   "type": "theater_seat",
+   "x": 2.525,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E14",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_055",
+   "type": "theater_seat",
+   "x": 3.075,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E15",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_056",
+   "type": "theater_seat",
+   "x": 3.625,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E16",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_057",
+   "type": "theater_seat",
+   "x": 4.175,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E17",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_058",
+   "type": "theater_seat",
+   "x": 4.725,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E18",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_059",
+   "type": "theater_seat",
+   "x": 5.275,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E19",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_060",
+   "type": "theater_seat",
+   "x": 5.825,
+   "z": 3.5,
+   "rot": 3.1416,
+   "y": 0.9,
+   "label": "E20",
+   "inferred": false
+  },
+  {
+   "id": "riser_004",
+   "type": "riser",
+   "x": 0.0,
+   "z": 4.35,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 15.0,
+   "d": 0.9,
+   "h": 1.2,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_010",
+   "type": "aisle_step",
+   "x": 0.0,
+   "z": 3.675,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.2,
+   "d": 0.45,
+   "h": 1.05,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_011",
+   "type": "aisle_step",
+   "x": -6.8,
+   "z": 3.675,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.05,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_012",
+   "type": "aisle_step",
+   "x": 6.8,
+   "z": 3.675,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.05,
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_061",
+   "type": "theater_seat",
+   "x": -5.825,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F1",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_062",
+   "type": "theater_seat",
+   "x": -5.275,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F2",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_063",
+   "type": "theater_seat",
+   "x": -4.725,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F3",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_064",
+   "type": "theater_seat",
+   "x": -4.175,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F4",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_065",
+   "type": "theater_seat",
+   "x": -3.625,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F5",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_066",
+   "type": "theater_seat",
+   "x": -3.075,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F6",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_067",
+   "type": "theater_seat",
+   "x": -2.525,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F7",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_068",
+   "type": "theater_seat",
+   "x": -1.975,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F8",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_069",
+   "type": "theater_seat",
+   "x": -1.425,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F9",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_070",
+   "type": "theater_seat",
+   "x": -0.875,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F10",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_071",
+   "type": "theater_seat",
+   "x": 0.875,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F11",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_072",
+   "type": "theater_seat",
+   "x": 1.425,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F12",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_073",
+   "type": "theater_seat",
+   "x": 1.975,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F13",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_074",
+   "type": "theater_seat",
+   "x": 2.525,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F14",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_075",
+   "type": "theater_seat",
+   "x": 3.075,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F15",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_076",
+   "type": "theater_seat",
+   "x": 3.625,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F16",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_077",
+   "type": "theater_seat",
+   "x": 4.175,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F17",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_078",
+   "type": "theater_seat",
+   "x": 4.725,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F18",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_079",
+   "type": "theater_seat",
+   "x": 5.275,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F19",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_080",
+   "type": "theater_seat",
+   "x": 5.825,
+   "z": 4.4,
+   "rot": 3.1416,
+   "y": 1.2,
+   "label": "F20",
+   "inferred": false
+  },
+  {
+   "id": "riser_005",
+   "type": "riser",
+   "x": 0.0,
+   "z": 5.25,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 15.0,
+   "d": 0.9,
+   "h": 1.5,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_013",
+   "type": "aisle_step",
+   "x": 0.0,
+   "z": 4.575,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.2,
+   "d": 0.45,
+   "h": 1.35,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_014",
+   "type": "aisle_step",
+   "x": -6.8,
+   "z": 4.575,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.35,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_015",
+   "type": "aisle_step",
+   "x": 6.8,
+   "z": 4.575,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.35,
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_081",
+   "type": "theater_seat",
+   "x": -5.825,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G1",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_082",
+   "type": "theater_seat",
+   "x": -5.275,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G2",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_083",
+   "type": "theater_seat",
+   "x": -4.725,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G3",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_084",
+   "type": "theater_seat",
+   "x": -4.175,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G4",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_085",
+   "type": "theater_seat",
+   "x": -3.625,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G5",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_086",
+   "type": "theater_seat",
+   "x": -3.075,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G6",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_087",
+   "type": "theater_seat",
+   "x": -2.525,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G7",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_088",
+   "type": "theater_seat",
+   "x": -1.975,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G8",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_089",
+   "type": "theater_seat",
+   "x": -1.425,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G9",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_090",
+   "type": "theater_seat",
+   "x": -0.875,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G10",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_091",
+   "type": "theater_seat",
+   "x": 0.875,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G11",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_092",
+   "type": "theater_seat",
+   "x": 1.425,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G12",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_093",
+   "type": "theater_seat",
+   "x": 1.975,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G13",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_094",
+   "type": "theater_seat",
+   "x": 2.525,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G14",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_095",
+   "type": "theater_seat",
+   "x": 3.075,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G15",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_096",
+   "type": "theater_seat",
+   "x": 3.625,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G16",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_097",
+   "type": "theater_seat",
+   "x": 4.175,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G17",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_098",
+   "type": "theater_seat",
+   "x": 4.725,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G18",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_099",
+   "type": "theater_seat",
+   "x": 5.275,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G19",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_100",
+   "type": "theater_seat",
+   "x": 5.825,
+   "z": 5.3,
+   "rot": 3.1416,
+   "y": 1.5,
+   "label": "G20",
+   "inferred": false
+  },
+  {
+   "id": "riser_006",
+   "type": "riser",
+   "x": 0.0,
+   "z": 6.15,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 15.0,
+   "d": 0.9,
+   "h": 1.8,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_016",
+   "type": "aisle_step",
+   "x": 0.0,
+   "z": 5.475,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.2,
+   "d": 0.45,
+   "h": 1.65,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_017",
+   "type": "aisle_step",
+   "x": -6.8,
+   "z": 5.475,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.65,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_018",
+   "type": "aisle_step",
+   "x": 6.8,
+   "z": 5.475,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.65,
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_101",
+   "type": "theater_seat",
+   "x": -5.825,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H1",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_102",
+   "type": "theater_seat",
+   "x": -5.275,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H2",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_103",
+   "type": "theater_seat",
+   "x": -4.725,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H3",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_104",
+   "type": "theater_seat",
+   "x": -4.175,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H4",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_105",
+   "type": "theater_seat",
+   "x": -3.625,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H5",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_106",
+   "type": "theater_seat",
+   "x": -3.075,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H6",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_107",
+   "type": "theater_seat",
+   "x": -2.525,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H7",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_108",
+   "type": "theater_seat",
+   "x": -1.975,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H8",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_109",
+   "type": "theater_seat",
+   "x": -1.425,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H9",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_110",
+   "type": "theater_seat",
+   "x": -0.875,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H10",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_111",
+   "type": "theater_seat",
+   "x": 0.875,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H11",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_112",
+   "type": "theater_seat",
+   "x": 1.425,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H12",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_113",
+   "type": "theater_seat",
+   "x": 1.975,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H13",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_114",
+   "type": "theater_seat",
+   "x": 2.525,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H14",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_115",
+   "type": "theater_seat",
+   "x": 3.075,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H15",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_116",
+   "type": "theater_seat",
+   "x": 3.625,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H16",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_117",
+   "type": "theater_seat",
+   "x": 4.175,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H17",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_118",
+   "type": "theater_seat",
+   "x": 4.725,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H18",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_119",
+   "type": "theater_seat",
+   "x": 5.275,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H19",
+   "inferred": false
+  },
+  {
+   "id": "theater_seat_120",
+   "type": "theater_seat",
+   "x": 5.825,
+   "z": 6.2,
+   "rot": 3.1416,
+   "y": 1.8,
+   "label": "H20",
+   "inferred": false
+  },
+  {
+   "id": "riser_007",
+   "type": "riser",
+   "x": 0.0,
+   "z": 7.05,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 15.0,
+   "d": 0.9,
+   "h": 2.1,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_019",
+   "type": "aisle_step",
+   "x": 0.0,
+   "z": 6.375,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.2,
+   "d": 0.45,
+   "h": 1.95,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_020",
+   "type": "aisle_step",
+   "x": -6.8,
+   "z": 6.375,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.95,
+   "inferred": false
+  },
+  {
+   "id": "aisle_step_021",
+   "type": "aisle_step",
+   "x": 6.8,
+   "z": 6.375,
+   "rot": 3.1416,
+   "y": 0.0,
+   "w": 1.4,
+   "d": 0.45,
+   "h": 1.95,
+   "inferred": false
+  },
+  {
+   "id": "theater_door_001",
+   "type": "theater_door",
+   "x": -7.5,
+   "z": -0.25,
+   "rot": 1.5708,
+   "y": 0.0,
+   "w": 1.8,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "exit_sign_001",
+   "type": "exit_sign",
+   "x": -7.5,
+   "z": -0.25,
+   "rot": 1.5708,
+   "y": 2.42,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "theater_door_002",
+   "type": "theater_door",
+   "x": 7.5,
+   "z": -0.25,
+   "rot": -1.5708,
+   "y": 0.0,
+   "w": 1.8,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "exit_sign_002",
+   "type": "exit_sign",
+   "x": 7.5,
+   "z": -0.25,
+   "rot": -1.5708,
+   "y": 2.42,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "theater_door_003",
+   "type": "theater_door",
+   "x": -7.5,
+   "z": 7.05,
+   "rot": 1.5708,
+   "y": 2.1,
+   "w": 0.9,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "exit_sign_003",
+   "type": "exit_sign",
+   "x": -7.5,
+   "z": 7.05,
+   "rot": 1.5708,
+   "y": 4.52,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "theater_door_004",
+   "type": "theater_door",
+   "x": 7.5,
+   "z": 7.05,
+   "rot": -1.5708,
+   "y": 2.1,
+   "w": 0.9,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "exit_sign_004",
+   "type": "exit_sign",
+   "x": 7.5,
+   "z": 7.05,
+   "rot": -1.5708,
+   "y": 4.52,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "theater_door_005",
+   "type": "theater_door",
+   "x": -7.5,
+   "z": -6.4,
+   "rot": 1.5708,
+   "y": 0.0,
+   "w": 1.8,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "exit_sign_005",
+   "type": "exit_sign",
+   "x": -7.5,
+   "z": -6.4,
+   "rot": 1.5708,
+   "y": 2.42,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "theater_door_006",
+   "type": "theater_door",
+   "x": 7.5,
+   "z": -6.4,
+   "rot": -1.5708,
+   "y": 0.0,
+   "w": 1.8,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "exit_sign_006",
+   "type": "exit_sign",
+   "x": 7.5,
+   "z": -6.4,
+   "rot": -1.5708,
+   "y": 2.42,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "booth_window_001",
+   "type": "booth_window",
+   "x": 0.0,
+   "z": 7.5,
+   "rot": 3.1416,
+   "y": 3.05,
+   "w": 3.6,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "bin_001",
+   "type": "bin",
+   "x": -7.1,
+   "z": 0.9,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "bin_002",
+   "type": "bin",
+   "x": 7.1,
+   "z": 0.9,
+   "rot": 0.0,
+   "inferred": false
+  }
+ ],
+ "provenance": "Sample venue modeled from typical black-box theater dimensions (15 x 16 m, 6.4 m grid); not scanned. Used to show multi-venue import and the edit agent on a second room."
+}
