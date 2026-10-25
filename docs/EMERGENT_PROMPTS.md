@@ -194,7 +194,12 @@ If a prompt breaks something, describe the exact bug (what you clicked, saw, exp
 > 3. Merge into a 3–5 cm voxel grid (average position and color per voxel). Color comes from the matching keyframe pixel (depth pixel × 7.5).
 > 4. Floor = the strongest histogram peak of y below the median phone height. Ceiling = the strongest peak above it.
 > 5. Align to the room: try yaw angles 0–90° in 0.25° steps and pick the one where wall points (1.6–2.6 m above the floor) give the sharpest x/z histograms. Main walls = the strongest histogram peaks. Propose a right-angle outline for me to accept.
-> 6. For each object detected in the keyframes (P3/SAM 3), take the median 3D point of its mask to get its floor position. Group same-type detections within ~40 cm into one instance.
+> 6. For each object detected in the keyframes (P3/SAM 3), take the median 3D point of its mask to get its floor position. Group same-type detections within ~40 cm into one instance. **No depth (far away or glass)?** Cast the camera ray through the box and intersect it with the known floor (floor items), walls (wall items) or a hanging height (lamps ~2.4 m).
+> 6b. **Free-space rule (important):**
+>    - Place tables only where the scan shows tabletop points (~0.68–0.76 m above the floor). Snap runs to the room's axes.
+>    - **Never place furniture where the scan clearly sees empty floor.** Those are aisles and open areas.
+>    - Extend a run only into areas the scan didn't cover, and mark those tables "inferred" (shown faded until confirmed).
+>    - Chairs go on the long sides of tables, never inside a table footprint.
 > 7. Show the scan as an optional point-cloud layer in the 3D editor, aligned with the twin. Report the scale check against tape measurements.
 >
 > **Sanity check with our venue scan:** floor-to-ceiling ≈ **3.68 m**, phone height ≈ 1.45 m above the floor, main hall ≈ **19.8 × 13.8 m**, and table runs show up as 0.8 m-wide strips.
