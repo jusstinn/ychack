@@ -79,27 +79,27 @@
   }
  },
  "counts": {
-  "column": 12,
+  "chair": 188,
+  "panel": 37,
   "pendant": 34,
-  "window": 19,
-  "panel": 50,
-  "screen": 2,
-  "door": 6,
-  "partition": 2,
-  "pilaster": 12,
-  "stage": 1,
-  "podium": 1,
-  "banner_vibecon": 2,
-  "ac_unit": 3,
+  "table": 32,
+  "pilaster": 14,
+  "column": 12,
+  "window": 8,
   "bin": 5,
-  "plant": 1,
+  "door": 5,
   "projector": 4,
-  "bar_stool": 1,
-  "av_cart": 2,
   "side_table": 4,
   "speaker": 4,
-  "table": 32,
-  "chair": 188
+  "ac_unit": 3,
+  "banner_vibecon": 2,
+  "av_cart": 2,
+  "screen": 2,
+  "stage": 1,
+  "podium": 1,
+  "plant": 1,
+  "bar_stool": 1,
+  "partition": 1
  },
  "items": [
   {
@@ -471,898 +471,6 @@
    "inferred": false
   },
   {
-   "id": "window_047",
-   "type": "window",
-   "x": -5.01,
-   "z": 6.87,
-   "rot": 3.1416,
-   "w": 1.3,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "window_048",
-   "type": "window",
-   "x": -9.75,
-   "z": 6.87,
-   "rot": 3.1416,
-   "w": 1.3,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "window_049",
-   "type": "window",
-   "x": -9.9,
-   "z": -0.31,
-   "rot": 1.5708,
-   "w": 1.3,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "window_050",
-   "type": "window",
-   "x": 9.85,
-   "z": 4.86,
-   "rot": -1.5708,
-   "w": 1.3,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "window_051",
-   "type": "window",
-   "x": 6.47,
-   "z": 6.87,
-   "rot": 3.1416,
-   "w": 1.3,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "window_052",
-   "type": "window",
-   "x": 2.69,
-   "z": 6.87,
-   "rot": 3.1416,
-   "w": 1.3,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "window_053",
-   "type": "window",
-   "x": -1.82,
-   "z": 6.87,
-   "rot": 3.1416,
-   "w": 1.3,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "window_054",
-   "type": "window",
-   "x": 9.85,
-   "z": 3.48,
-   "rot": -1.5708,
-   "w": 1.3,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "window_055",
-   "type": "window",
-   "x": -0.11,
-   "z": -6.88,
-   "rot": 0.0,
-   "w": 1.3,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "window_056",
-   "type": "window",
-   "x": 9.85,
-   "z": -5.48,
-   "rot": -1.5708,
-   "w": 1.3,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "window_057",
-   "type": "window",
-   "x": 9.85,
-   "z": -4.05,
-   "rot": -1.5708,
-   "w": 1.3,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "window_058",
-   "type": "window",
-   "x": 6.05,
-   "z": -6.88,
-   "rot": 0.0,
-   "w": 1.3,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "window_059",
-   "type": "window",
-   "x": 5.09,
-   "z": -6.88,
-   "rot": 0.0,
-   "w": 1.3,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "window_060",
-   "type": "window",
-   "x": -9.9,
-   "z": 6.14,
-   "rot": 1.5708,
-   "w": 1.3,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "window_061",
-   "type": "window",
-   "x": -8.02,
-   "z": 6.87,
-   "rot": 3.1416,
-   "w": 1.3,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "window_062",
-   "type": "window",
-   "x": 9.85,
-   "z": -0.78,
-   "rot": -1.5708,
-   "w": 1.3,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "window_063",
-   "type": "window",
-   "x": -8.89,
-   "z": -6.88,
-   "rot": 0.0,
-   "w": 1.3,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "window_064",
-   "type": "window",
-   "x": 7.41,
-   "z": 6.87,
-   "rot": 3.1416,
-   "w": 1.3,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "window_065",
-   "type": "window",
-   "x": -9.9,
-   "z": 5.08,
-   "rot": 1.5708,
-   "w": 1.3,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_066",
-   "type": "panel",
-   "x": -6.65,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_067",
-   "type": "panel",
-   "x": -8.25,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_068",
-   "type": "panel",
-   "x": -9.9,
-   "z": 5.84,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_069",
-   "type": "panel",
-   "x": -4.18,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_070",
-   "type": "panel",
-   "x": -9.9,
-   "z": 2.92,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_071",
-   "type": "panel",
-   "x": -9.9,
-   "z": 0.84,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_072",
-   "type": "panel",
-   "x": 9.85,
-   "z": 6.3,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_073",
-   "type": "panel",
-   "x": 9.49,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_074",
-   "type": "panel",
-   "x": 8.96,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_075",
-   "type": "panel",
-   "x": 8.16,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_076",
-   "type": "panel",
-   "x": 5.3,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_077",
-   "type": "panel",
-   "x": 4.42,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_078",
-   "type": "panel",
-   "x": 1.35,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_079",
-   "type": "panel",
-   "x": -2.49,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_080",
-   "type": "panel",
-   "x": -3.05,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_081",
-   "type": "panel",
-   "x": 2.73,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_082",
-   "type": "panel",
-   "x": 0.2,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_083",
-   "type": "panel",
-   "x": -9.9,
-   "z": 6.38,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_084",
-   "type": "panel",
-   "x": -9.9,
-   "z": -3.34,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_085",
-   "type": "panel",
-   "x": -9.9,
-   "z": -2.66,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_086",
-   "type": "panel",
-   "x": -9.9,
-   "z": -5.66,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_087",
-   "type": "panel",
-   "x": -6.03,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_088",
-   "type": "panel",
-   "x": -6.94,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_089",
-   "type": "panel",
-   "x": 0.25,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_090",
-   "type": "panel",
-   "x": 4.17,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_091",
-   "type": "panel",
-   "x": -0.44,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_092",
-   "type": "panel",
-   "x": 7.31,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_093",
-   "type": "panel",
-   "x": 9.85,
-   "z": -6.7,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_094",
-   "type": "panel",
-   "x": 5.01,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_095",
-   "type": "panel",
-   "x": 5.78,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_096",
-   "type": "panel",
-   "x": 9.82,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_097",
-   "type": "panel",
-   "x": 9.85,
-   "z": -0.84,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_098",
-   "type": "panel",
-   "x": 9.85,
-   "z": 1.76,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_099",
-   "type": "panel",
-   "x": -9.9,
-   "z": -4.61,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_100",
-   "type": "panel",
-   "x": -9.9,
-   "z": 4.97,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_101",
-   "type": "panel",
-   "x": -9.26,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_102",
-   "type": "panel",
-   "x": -1.0,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "panel_103",
-   "type": "panel",
-   "x": 9.85,
-   "z": 5.76,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_104",
-   "type": "panel",
-   "x": 9.85,
-   "z": 1.02,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_105",
-   "type": "panel",
-   "x": 9.85,
-   "z": 0.24,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_106",
-   "type": "panel",
-   "x": 9.85,
-   "z": -1.89,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_107",
-   "type": "panel",
-   "x": 9.85,
-   "z": -2.66,
-   "rot": -1.5708,
-   "y": 1.05,
-   "wall": "east",
-   "inferred": false
-  },
-  {
-   "id": "panel_108",
-   "type": "panel",
-   "x": 9.03,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_109",
-   "type": "panel",
-   "x": -9.9,
-   "z": 3.87,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_110",
-   "type": "panel",
-   "x": -9.9,
-   "z": 1.7,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_111",
-   "type": "panel",
-   "x": -9.9,
-   "z": -1.73,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_112",
-   "type": "panel",
-   "x": -9.9,
-   "z": -3.94,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_113",
-   "type": "panel",
-   "x": -9.9,
-   "z": -6.67,
-   "rot": 1.5708,
-   "y": 1.05,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "panel_114",
-   "type": "panel",
-   "x": -7.46,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.05,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "panel_115",
-   "type": "panel",
-   "x": -7.48,
-   "z": 6.87,
-   "rot": 3.1416,
-   "y": 1.05,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "screen_116",
-   "type": "screen",
-   "x": -4.75,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.25,
-   "w": 2.9,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "screen_117",
-   "type": "screen",
-   "x": 2.06,
-   "z": -6.88,
-   "rot": 0.0,
-   "y": 1.25,
-   "w": 2.9,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "door_118",
-   "type": "door",
-   "x": -9.9,
-   "z": 5.23,
-   "rot": 1.5708,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "door_119",
-   "type": "door",
-   "x": -4.08,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "door_120",
-   "type": "door",
-   "x": 3.0,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "door_121",
-   "type": "door",
-   "x": -1.6,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "door_122",
-   "type": "door",
-   "x": -8.75,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "door_123",
-   "type": "door",
-   "x": -4.99,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "partition_124",
-   "type": "partition",
-   "x": -9.9,
-   "z": -0.37,
-   "rot": 1.5708,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "partition_125",
-   "type": "partition",
-   "x": -9.9,
-   "z": 1.17,
-   "rot": 1.5708,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_126",
-   "type": "pilaster",
-   "x": -9.9,
-   "z": 1.49,
-   "rot": 1.5708,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_127",
-   "type": "pilaster",
-   "x": 4.82,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_128",
-   "type": "pilaster",
-   "x": -3.02,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_129",
-   "type": "pilaster",
-   "x": 0.77,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_130",
-   "type": "pilaster",
-   "x": -6.46,
-   "z": -6.88,
-   "rot": 0.0,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_131",
-   "type": "pilaster",
-   "x": -2.64,
-   "z": -6.88,
-   "rot": 0.0,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_132",
-   "type": "pilaster",
-   "x": 5.03,
-   "z": -6.88,
-   "rot": 0.0,
-   "wall": "north",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_133",
-   "type": "pilaster",
-   "x": -9.9,
-   "z": 6.54,
-   "rot": 1.5708,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_134",
-   "type": "pilaster",
-   "x": -6.2,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_135",
-   "type": "pilaster",
-   "x": -4.63,
-   "z": 6.87,
-   "rot": 3.1416,
-   "wall": "south",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_136",
-   "type": "pilaster",
-   "x": -9.9,
-   "z": -1.48,
-   "rot": 1.5708,
-   "wall": "west",
-   "inferred": false
-  },
-  {
-   "id": "pilaster_137",
-   "type": "pilaster",
-   "x": -9.7,
-   "z": -6.88,
-   "rot": 0.0,
-   "wall": "north",
-   "inferred": false
-  },
-  {
    "id": "stage_138",
    "type": "stage",
    "x": -1.9,
@@ -1474,7 +582,7 @@
   {
    "id": "projector_151",
    "type": "projector",
-   "x": -3.76,
+   "x": -3.04,
    "z": -3.11,
    "rot": 0.0,
    "inferred": false
@@ -1482,7 +590,7 @@
   {
    "id": "projector_152",
    "type": "projector",
-   "x": 3.13,
+   "x": 3.92,
    "z": -4.06,
    "rot": 0.0,
    "inferred": false
@@ -1490,7 +598,7 @@
   {
    "id": "projector_153",
    "type": "projector",
-   "x": -4.73,
+   "x": -4.01,
    "z": -3.84,
    "rot": 0.0,
    "inferred": false
@@ -1498,7 +606,7 @@
   {
    "id": "projector_154",
    "type": "projector",
-   "x": -3.25,
+   "x": -2.53,
    "z": -4.29,
    "rot": 0.0,
    "inferred": false
@@ -1558,38 +666,6 @@
    "z": -6.6,
    "rot": 0.0,
    "inferred": false
-  },
-  {
-   "id": "speaker_162",
-   "type": "speaker",
-   "x": -6.75,
-   "z": -6.76,
-   "rot": 0.0,
-   "inferred": true
-  },
-  {
-   "id": "speaker_163",
-   "type": "speaker",
-   "x": -3.25,
-   "z": -6.76,
-   "rot": 0.0,
-   "inferred": true
-  },
-  {
-   "id": "speaker_164",
-   "type": "speaker",
-   "x": 1.85,
-   "z": -6.76,
-   "rot": 0.0,
-   "inferred": true
-  },
-  {
-   "id": "speaker_165",
-   "type": "speaker",
-   "x": 5.35,
-   "z": -6.76,
-   "rot": 0.0,
-   "inferred": true
   },
   {
    "id": "table_166",
@@ -3350,6 +2426,714 @@
    "z": 5.43,
    "rot": 3.2088,
    "inferred": true
+  },
+  {
+   "id": "window_001",
+   "type": "window",
+   "x": -8.08,
+   "z": -6.88,
+   "rot": 0.0,
+   "w": 1.28,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "window_002",
+   "type": "window",
+   "x": 6.85,
+   "z": -6.88,
+   "rot": 0.0,
+   "w": 1.28,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "screen_001",
+   "type": "screen",
+   "x": -4.03,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.25,
+   "w": 3.3,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "screen_002",
+   "type": "screen",
+   "x": 2.85,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.25,
+   "w": 3.25,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_001",
+   "type": "pilaster",
+   "x": -6.43,
+   "z": -6.88,
+   "rot": 0.0,
+   "w": 0.2,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_001",
+   "type": "panel",
+   "x": -6.825,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_002",
+   "type": "panel",
+   "x": -6.035,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_002",
+   "type": "pilaster",
+   "x": 5.2,
+   "z": -6.88,
+   "rot": 0.0,
+   "w": 0.2,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_003",
+   "type": "panel",
+   "x": 4.805,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_004",
+   "type": "panel",
+   "x": 5.595,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_003",
+   "type": "pilaster",
+   "x": 8.55,
+   "z": -6.88,
+   "rot": 0.0,
+   "w": 0.2,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_005",
+   "type": "panel",
+   "x": 8.155,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_006",
+   "type": "panel",
+   "x": 8.945,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_004",
+   "type": "pilaster",
+   "x": -9.7,
+   "z": -6.88,
+   "rot": 0.0,
+   "w": 0.2,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_007",
+   "type": "panel",
+   "x": 0.83,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "panel_008",
+   "type": "panel",
+   "x": 9.525,
+   "z": -6.88,
+   "rot": 0.0,
+   "y": 1.05,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "window_003",
+   "type": "window",
+   "x": 9.85,
+   "z": -5.45,
+   "rot": -1.5708,
+   "w": 1.28,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "window_004",
+   "type": "window",
+   "x": 9.85,
+   "z": -3.68,
+   "rot": -1.5708,
+   "w": 1.28,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "window_005",
+   "type": "window",
+   "x": 9.85,
+   "z": -0.44,
+   "rot": -1.5708,
+   "w": 1.28,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "window_006",
+   "type": "window",
+   "x": 9.85,
+   "z": 2.38,
+   "rot": -1.5708,
+   "w": 1.28,
+   "wall": "east",
+   "inferred": true
+  },
+  {
+   "id": "window_007",
+   "type": "window",
+   "x": 9.85,
+   "z": 5.2,
+   "rot": -1.5708,
+   "w": 1.28,
+   "wall": "east",
+   "inferred": true
+  },
+  {
+   "id": "pilaster_005",
+   "type": "pilaster",
+   "x": 9.85,
+   "z": -1.85,
+   "rot": -1.5708,
+   "w": 0.2,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "panel_009",
+   "type": "panel",
+   "x": 9.85,
+   "z": -2.245,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "panel_010",
+   "type": "panel",
+   "x": 9.85,
+   "z": -1.455,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_006",
+   "type": "pilaster",
+   "x": 9.85,
+   "z": 0.97,
+   "rot": -1.5708,
+   "w": 0.2,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "panel_011",
+   "type": "panel",
+   "x": 9.85,
+   "z": 0.575,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "panel_012",
+   "type": "panel",
+   "x": 9.85,
+   "z": 1.365,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_007",
+   "type": "pilaster",
+   "x": 9.85,
+   "z": 3.79,
+   "rot": -1.5708,
+   "w": 0.2,
+   "wall": "east",
+   "inferred": true
+  },
+  {
+   "id": "panel_013",
+   "type": "panel",
+   "x": 9.85,
+   "z": 3.395,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": true
+  },
+  {
+   "id": "panel_014",
+   "type": "panel",
+   "x": 9.85,
+   "z": 4.185,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": true
+  },
+  {
+   "id": "panel_015",
+   "type": "panel",
+   "x": 9.85,
+   "z": -6.53,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": false
+  },
+  {
+   "id": "panel_016",
+   "type": "panel",
+   "x": 9.85,
+   "z": 6.35,
+   "rot": -1.5708,
+   "y": 1.05,
+   "wall": "east",
+   "inferred": true
+  },
+  {
+   "id": "window_008",
+   "type": "window",
+   "x": 6.9,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 1.28,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "door_001",
+   "type": "door",
+   "x": -7.9,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 1.4,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "door_002",
+   "type": "door",
+   "x": -4.5,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 1.08,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "door_003",
+   "type": "door",
+   "x": -1.6,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 1.08,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "door_004",
+   "type": "door",
+   "x": 3.0,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 1.08,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_008",
+   "type": "pilaster",
+   "x": -6.2,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 0.2,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_017",
+   "type": "panel",
+   "x": -6.595,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_018",
+   "type": "panel",
+   "x": -5.805,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_009",
+   "type": "pilaster",
+   "x": -3.02,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 0.2,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_019",
+   "type": "panel",
+   "x": -3.415,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_020",
+   "type": "panel",
+   "x": -2.625,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_010",
+   "type": "pilaster",
+   "x": 0.77,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 0.2,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_021",
+   "type": "panel",
+   "x": 0.375,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_022",
+   "type": "panel",
+   "x": 1.165,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_011",
+   "type": "pilaster",
+   "x": 4.82,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 0.2,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_023",
+   "type": "panel",
+   "x": 4.425,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "panel_024",
+   "type": "panel",
+   "x": 5.215,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_012",
+   "type": "pilaster",
+   "x": 8.75,
+   "z": 6.87,
+   "rot": 3.1416,
+   "w": 0.2,
+   "wall": "south",
+   "inferred": true
+  },
+  {
+   "id": "panel_025",
+   "type": "panel",
+   "x": 8.355,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": true
+  },
+  {
+   "id": "panel_026",
+   "type": "panel",
+   "x": 9.145,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": true
+  },
+  {
+   "id": "panel_027",
+   "type": "panel",
+   "x": -9.2,
+   "z": 6.87,
+   "rot": 3.1416,
+   "y": 1.05,
+   "wall": "south",
+   "inferred": false
+  },
+  {
+   "id": "door_005",
+   "type": "door",
+   "x": -9.9,
+   "z": 6.15,
+   "rot": 1.5708,
+   "w": 1.08,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "partition_001",
+   "type": "partition",
+   "x": -9.9,
+   "z": -0.4,
+   "rot": 1.5708,
+   "w": 2.7,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_013",
+   "type": "pilaster",
+   "x": -9.9,
+   "z": -1.88,
+   "rot": 1.5708,
+   "w": 0.2,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "pilaster_014",
+   "type": "pilaster",
+   "x": -9.9,
+   "z": 1.07,
+   "rot": 1.5708,
+   "w": 0.2,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_028",
+   "type": "panel",
+   "x": -9.9,
+   "z": -6.45,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_029",
+   "type": "panel",
+   "x": -9.9,
+   "z": -3.457,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_030",
+   "type": "panel",
+   "x": -9.9,
+   "z": -2.87,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_031",
+   "type": "panel",
+   "x": -9.9,
+   "z": -2.283,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_032",
+   "type": "panel",
+   "x": -9.9,
+   "z": 1.741,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_033",
+   "type": "panel",
+   "x": -9.9,
+   "z": 2.382,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_034",
+   "type": "panel",
+   "x": -9.9,
+   "z": 3.024,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_035",
+   "type": "panel",
+   "x": -9.9,
+   "z": 3.666,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_036",
+   "type": "panel",
+   "x": -9.9,
+   "z": 4.307,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "panel_037",
+   "type": "panel",
+   "x": -9.9,
+   "z": 4.949,
+   "rot": 1.5708,
+   "y": 1.05,
+   "wall": "west",
+   "inferred": false
+  },
+  {
+   "id": "speaker_001",
+   "type": "speaker",
+   "x": -6.43,
+   "z": -6.88,
+   "rot": 0.0,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "speaker_002",
+   "type": "speaker",
+   "x": -1.7,
+   "z": -6.88,
+   "rot": 0.0,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "speaker_003",
+   "type": "speaker",
+   "x": 0.2,
+   "z": -6.88,
+   "rot": 0.0,
+   "wall": "north",
+   "inferred": false
+  },
+  {
+   "id": "speaker_004",
+   "type": "speaker",
+   "x": 5.2,
+   "z": -6.88,
+   "rot": 0.0,
+   "wall": "north",
+   "inferred": false
   }
  ],
  "provenance": "Reconstructed from a 2.7-min iPhone LiDAR scan (Stray Scanner) + 95 keyframes analyzed by vision agents; items marked inferred were filled by row patterns where the scan had no coverage."
