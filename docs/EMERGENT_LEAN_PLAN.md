@@ -11,7 +11,7 @@
 - **Transparency line** for the video and submission: "We reconstructed this venue with our scan pipeline; the app imports the twin and everything you see is live."
 - **Ask the Emergent desk:** "Can we import 3D venue scenes we generated with our own scan pipeline, plus our own 3D model files and a hero video, as data and design assets?"
 
-**Credits:** about 2,000 + the 1,000 refill. Rough guess: L1 150 · L2 300 · L3 350 · L4 400 · L5 150 · fixes 400 = ~1,750.
+**Credits:** about 2,000 + the 1,000 refill. Rough guess: L1 150 · L2 300 · L3 350 · L4 400 · L5 300 · fixes 400 = ~1,900.
 - **Check usage after L1.**
 - **Roll back instead of looping.**
 - **Keep ~100 for deployment.**
@@ -138,26 +138,31 @@
 >
 > **Done when:** each command works in under ~20 s, passes validation, and is undoable.
 
-## L5 — Landing + How it works
-> Follow `design_landing.png` and `design_how.png` and DESIGN.md exactly.
+## L5 — The signature animation (built here, from scene data) + Landing + How it works
+> **Build a reusable `SceneReveal` component**, used as the landing hero **and** whenever a scene opens in the editor. It must be generated **from the scene JSON**, not from a video. Choreography (~10 s, see `design_landing.png` and DESIGN.md "Motion"):
+> 1. **Draw (0–3 s):** on cream paper, an SVG blueprint of the scene draws itself like a draughtsman, using stroke-dash animation in ink navy.
+>    - Walls first (thick strokes), then columns (circles), then tables, then chairs (thin), staggered from the stage outward.
+>    - A faint drafting grid and dimension ticks along two walls (e.g. "19.75 m", "13.75 m").
+> 2. **Erase (3–4.5 s):** a soft rounded eraser sweeps across in a zig-zag and wipes the drawing away. Use an animated SVG mask; leave faint graphite smudges.
+> 3. **Redraw (4.5–6.5 s):** a different layout draws in the same way: **Theater** rows facing the stage with a center aisle, computed by the same layout helper the agent uses.
+> 4. **Become 3D (6.5–10 s):** crossfade into the react-three-fiber scene, top-down camera matching the plan.
+>    - Everything **grows up from the floor** (staggered scale-Y from 0 to 1) as matte warm-white clay.
+>    - Real materials then spread across the surfaces.
+>    - The camera eases into the overview angle.
+>
+>    Respect `prefers-reduced-motion` (show the final frame). The hero shows the VibeCon Hall; a "Replay" link restarts it.
 >
 > **Landing ( / ):**
-> - Full-bleed hero playing `media/hero.mp4` (muted, autoplay, loop) on cream paper.
+> - `SceneReveal` as a full-bleed hero (fallback: `media/hero.mp4` if WebGL is unavailable).
 > - Headline: **"Your venue, as a living blueprint."**
 > - Subline: "Scan once. Rearrange, redecorate and quote any event in seconds, just by asking."
-> - Primary button "Open the demo venue" → editor with VibeCon Hall. Secondary: "How it works."
+> - Buttons "Open the demo venue" / "How it works."
 > - Three benefit cards: Scan → Twin · Edit by talking · Quote instantly.
 >
-> **How it works ( /how ):** a vertical story using `media/pipeline_1_scan.jpg` … `pipeline_5_twin.jpg`, one line each:
-> 1. "3-minute iPhone LiDAR walk-through"
-> 2. "Vision agents find every object and group duplicates into types"
-> 3. "Everything placed in true scale"
-> 4. "Blueprint → clay → real materials"
-> 5. "Edit by talking"
+> **How it works ( /how ):** a vertical story with `media/pipeline_1_scan.jpg` … `pipeline_5_twin.jpg`, one line each (scan → vision agents → true scale → blueprint/clay/real → edit by talking), plus the honest note "This venue was reconstructed with our scan pipeline and imported into the app."
 >
-> Include the honest note: "This venue was reconstructed with our scan pipeline and imported into the app."
->
-> **Done when:** both pages match the mockups on laptop and phone.
+> **Done when:** the hero plays the full draw → erase → redraw → grow-into-3D sequence smoothly on a laptop, opening a scene in the editor plays the reveal (skippable), and both pages match the mockups.
+> **Budget tip:** if credits run low, keep steps 1 and 4 and drop the eraser and redraw.
 
 ## L6 (only if credits remain) — pick one
 - **Product link → 3D:** paste a URL; the backend extracts name, price, size and image via Claude, then runs image-to-3D via fal.ai TRELLIS.2 (I'll paste `FAL_KEY`), scales the model to size, and adds it to the catalog as a partner item the agent can place.
