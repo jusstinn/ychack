@@ -3,7 +3,7 @@
 Upload these into the Emergent project when prompt **L1** (docs/EMERGENT_LEAN_PLAN.md) asks for them.
 
 ## Scenes (two venues)
-- `venue_twin.json`: **VibeCon Hall**, reconstructed from our scan. Room outline, 3.68 m ceiling, 385 items (188 chairs, 32 tables, 12 columns, 34 pendant lamps, 50 orange panels, windows, doors, stage, screens…). `inferred: true` marks items filled in by pattern where the scan had no coverage.
+- `venue_twin.json`: **VibeCon Hall**, reconstructed from our scan. Room outline, 3.68 m ceiling, 361 items (188 chairs, 32 tables, 12 columns, 34 pendant lamps, 37 orange acoustic panels in pairs on the piers between 8 windows, doors, stage, screens…). `inferred: true` marks items filled in by pattern where the scan had no coverage.
 - `theater_twin.json`: **Studio Theater**, a 152-seat black-box theater (15 × 16 m, 6.4 m lighting grid). It has:
   - a stage deck with red house curtains, valance and a lit cyclorama
   - 6 seating tiers with 120 theater seats (rows C–H), plus 2 floor rows of 32 loose chairs (rows A–B)
