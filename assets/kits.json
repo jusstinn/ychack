@@ -45,6 +45,22 @@
     "candle",
     "string_lights"
    ]
+  },
+  {
+   "name": "living_room_set",
+   "label": "Living room set (stage)",
+   "recipe": "Dress the stage as a living room, for a play, a talk-show or a fireside chat. Everything stands on the stage, which the app places on top automatically. Back wall: two scenic flats near the back of the stage, angled about 15 degrees inward like the corners of a room; leave a gap between them so the lit cyclorama shows through like a window. Center stage, facing the audience: the sofa, with the coffee table about 0.9 m in front of it and a rug under both. Two armchairs either side of the coffee table, turned about 40 degrees toward the sofa. A floor lamp beside the sofa, a bookshelf against one flat and a plant against the other. Keep 1 m clear along the stage front edge and in front of the stage steps; stay inside the masking drapes. If the user names a color, use the sofa and armchair presets (teal, mustard, grey, burgundy).",
+   "uses": [
+    "scenic_flat",
+    "sofa",
+    "armchair",
+    "coffee_table",
+    "area_rug",
+    "floor_lamp",
+    "bookshelf",
+    "plant",
+    "side_table"
+   ]
   }
  ]
 }

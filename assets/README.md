@@ -19,7 +19,7 @@ Both scenes use the same format. Coordinates are in meters; see `coordinate_syst
 - `inventory`: quantities this venue owns, overriding the catalog.
 
 ## Catalog, kits, models
-- `catalog.json`: 49 object types. Each has:
+- `catalog.json`: 56 object types. Each has:
   - model file, size, seats
   - per-event price (partner prices are demo assumptions) and quantity owned
   - `mount`:
@@ -27,15 +27,17 @@ Both scenes use the same format. Coordinates are in meters; see `coordinate_syst
     - `wall`: placed at its `y`
     - `ceiling`: hangs from the ceiling; the model origin is the mount point
   - `platform`: true for the stage, stage deck, risers and aisle steps
-- `kits.json`: Wedding, Theater, Conference and Cabaret, as plain-language recipes for the edit agent. Positions are never precomputed.
-- `models/*.glb`: 49 3D models. Every model's front faces +z.
+  - `materials`: color presets the agent can switch to (chairs, tables, theater seats, sofas, armchairs)
+- `kits.json`: Wedding, Theater, Conference, Cabaret and Living room set, as plain-language recipes for the edit agent. Positions are never precomputed.
+- `models/*.glb`: 56 3D models. Every model's front faces +z.
   - **Hall:** chairs, trestle tables, columns, pendants, panels, stage…
   - **Theater:** theater seat, riser, aisle step, stage deck, stage steps, cyc, drape, house curtain, valance, batten, stage light, house light, PA speaker, double door, exit sign, booth window
   - **Decorations:** tablecloth, centerpiece, candle, dance floor, flower arch, string lights, curtain, spotlight, aisle runner, banquet round table
+  - **Set pieces / props:** sofa, armchair, coffee table, area rug, floor lamp, bookshelf, scenic flat (wallpapered set wall). Sofas and armchairs come in teal, mustard, grey or burgundy.
 
 ## Media
 - `media/pipeline_1_scan.jpg` … `pipeline_5_twin.jpg`: the how-it-works story for the scanned hall.
-- `media/scene_theater_overview.jpg`, `scene_theater_seat.jpg` (view from seat E10), `scene_theater_stage.jpg`, `scene_theater_blueprint.jpg`, `scene_theater_clay.jpg`: the theater's look targets.
+- `media/scene_theater_overview.jpg`, `scene_theater_seat.jpg` (view from seat E10), `scene_theater_stage.jpg`, `scene_theater_blueprint.jpg`, `scene_theater_clay.jpg`: the theater's look targets. `scene_theater_livingroom_seat.jpg` shows the stage after "dress the stage as a living room".
 - `media/wedding_*.jpg`, `twin_overview.jpg`, `hall_theater_setup_eye.jpg`: look targets for edits in the hall.
 - `design/*.png`: UI mockups (see docs/DESIGN.md).
 

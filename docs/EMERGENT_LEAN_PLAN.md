@@ -2,7 +2,7 @@
 
 > **Send these in order, one at a time.** After each one, test in the preview, then send the next.
 > **Design:** follow `docs/DESIGN.md` and the mockups in `assets/design/` (upload the PNGs when a prompt mentions them).
-> **Assets:** upload from `assets/` when L1 asks: the two scenes (`venue_twin.json`, `theater_twin.json`), catalog, kit recipes, 49 3D models and media.
+> **Assets:** upload from `assets/` when L1 asks: the two scenes (`venue_twin.json`, `theater_twin.json`), catalog, kit recipes, 56 3D models and media.
 > **Rules:** Emergent writes all code. Never paste code. API keys only in the backend.
 
 **Decision (recap):**
@@ -62,7 +62,7 @@
 >   - an item's own `y` always wins; when an item has w/d/h, scale its model from the catalog size to that size
 > - **Visual states:**
 >   - items with `inferred: true` render at 70% opacity until confirmed
->   - items with a `material` override show it (tables: white / black / walnut; chairs: white / black / gold)
+>   - items with a `material` override show it, using the presets in the catalog's `materials` (name → color of the main surface: tables white / black / walnut, chairs white / black / gold, theater seats red / blue / black, sofas and armchairs teal / mustard / grey / burgundy)
 > - **Room:**
 >   - walls from the outline, ceiling at the scene's height
 >   - colors from the scene's `style`: the hall is warm white with a dark varnished wood floor, the theater is a black box
@@ -146,6 +146,7 @@
 > - "move the left table run one square right"
 > - "add 10 more chairs along the back wall"
 > - in the theater: "set up a cabaret night for 64 on the floor" (cabaret kit), "make all the theater seats blue" (seat presets red / blue / black), "add a 4 × 2.4 m thrust in front of the stage" (a stage_deck 0.6 m high), "show me the view from seat E10"
+> - set pieces: "dress the stage as a living room" (living_room_set recipe: scenic flats, sofa, armchairs, coffee table, rug, floor lamp, bookshelf, plant, all placed by Claude on the stage), then "make the couch mustard" or "move the sofa one square left". The look target is `assets/media/scene_theater_livingroom_seat.jpg`.
 >
 > **Done when:** each command works in under ~20 s, passes validation, and is undoable.
 

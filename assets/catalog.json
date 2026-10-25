@@ -1,7 +1,7 @@
 {
  "currency": "USD",
  "pricing_note": "Owned-item prices are per-event fees; partner prices are assumptions for the demo.",
- "placement_note": "mount: floor = stands on the floor, or on top of a platform (stage, stage_deck, riser, aisle_step) when its center is over one; wall = placed at the item's y (default 0) against a wall; ceiling = hangs from the ceiling, model origin = mount point. An item's own y always wins. Items with w/d/h are scaled from size_m to that size. qty_owned null = fixed building element; a scene's 'inventory' overrides qty_owned for that venue.",
+ "placement_note": "mount: floor = stands on the floor, or on top of a platform (stage, stage_deck, riser, aisle_step) when its center is over one; wall = placed at the item's y (default 0) against a wall; ceiling = hangs from the ceiling, model origin = mount point. An item's own y always wins. Items with w/d/h are scaled from size_m to that size. qty_owned null = fixed building element; a scene's 'inventory' overrides qty_owned for that venue. materials = override presets an item accepts, as name -> color of its main surface (e.g. set_material(sofa, 'mustard') recolors the upholstery #B8862B).",
  "items": [
   {
    "type": "chair",
@@ -19,6 +19,11 @@
    "seats": 1,
    "mount": "floor",
    "platform": false,
+   "materials": {
+    "white": "#F2F1ED",
+    "black": "#1C1C1E",
+    "gold": "#C8A253"
+   },
    "link": null
   },
   {
@@ -37,6 +42,11 @@
    "seats": 6,
    "mount": "floor",
    "platform": false,
+   "materials": {
+    "white": "#F3F2EE",
+    "black": "#1D1D1F",
+    "walnut": "#5A3A26"
+   },
    "link": null
   },
   {
@@ -595,6 +605,11 @@
    "seats": 1,
    "mount": "floor",
    "platform": false,
+   "materials": {
+    "red": "#8A1823",
+    "blue": "#1D3F8A",
+    "black": "#1A1A1D"
+   },
    "link": null
   },
   {
@@ -882,6 +897,144 @@
    "qty_owned": null,
    "seats": 0,
    "mount": "wall",
+   "platform": false,
+   "link": null
+  },
+  {
+   "type": "sofa",
+   "name": "Velvet sofa, 3-seat (set piece / lounge)",
+   "model": "models/sofa.glb",
+   "size_m": [
+    2.2,
+    1.0,
+    0.81
+   ],
+   "category": "props",
+   "source": "partner",
+   "unit_price_usd": 120,
+   "qty_owned": null,
+   "seats": 0,
+   "mount": "floor",
+   "platform": false,
+   "materials": {
+    "teal": "#2C5C63",
+    "mustard": "#B8862B",
+    "grey": "#6B6E73",
+    "burgundy": "#6E1F2A"
+   },
+   "link": null
+  },
+  {
+   "type": "armchair",
+   "name": "Velvet armchair (set piece / lounge)",
+   "model": "models/armchair.glb",
+   "size_m": [
+    0.98,
+    0.94,
+    0.81
+   ],
+   "category": "props",
+   "source": "partner",
+   "unit_price_usd": 60,
+   "qty_owned": null,
+   "seats": 0,
+   "mount": "floor",
+   "platform": false,
+   "materials": {
+    "teal": "#2C5C63",
+    "mustard": "#B8862B",
+    "grey": "#6B6E73",
+    "burgundy": "#6E1F2A"
+   },
+   "link": null
+  },
+  {
+   "type": "coffee_table",
+   "name": "Walnut coffee table",
+   "model": "models/coffee_table.glb",
+   "size_m": [
+    1.22,
+    0.62,
+    0.42
+   ],
+   "category": "props",
+   "source": "partner",
+   "unit_price_usd": 40,
+   "qty_owned": null,
+   "seats": 0,
+   "mount": "floor",
+   "platform": false,
+   "link": null
+  },
+  {
+   "type": "area_rug",
+   "name": "Area rug 3 x 2 m",
+   "model": "models/area_rug.glb",
+   "size_m": [
+    3.0,
+    2.0,
+    0.012
+   ],
+   "category": "props",
+   "source": "partner",
+   "unit_price_usd": 45,
+   "qty_owned": null,
+   "seats": 0,
+   "mount": "floor",
+   "platform": false,
+   "link": null
+  },
+  {
+   "type": "floor_lamp",
+   "name": "Brass floor lamp (lit)",
+   "model": "models/floor_lamp.glb",
+   "size_m": [
+    0.46,
+    0.46,
+    1.7
+   ],
+   "category": "props",
+   "source": "partner",
+   "unit_price_usd": 25,
+   "qty_owned": null,
+   "seats": 0,
+   "mount": "floor",
+   "platform": false,
+   "link": null
+  },
+  {
+   "type": "bookshelf",
+   "name": "Bookshelf with books",
+   "model": "models/bookshelf.glb",
+   "size_m": [
+    1.0,
+    0.34,
+    2.0
+   ],
+   "category": "props",
+   "source": "partner",
+   "unit_price_usd": 40,
+   "qty_owned": null,
+   "seats": 0,
+   "mount": "floor",
+   "platform": false,
+   "link": null
+  },
+  {
+   "type": "scenic_flat",
+   "name": "Scenic flat 3 x 3.6 m (wallpapered set wall, braced)",
+   "model": "models/scenic_flat.glb",
+   "size_m": [
+    3.0,
+    1.3,
+    3.6
+   ],
+   "category": "props",
+   "source": "partner",
+   "unit_price_usd": 85,
+   "qty_owned": null,
+   "seats": 0,
+   "mount": "floor",
    "platform": false,
    "link": null
   }
