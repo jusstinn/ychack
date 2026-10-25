@@ -35,6 +35,7 @@
 > - Import both scenes now: **"VibeCon Hall"** (`venue_twin.json`, our scanned hall) and **"Studio Theater"** (`theater_twin.json`, a 152-seat black-box theater).
 >
 > **Catalog and models:** import `catalog.json`, `kits.json` and every file in `models/` (GLB) into built-in storage. A scene can only use types that exist in the catalog; import shows a warning for unknown types.
+> - **Assets page ( /admin/assets ):** lets me re-upload `catalog.json`, `kits.json`, scene files and model files at any time. Replace by type or scene name, keep everything else. We will keep updating these files, so updates must not need a code change.
 >
 > **Pages:**
 > - Landing ( / )
