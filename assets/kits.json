@@ -3,87 +3,36 @@
   {
    "name": "wedding",
    "label": "Wedding",
-   "steps": [
-    {
-     "add": "tablecloth",
-     "rule": "each_table"
-    },
-    {
-     "add": "centerpiece",
-     "rule": "each_table_center"
-    },
-    {
-     "add": "candle",
-     "rule": "each_table",
-     "count": 2,
-     "offsets_m": [
-      -0.55,
-      0.55
-     ]
-    },
-    {
-     "swap": {
-      "from": "chair",
-      "to": "chair_gold"
-     }
-    },
-    {
-     "add": "dance_floor",
-     "rule": "largest_open_area",
-     "prefer_near": "stage_front",
-     "size_m": [
-      4.0,
-      2.5
-     ],
-     "clear_loose_chairs": true,
-     "min_clearance_m": 0.3
-    },
-    {
-     "add": "flower_arch",
-     "rule": "on_stage_center"
-    },
-    {
-     "add": "string_lights",
-     "rule": "across_hall_z",
-     "count": 7,
-     "height_m": 3.3
-    }
+   "recipe": "Elegant wedding reception. On every table: one floor-length white tablecloth, one floral centerpiece at the table center, and two candles 0.55 m either side of the center along the table. Swap every chair to the gold chiavari chair. Add one dance floor (about 4 x 2.5 m) in the best open area near the front of the stage; if loose chairs (not at a table) are in the way, remove them. Center one flower arch on the stage. Hang string lights across the hall, about 7 strands evenly spaced along the room width, running front to back. Keep all aisles >= 44 in and exits clear.",
+   "uses": [
+    "tablecloth",
+    "centerpiece",
+    "candle",
+    "chair_gold",
+    "dance_floor",
+    "flower_arch",
+    "string_lights"
    ]
   },
   {
    "name": "theater",
    "label": "Theater",
-   "steps": [
-    {
-     "generate_layout": {
-      "setup": "theater",
-      "guests": 150,
-      "center_aisle_in": 44,
-      "side_aisles_in": 44,
-      "row_pitch_m": 0.92,
-      "seat_pitch_m": 0.52,
-      "face": "stage",
-      "skip": [
-       "columns",
-       "exits"
-      ]
-     }
-    },
-    {
-     "add": "curtain",
-     "rule": "behind_stage",
-     "width_m": "stage_width+3.0"
-    },
-    {
-     "add": "spotlight",
-     "rule": "stage_sides",
-     "count": 2,
-     "offset_m": 1.6
-    },
-    {
-     "add": "aisle_runner",
-     "rule": "center_aisle"
-    }
+   "recipe": "Theater / keynote setup. Remove all tables (keep fixed building items). Place chairs in straight rows facing the stage, centered on the stage, with a 44-in center aisle aligned with the stage center and 44-in side aisles along the walls; first row ~1 m from the stage front; row pitch ~0.92 m; seat pitch ~0.52 m; skip seats that would collide with columns or block exits. Stop at the requested guest count. Add a black curtain behind the stage (stage width + 3 m), two spotlights on stands at the front corners of the stage aimed at it, and a red aisle runner down the center aisle.",
+   "uses": [
+    "chair",
+    "curtain",
+    "spotlight",
+    "aisle_runner"
+   ]
+  },
+  {
+   "name": "conference",
+   "label": "Conference",
+   "recipe": "Classroom conference: tables in rows facing the stage with 2-3 chairs per table on the stage-facing side, a center aisle, podium on stage, screens on.",
+   "uses": [
+    "table",
+    "chair",
+    "podium"
    ]
   }
  ]

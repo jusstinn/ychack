@@ -1,152 +1,174 @@
-# Lean Emergent plan (Sat ~8:15 PM): 6 prompts, demo-first
+# Lean Emergent plan v2: 6 prompts, demo-first, agentive editing
 
-**Decision:** we reconstruct the venue ourselves (scan → AI detections → twin) and ship the result as **data and design assets**: a twin JSON, 3D model files and media. The **app, built 100% in Emergent**, imports the twin and does everything interactive:
-- the 3D view
-- the blueprint editor
-- the AI edit agent
-- the decoration kits
-- the landing and "How it works" pages
+> **Send these in order, one at a time.** After each one, test in the preview, then send the next.
+> **Design:** follow `docs/DESIGN.md` and the mockups in `assets/design/` (upload the PNGs when a prompt mentions them).
+> **Assets:** upload from `assets/` when L1 asks: the venue twin, catalog, kit recipes, 3D models and media.
+> **Rules:** Emergent writes all code. Never paste code. API keys only in the backend.
 
-**Be transparent** in the video and submission: "We reconstructed this venue with our scan pipeline; the app imports the twin and everything you see is live."
+**Decision (recap):**
+- We reconstruct venues ourselves and ship them as **scene files (data) plus 3D models (design assets)**.
+- The **app imports scenes**. Everything interactive is built here and is **agentive**: Claude decides placements live from the scene and the catalog. Nothing is precomputed.
+- **Transparency line** for the video and submission: "We reconstructed this venue with our scan pipeline; the app imports the twin and everything you see is live."
+- **Ask the Emergent desk:** "Can we import 3D venue scenes we generated with our own scan pipeline, plus our own 3D model files and a hero video, as data and design assets?"
 
-**Confirm with the Emergent desk:** "Can we import a 3D venue model we generated with our own scan pipeline, plus our own 3D model files and a hero video, as data and design assets?"
-
-**Video rule:** the demo video is a screen recording of the live app (no slides beyond a title card). So the pipeline story must live **inside the app**, on the "How it works" page.
-
-## Assets we provide (upload into the project when a prompt asks)
-- `venue_twin.json`: room outline and height, plus every item: type, x/z in meters, rotation, size, and `inferred: true|false`.
-- `catalog.json`: one entry per object type: name, model file, size, seats, price per unit (assumption), quantity owned.
-- `kits.json`: Wedding and Theater, each a list of catalog items plus placement rules.
-- `models/*.glb`: the 3D models (chair, table, column, pendant lamp, orange panel, stage, screen, banner, window, door, partition, bin, AC unit, plus decorations: tablecloth, centerpiece, candle, flower arch, dance floor, string lights, curtain, spotlight, aisle runner, gold chair).
-- `media/hero.mp4`: landing hero (blueprint draws → eraser → redraw → becomes 3D).
-- `media/pipeline_*.jpg`: How-it-works images (LiDAR scan → AI detections → blueprint → clay → twin).
-
-## Credit rules (about 2,000 + the 1,000 refill)
-- **Get the 1,000-credit refill now.**
-- **One prompt at a time.** Test in the preview, then send the next.
-- **If something breaks:** describe the exact bug once (what you clicked, saw, expected). If the next try is still wrong, **roll back to the last checkpoint** instead of looping.
-- Use the default (strong) model for L2–L4. A cheaper model, if offered, is fine for L5 only.
-- **Rough budget (a guess; check after L1):** L1 150 · L2 300 · L3 350 · L4 350 · L5 150 · fixes 400 = **~1,700 credits**.
+**Credits:** about 2,000 + the 1,000 refill. Rough guess: L1 150 · L2 300 · L3 350 · L4 400 · L5 150 · fixes 400 = ~1,750.
+- **Check usage after L1.**
+- **Roll back instead of looping.**
+- **Keep ~100 for deployment.**
 
 ---
 
-## L1 — App skeleton + import our venue
-> Build a single-venue web app called **VenueTwin**: an AI venue planner for small event venues.
+## L1 — App skeleton, scenes, import
+> Build a web app called **VenueTwin**: an AI venue planner. Venues get a 3D "twin" of their space, rearrange and decorate it by talking to an AI, and see seats and price update live.
 >
 > **Data:**
-> - **Twin:** room outline in meters, ceiling height, and a list of items. Each item has id, type, x, z, rotation in radians, optional width/depth, an `inferred` flag and an optional `kit` name.
-> - **CatalogItem:** type, name, 3D model file, width/depth/height, seats, unit price, quantity owned.
-> - **Kit:** name, item list, placement rules.
-> - **EditHistory:** list of changes, for undo.
+> - **Scene:** name, room outline (polygon in meters), ceiling height, item list. Each item has id, type, x, z, rotation in radians, optional w/d, an `inferred` flag, an optional `group` tag (e.g. "wedding"), and an optional `material` override.
+> - **CatalogItem:** type, name, 3D model file, size in meters [w, d, h], seats, unit price, quantity owned, source owned/partner, category.
+> - **KitRecipe:** name, label, plain-language recipe, list of steps.
+> - **SceneVersion:** a snapshot after every change (undo/redo and history).
 >
-> **Import:** load the files I upload (`venue_twin.json`, `catalog.json`, `kits.json`, the `models/*.glb` files) into built-in storage and the database. Add a "Reset demo venue" button that restores the imported twin.
+> **Multiple scenes:**
+> - An **Import scene** button accepts a scene JSON file (format = `assets/venue_twin.json`).
+> - A **scene switcher** in the top bar.
+> - **"Reset scene"** restores the imported original.
+> - We'll import two scenes: **"VibeCon Hall"** now, and a **"Theater"** scene later tonight.
 >
-> **Pages:** Landing ( / ), Twin editor ( /venue ), How it works ( /how ).
+> **Catalog and models:** import `catalog.json`, `kits.json` and every file in `models/` (GLB) into built-in storage. A scene can only use types that exist in the catalog; import shows a warning for unknown types.
+>
+> **Pages:**
+> - Landing ( / )
+> - Editor ( /venue/:sceneId )
+> - How it works ( /how )
+>
+> Use the design system in `DESIGN.md` (I'll upload it with the mockups `design_landing.png`, `design_editor.png`, `design_how.png`).
 >
 > **Architecture rules:**
 > - API keys only in backend environment variables.
-> - Store files in built-in storage, never on local disk.
-> - Any AI call runs as a background job with status polling (requests time out at ~2 min).
-> - For 3D use **@react-three/fiber v9 + @react-three/drei v10** (matching React 19), pinned.
+> - Files in built-in storage, never local disk.
+> - AI calls as background jobs with status polling (requests time out at ~2 min).
+> - 3D with **@react-three/fiber v9 + @react-three/drei v10** (React 19), pinned.
 >
-> **Done when:** after uploading the files, /venue lists the imported items by type with counts (e.g., chair 188, table 32, column 12), and "Reset demo venue" works.
+> **Done when:** I can import `venue_twin.json`, see it in the scene switcher with counts by type (e.g. chair 188, table 32, column 12), import a second scene file, switch between them, and reset a scene.
 
 ## L2 — The 3D twin (premium look)
-> On /venue, render the twin in 3D with react-three-fiber.
-> - **Instancing:** one instanced mesh per catalog model (hundreds of chairs must stay smooth). Use each item's x, z and rotation; the floor is y = 0. Items with `inferred: true` render slightly faded.
+> In the editor, render the current scene in 3D (react-three-fiber).
+> - **Instancing:** one instanced mesh per catalog model (hundreds of chairs stay smooth). Floor y = 0. Every model's front faces +z at rotation 0. The pendant model's origin is its ceiling mount; place it at ceiling height.
+> - **Visual states:**
+>   - items with `inferred: true` render at 70% opacity until confirmed
+>   - items with a `material` override show it (tables: white / black / walnut; chairs: white / black / gold)
 > - **Room:**
->   - walls from the outline (white), ceiling at the given height
+>   - white walls from the outline, ceiling at the scene's height
 >   - dark varnished wood floor
->   - a "dollhouse" toggle that hides the ceiling and lowers the two near walls
-> - **Premium lighting:** drei `Environment` built from `Lightformer` softboxes (big overhead softbox, a strip light each side, a dim warm floor bounce), N8AO ambient occlusion, `NeutralToneMapping`, soft contact shadows.
-> - **Quality and performance:** `PerformanceMonitor` turns AO and shadows off on weak devices; pixel ratio ≤ 1.5 on phones.
-> - **Camera presets:** Overview (dollhouse corner), Eye level (back of the room looking at the stage), Top-down plan.
+>   - a **dollhouse toggle** (hide the ceiling, lower the two walls nearest the camera)
+> - **Premium lighting (see DESIGN.md "3D look"):**
+>   - drei `Environment` from `Lightformer` softboxes: a big overhead softbox, a strip light on each side, a dim warm floor bounce
+>   - N8AO ambient occlusion, `NeutralToneMapping`, soft contact shadows
+>   - pendant lamps glow softly
+> - **Performance:** `PerformanceMonitor` (AO and shadows off on weak devices), pixel ratio ≤ 1.5 on phones.
+> - **Camera presets:** Overview (dollhouse corner), Eye level (back of the room looking at the stage), Top-down, with smooth transitions.
 >
-> **Done when:** the venue looks like a premium architectural render, orbits smoothly on a laptop, and the presets work.
+> **Done when:** the scene looks like `assets/media/pipeline_5_twin.jpg`, orbits smoothly on a laptop, and the presets work.
 
-## L3 — Blueprint editor + live metrics (DoBu-style)
-> Add a **Blueprint** panel next to the 3D view: a top-down plan in blueprint style (navy background, white lines) with a visible grid (0.25 m squares; toggle 0.5 m or 1 ft).
-> - **Select:** click, shift-click, drag a box, or "select all of this type." Selected items are highlighted yellow in both 2D and 3D.
-> - **Move:** drag to move (snaps to the grid). **Arrow keys nudge one grid square** (Shift = 4).
-> - **Rotate / delete / duplicate / undo:** R = 90°, Q/E = 15°, Delete, Cmd/Ctrl+D duplicate, Cmd/Ctrl+Z undo, Shift+Cmd/Ctrl+Z redo.
-> - **"+ Add" palette from the catalog:** Table (comes with 6 chairs), Chair, Round table, Stage riser, Bar, and so on. Click to place at the view center, then drag.
-> - **Live metrics panel with before → after deltas** after every change:
+## L3 — Blueprint editor + live metrics (like DoBu's site-plan editor)
+> Add the **Blueprint panel** (left side, see `design_editor.png`): a top-down plan in blueprint style (navy, white lines) with a grid (0.25 m squares; toggle 0.5 m / 1 ft).
+> - **Select:** click, shift-click, drag-box, "select all of this type." Selected items are highlighted yellow in **both** 2D and 3D.
+> - **Move:** drag (snaps to the grid). **Arrow keys nudge one square** (Shift = 4).
+> - **Rotate / delete / duplicate / undo:** R = 90°, Q/E = 15°, Delete, Cmd/Ctrl+D duplicate, Cmd/Ctrl+Z / Shift+Cmd/Ctrl+Z undo/redo.
+> - **"+ Add" palette from the catalog:** "Table + 6 chairs", Chair, Stage riser, Bar stool, and so on. Click to place at the plan center, then drag.
+> - **Metrics bar** (top of the editor) with **before → after deltas** after every change:
 >   - seats
 >   - tables and chairs used vs. owned (warn if over)
->   - **narrowest aisle vs. 44 in (1.12 m)**: red warning plus the offending items highlighted
->   - exits clear yes/no
->   - total price (owned items' fees + partner items)
-> - 2D and 3D always show the same data.
+>   - **narrowest aisle vs. 44 in (1.12 m)** (red warning and the offending items highlighted)
+>   - exits clear
+>   - **total price** (owned per-event fees + partner items)
+> - 2D and 3D always show the same data; every change is saved as a SceneVersion.
 >
-> **Done when:** I can add a table, nudge a table run one square right with the arrow keys, see the 3D update instantly, and watch the metrics show deltas, including a red aisle warning when I push tables too close.
+> **Done when:** I can add a table, nudge a table run one square right with the arrow keys, see the 3D update instantly, and the metrics show deltas, including a red aisle warning when tables get too close.
 
-## L4 — The AI edit agent + decoration kits
-> Add an **Edit chat** under the blueprint panel. Use the **Anthropic API** (Claude Opus 5.5, or Sonnet for speed) with tool calling.
+## L4 — The AI edit agent (agentive, not precomputed)
+> Add the **Edit chat** (right side, see `design_editor.png`). Use the **Anthropic API** with tool calling (model `claude-opus-5-5`, or `claude-sonnet-5-5` for speed; I'll paste `ANTHROPIC_API_KEY` when you ask).
 >
-> **Request:** send the scene as compact JSON (room, items with ids/types/positions, materials, catalog, kits, open areas) plus the message.
+> **Agent loop (up to 4 rounds per message):** send the system prompt, the conversation, and a compact scene summary (room size, aisle, counts, rows of tables with ids and positions, stage position, open areas, catalog types with sizes, kit recipes). Claude calls tools; the backend executes them and **returns results and any rule violations**, so Claude can correct itself. All changes from one message form **one undoable step**; changed items flash in 2D and 3D.
 >
-> **Tools** (execute all calls from one message as **one undoable step**; changed items flash):
-> - `select(type?, area?, near?)`
-> - `move(ids, dx_squares, dz_squares)`
+> **Query tools:**
+> - `get_scene_summary()`
+> - `list_items(type?, area?)`
+> - `find_open_areas(min_w, min_d, near?)`: returns free rectangles that respect the aisle and exits
+> - `measure_aisles()`
+>
+> **Edit tools:**
+> - `add_items(type, placements[{x, z, rot}], group?)`
+> - `move(ids, dx_squares?, dz_squares?, to?)`
 > - `rotate(ids, degrees)`
-> - `set_material(type, preset)`. Presets:
->   - tables: white / black / walnut / linen
->   - chairs: white / black / gold
-> - `add_items(catalog_type, count, rule: rows | around_each_table | along_wall | on_stage | in_open_area)`
-> - `remove(ids)`
-> - `apply_kit(name)` / `remove_kit(name)`
-> - `generate_layout(setup: theater | banquet | classroom, guests)`: rows facing the stage with a 44-in center aisle, skipping columns, never blocking exits
+> - `remove(ids or group)`
+> - `set_material(type or ids, preset)`
+> - `swap_type(ids or from_type, to_type)`
 > - `undo()`
 >
-> **Kits** (from `kits.json`):
-> - **Wedding:**
->   - a tablecloth, centerpiece and 3 candles on every table
->   - chairs set to gold
->   - a 4 × 2.5 m dance floor in the largest open area (loose chairs nearby are cleared)
->   - a flower arch on the stage
->   - string lights across the hall
-> - **Theater:**
->   - `generate_layout(theater)`
->   - a black curtain behind the stage
->   - two spotlights
->   - a red aisle runner
+> **Validation (backend, after every edit tool):**
+> - items stay inside the room
+> - no overlaps with columns, walls or the stage beyond 5 cm
+> - aisles ≥ 44 in
+> - exits clear
+>
+> Return violations to Claude rather than silently fixing them.
+>
+> **Kits are recipes, not coordinates.** Put `kits.json`'s plain-language recipes in the system prompt. **Claude computes every position itself** from the scene, e.g. Wedding:
+> - tablecloth + centerpiece + 2 candles on every table
+> - swap chairs to gold
+> - a dance floor in the best open area near the stage
+> - a flower arch on the stage
+> - string lights across the hall
+>
+> Tag everything a kit adds with `group`, so "remove the wedding decorations" works.
 >
 > **Behavior:**
-> - Reply in one short sentence.
-> - Never invent items outside the catalog.
-> - Ask if a request is ambiguous.
+> - Reply in one or two sentences after acting.
+> - Never invent item types outside the catalog.
+> - Ask when a request is ambiguous.
+> - Show a small "thinking / placing 96 items…" status while working.
 >
-> **Demo commands that must work:** "make all the tables black," "add wedding decorations," "theater setup for 150 with a center aisle," "move the left table run one square right," "remove the wedding kit."
+> **Demo commands that must work:**
+> - "make all the tables black"
+> - "add wedding decorations"
+> - "remove the wedding decorations"
+> - "theater setup for 150 with a center aisle" (Claude removes the tables, then places chair rows facing the stage itself, using `find_open_areas` and `measure_aisles`)
+> - "move the left table run one square right"
+> - "add 10 more chairs along the back wall"
 >
-> **Done when:** each of those works in under ~10 s and can be undone.
+> **Done when:** each command works in under ~20 s, passes validation, and is undoable.
 
-## L5 — Landing page + How it works
+## L5 — Landing + How it works
+> Follow `design_landing.png` and `design_how.png` and DESIGN.md exactly.
+>
 > **Landing ( / ):**
-> - Full-screen hero playing `media/hero.mp4` (muted, autoplay, loops), cream-paper aesthetic, thin drafting lines.
-> - Headline: "Your venue, as a living blueprint."
-> - Subline: "Scan once. Rearrange, redecorate and quote any event in seconds."
-> - CTA "Open the demo venue" → /venue.
-> - Three short benefit cards: Scan → Twin, Edit by talking, Quote instantly.
+> - Full-bleed hero playing `media/hero.mp4` (muted, autoplay, loop) on cream paper.
+> - Headline: **"Your venue, as a living blueprint."**
+> - Subline: "Scan once. Rearrange, redecorate and quote any event in seconds, just by asking."
+> - Primary button "Open the demo venue" → editor with VibeCon Hall. Secondary: "How it works."
+> - Three benefit cards: Scan → Twin · Edit by talking · Quote instantly.
 >
-> **How it works ( /how ):** a vertical story with the pipeline images:
-> 1. LiDAR walk-through (3 minutes with an iPhone)
-> 2. AI finds every object and groups duplicates into types
-> 3. Everything placed in true scale
-> 4. Blueprint → clay → real materials
-> 5. Edit by talking
+> **How it works ( /how ):** a vertical story using `media/pipeline_1_scan.jpg` … `pipeline_5_twin.jpg`, one line each:
+> 1. "3-minute iPhone LiDAR walk-through"
+> 2. "Vision agents find every object and group duplicates into types"
+> 3. "Everything placed in true scale"
+> 4. "Blueprint → clay → real materials"
+> 5. "Edit by talking"
 >
-> Each step gets one line of text. Include a short honest note: "This venue was reconstructed with our scan pipeline and imported into the app."
+> Include the honest note: "This venue was reconstructed with our scan pipeline and imported into the app."
 >
-> **Done when:** the landing looks premium on laptop and phone, and /how tells the pipeline story in under 30 seconds of scrolling.
+> **Done when:** both pages match the mockups on laptop and phone.
 
 ## L6 (only if credits remain) — pick one
-- **Product link → 3D** (EMERGENT_PROMPTS.md P7c).
-- **Demo mode:** a preset button sequence that plays the 5 demo commands for the video.
+- **Product link → 3D:** paste a URL; the backend extracts name, price, size and image via Claude, then runs image-to-3D via fal.ai TRELLIS.2 (I'll paste `FAL_KEY`), scales the model to size, and adds it to the catalog as a partner item the agent can place.
+- **Demo mode:** a button that plays the demo commands in sequence for recording.
+
+---
 
 ## Demo video beat sheet (≤ 2:00, screen recording of the live app)
 | Time | Beat |
 |---|---|
-| 0:00–0:12 | Landing hero. Customer: a small venue manager answering "will 150 fit?" by email and site tours. Strongest stat: the Prismm shutdown on Dec 31 forces venues to switch. |
-| 0:12–0:25 | /how: "3 minutes of LiDAR → AI found 12 object types → true-scale twin." |
-| 0:25–1:35 | /venue: our scanned hall in 3D. Blueprint: add a table, nudge a run one square with live deltas and an aisle warning. Chat: "make all the tables black" → "add wedding decorations" → "theater setup for 150." |
-| 1:35–2:00 | Why we win: real venue twins in minutes, editable by talking, priced instantly. Close on the wedding render. |
+| 0:00–0:12 | Landing hero. A venue manager answers "will 150 fit?" by email and site tours. Strongest stat: Prismm shuts down Dec 31, so venues must switch. |
+| 0:12–0:25 | /how: "3 minutes of LiDAR → AI found every object → true-scale twin." |
+| 0:25–1:35 | Editor: our scanned hall. Blueprint: add a table, nudge a run one square, live deltas and an aisle warning. Chat: "make all the tables black" → "add wedding decorations" → "theater setup for 150." Switch to the Theater scene. |
+| 1:35–2:00 | Why we win: venue twins in minutes, editable by talking, priced instantly. Close on the wedding view. |
