@@ -1,0 +1,90 @@
+{
+ "kits": [
+  {
+   "name": "wedding",
+   "label": "Wedding",
+   "steps": [
+    {
+     "add": "tablecloth",
+     "rule": "each_table"
+    },
+    {
+     "add": "centerpiece",
+     "rule": "each_table_center"
+    },
+    {
+     "add": "candle",
+     "rule": "each_table",
+     "count": 2,
+     "offsets_m": [
+      -0.55,
+      0.55
+     ]
+    },
+    {
+     "swap": {
+      "from": "chair",
+      "to": "chair_gold"
+     }
+    },
+    {
+     "add": "dance_floor",
+     "rule": "largest_open_area",
+     "prefer_near": "stage_front",
+     "size_m": [
+      4.0,
+      2.5
+     ],
+     "clear_loose_chairs": true,
+     "min_clearance_m": 0.3
+    },
+    {
+     "add": "flower_arch",
+     "rule": "on_stage_center"
+    },
+    {
+     "add": "string_lights",
+     "rule": "across_hall_z",
+     "count": 7,
+     "height_m": 3.3
+    }
+   ]
+  },
+  {
+   "name": "theater",
+   "label": "Theater",
+   "steps": [
+    {
+     "generate_layout": {
+      "setup": "theater",
+      "guests": 150,
+      "center_aisle_in": 44,
+      "side_aisles_in": 44,
+      "row_pitch_m": 0.92,
+      "seat_pitch_m": 0.52,
+      "face": "stage",
+      "skip": [
+       "columns",
+       "exits"
+      ]
+     }
+    },
+    {
+     "add": "curtain",
+     "rule": "behind_stage",
+     "width_m": "stage_width+3.0"
+    },
+    {
+     "add": "spotlight",
+     "rule": "stage_sides",
+     "count": 2,
+     "offset_m": 1.6
+    },
+    {
+     "add": "aisle_runner",
+     "rule": "center_aisle"
+    }
+   ]
+  }
+ ]
+}

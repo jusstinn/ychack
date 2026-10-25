@@ -1,0 +1,3259 @@
+{
+ "venue": "VibeCon hall (demo venue)",
+ "units": "meters",
+ "coordinate_system": "x along the stage (north) wall, z toward the back (south); y up; floor y=0; rot = radians about the vertical axis (three.js rotation.y); every model's front faces +z at rot=0",
+ "room": {
+  "outline": [
+   [
+    -9.9,
+    -6.88
+   ],
+   [
+    9.849999999999998,
+    -6.88
+   ],
+   [
+    9.849999999999998,
+    6.87
+   ],
+   [
+    -9.9,
+    6.87
+   ]
+  ],
+  "ceiling_height": 3.68,
+  "floor": "dark varnished wood",
+  "walls": "white"
+ },
+ "center_aisle_x": [
+  -2.05,
+  -0.45
+ ],
+ "table_rows_z": [
+  -3.53,
+  -0.83,
+  2.27,
+  4.77
+ ],
+ "counts": {
+  "column": 12,
+  "pendant": 34,
+  "window": 19,
+  "panel": 50,
+  "screen": 2,
+  "door": 6,
+  "partition": 2,
+  "pilaster": 12,
+  "stage": 1,
+  "podium": 1,
+  "banner_vibecon": 2,
+  "ac_unit": 3,
+  "bin": 5,
+  "plant": 1,
+  "projector": 4,
+  "bar_stool": 1,
+  "av_cart": 2,
+  "side_table": 4,
+  "speaker": 4,
+  "table": 32,
+  "chair": 188
+ },
+ "items": [
+  {
+   "id": "column_001",
+   "type": "column",
+   "x": -3.1,
+   "z": -4.25,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "column_002",
+   "type": "column",
+   "x": -3.1,
+   "z": -1.95,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "column_003",
+   "type": "column",
+   "x": -3.1,
+   "z": 0.74,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "column_004",
+   "type": "column",
+   "x": -3.1,
+   "z": 3.35,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "column_005",
+   "type": "column",
+   "x": 1.0,
+   "z": -4.25,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "column_006",
+   "type": "column",
+   "x": 1.0,
+   "z": -1.95,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "column_007",
+   "type": "column",
+   "x": 1.0,
+   "z": 0.74,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "column_008",
+   "type": "column",
+   "x": 1.0,
+   "z": 3.35,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "column_009",
+   "type": "column",
+   "x": 5.0,
+   "z": -4.25,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "column_010",
+   "type": "column",
+   "x": 5.0,
+   "z": -1.95,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "column_011",
+   "type": "column",
+   "x": 5.0,
+   "z": 0.74,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "column_012",
+   "type": "column",
+   "x": 5.0,
+   "z": 3.35,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "pendant_013",
+   "type": "pendant",
+   "x": 2.23,
+   "z": 1.035,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_014",
+   "type": "pendant",
+   "x": -4.97,
+   "z": 1.035,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_015",
+   "type": "pendant",
+   "x": 3.507,
+   "z": 3.229,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_016",
+   "type": "pendant",
+   "x": -6.32,
+   "z": 5.193,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_017",
+   "type": "pendant",
+   "x": -3.3,
+   "z": 3.229,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_018",
+   "type": "pendant",
+   "x": -0.4,
+   "z": 3.229,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_019",
+   "type": "pendant",
+   "x": -1.58,
+   "z": 1.035,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_020",
+   "type": "pendant",
+   "x": -4.97,
+   "z": -0.24,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_021",
+   "type": "pendant",
+   "x": -4.97,
+   "z": 3.229,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_022",
+   "type": "pendant",
+   "x": -4.97,
+   "z": -4.067,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_023",
+   "type": "pendant",
+   "x": 8.683,
+   "z": -5.82,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_024",
+   "type": "pendant",
+   "x": 5.937,
+   "z": -4.067,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_025",
+   "type": "pendant",
+   "x": 3.507,
+   "z": -4.067,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_026",
+   "type": "pendant",
+   "x": -0.4,
+   "z": 1.035,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_027",
+   "type": "pendant",
+   "x": 5.023,
+   "z": -1.757,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_028",
+   "type": "pendant",
+   "x": 5.023,
+   "z": 1.035,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_029",
+   "type": "pendant",
+   "x": 5.023,
+   "z": 3.229,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_030",
+   "type": "pendant",
+   "x": 2.23,
+   "z": -1.757,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_031",
+   "type": "pendant",
+   "x": -3.3,
+   "z": 5.193,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_032",
+   "type": "pendant",
+   "x": -0.4,
+   "z": 5.193,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_033",
+   "type": "pendant",
+   "x": 5.937,
+   "z": 3.229,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_034",
+   "type": "pendant",
+   "x": 3.507,
+   "z": -5.82,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_035",
+   "type": "pendant",
+   "x": 8.683,
+   "z": -4.067,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_036",
+   "type": "pendant",
+   "x": 8.683,
+   "z": -1.757,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_037",
+   "type": "pendant",
+   "x": 3.507,
+   "z": -1.757,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_038",
+   "type": "pendant",
+   "x": 5.937,
+   "z": -5.82,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_039",
+   "type": "pendant",
+   "x": -3.3,
+   "z": 1.035,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_040",
+   "type": "pendant",
+   "x": 0.72,
+   "z": -1.757,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_041",
+   "type": "pendant",
+   "x": 0.72,
+   "z": -4.067,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_042",
+   "type": "pendant",
+   "x": -3.3,
+   "z": -4.067,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_043",
+   "type": "pendant",
+   "x": -3.3,
+   "z": -5.82,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_044",
+   "type": "pendant",
+   "x": 7.94,
+   "z": 3.229,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_045",
+   "type": "pendant",
+   "x": -4.97,
+   "z": -1.757,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "pendant_046",
+   "type": "pendant",
+   "x": -4.97,
+   "z": -5.82,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "window_047",
+   "type": "window",
+   "x": -5.01,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "south"
+  },
+  {
+   "id": "window_048",
+   "type": "window",
+   "x": -9.75,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "south"
+  },
+  {
+   "id": "window_049",
+   "type": "window",
+   "x": -9.9,
+   "z": -0.31,
+   "rot": 1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "west"
+  },
+  {
+   "id": "window_050",
+   "type": "window",
+   "x": 9.85,
+   "z": 4.86,
+   "rot": -1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "east"
+  },
+  {
+   "id": "window_051",
+   "type": "window",
+   "x": 6.47,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "south"
+  },
+  {
+   "id": "window_052",
+   "type": "window",
+   "x": 2.69,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "south"
+  },
+  {
+   "id": "window_053",
+   "type": "window",
+   "x": -1.82,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "south"
+  },
+  {
+   "id": "window_054",
+   "type": "window",
+   "x": 9.85,
+   "z": 3.48,
+   "rot": -1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "east"
+  },
+  {
+   "id": "window_055",
+   "type": "window",
+   "x": -0.11,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "north"
+  },
+  {
+   "id": "window_056",
+   "type": "window",
+   "x": 9.85,
+   "z": -5.48,
+   "rot": -1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "east"
+  },
+  {
+   "id": "window_057",
+   "type": "window",
+   "x": 9.85,
+   "z": -4.05,
+   "rot": -1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "east"
+  },
+  {
+   "id": "window_058",
+   "type": "window",
+   "x": 6.05,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "north"
+  },
+  {
+   "id": "window_059",
+   "type": "window",
+   "x": 5.09,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "north"
+  },
+  {
+   "id": "window_060",
+   "type": "window",
+   "x": -9.9,
+   "z": 6.14,
+   "rot": 1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "west"
+  },
+  {
+   "id": "window_061",
+   "type": "window",
+   "x": -8.02,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "south"
+  },
+  {
+   "id": "window_062",
+   "type": "window",
+   "x": 9.85,
+   "z": -0.78,
+   "rot": -1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "east"
+  },
+  {
+   "id": "window_063",
+   "type": "window",
+   "x": -8.89,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "north"
+  },
+  {
+   "id": "window_064",
+   "type": "window",
+   "x": 7.41,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "south"
+  },
+  {
+   "id": "window_065",
+   "type": "window",
+   "x": -9.9,
+   "z": 5.08,
+   "rot": 1.5708,
+   "inferred": false,
+   "w": 1.3,
+   "wall": "west"
+  },
+  {
+   "id": "panel_066",
+   "type": "panel",
+   "x": -6.65,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_067",
+   "type": "panel",
+   "x": -8.25,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_068",
+   "type": "panel",
+   "x": -9.9,
+   "z": 5.84,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_069",
+   "type": "panel",
+   "x": -4.18,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_070",
+   "type": "panel",
+   "x": -9.9,
+   "z": 2.92,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_071",
+   "type": "panel",
+   "x": -9.9,
+   "z": 0.84,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_072",
+   "type": "panel",
+   "x": 9.85,
+   "z": 6.3,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_073",
+   "type": "panel",
+   "x": 9.49,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_074",
+   "type": "panel",
+   "x": 8.96,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_075",
+   "type": "panel",
+   "x": 8.16,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_076",
+   "type": "panel",
+   "x": 5.3,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_077",
+   "type": "panel",
+   "x": 4.42,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_078",
+   "type": "panel",
+   "x": 1.35,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_079",
+   "type": "panel",
+   "x": -2.49,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_080",
+   "type": "panel",
+   "x": -3.05,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_081",
+   "type": "panel",
+   "x": 2.73,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_082",
+   "type": "panel",
+   "x": 0.2,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_083",
+   "type": "panel",
+   "x": -9.9,
+   "z": 6.38,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_084",
+   "type": "panel",
+   "x": -9.9,
+   "z": -3.34,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_085",
+   "type": "panel",
+   "x": -9.9,
+   "z": -2.66,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_086",
+   "type": "panel",
+   "x": -9.9,
+   "z": -5.66,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_087",
+   "type": "panel",
+   "x": -6.03,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_088",
+   "type": "panel",
+   "x": -6.94,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_089",
+   "type": "panel",
+   "x": 0.25,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_090",
+   "type": "panel",
+   "x": 4.17,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_091",
+   "type": "panel",
+   "x": -0.44,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_092",
+   "type": "panel",
+   "x": 7.31,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_093",
+   "type": "panel",
+   "x": 9.85,
+   "z": -6.7,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_094",
+   "type": "panel",
+   "x": 5.01,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_095",
+   "type": "panel",
+   "x": 5.78,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_096",
+   "type": "panel",
+   "x": 9.82,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_097",
+   "type": "panel",
+   "x": 9.85,
+   "z": -0.84,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_098",
+   "type": "panel",
+   "x": 9.85,
+   "z": 1.76,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_099",
+   "type": "panel",
+   "x": -9.9,
+   "z": -4.61,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_100",
+   "type": "panel",
+   "x": -9.9,
+   "z": 4.97,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_101",
+   "type": "panel",
+   "x": -9.26,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_102",
+   "type": "panel",
+   "x": -1.0,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "panel_103",
+   "type": "panel",
+   "x": 9.85,
+   "z": 5.76,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_104",
+   "type": "panel",
+   "x": 9.85,
+   "z": 1.02,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_105",
+   "type": "panel",
+   "x": 9.85,
+   "z": 0.24,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_106",
+   "type": "panel",
+   "x": 9.85,
+   "z": -1.89,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_107",
+   "type": "panel",
+   "x": 9.85,
+   "z": -2.66,
+   "rot": -1.5708,
+   "inferred": false,
+   "wall": "east"
+  },
+  {
+   "id": "panel_108",
+   "type": "panel",
+   "x": 9.03,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_109",
+   "type": "panel",
+   "x": -9.9,
+   "z": 3.87,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_110",
+   "type": "panel",
+   "x": -9.9,
+   "z": 1.7,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_111",
+   "type": "panel",
+   "x": -9.9,
+   "z": -1.73,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_112",
+   "type": "panel",
+   "x": -9.9,
+   "z": -3.94,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_113",
+   "type": "panel",
+   "x": -9.9,
+   "z": -6.67,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "panel_114",
+   "type": "panel",
+   "x": -7.46,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "panel_115",
+   "type": "panel",
+   "x": -7.48,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "screen_116",
+   "type": "screen",
+   "x": -4.75,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "w": 2.9,
+   "wall": "north"
+  },
+  {
+   "id": "screen_117",
+   "type": "screen",
+   "x": 2.06,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "w": 2.9,
+   "wall": "north"
+  },
+  {
+   "id": "door_118",
+   "type": "door",
+   "x": -9.9,
+   "z": 5.23,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "door_119",
+   "type": "door",
+   "x": -4.08,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "door_120",
+   "type": "door",
+   "x": 3.0,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "door_121",
+   "type": "door",
+   "x": -1.6,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "door_122",
+   "type": "door",
+   "x": -8.75,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "door_123",
+   "type": "door",
+   "x": -4.99,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "partition_124",
+   "type": "partition",
+   "x": -9.9,
+   "z": -0.37,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "partition_125",
+   "type": "partition",
+   "x": -9.9,
+   "z": 1.17,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "pilaster_126",
+   "type": "pilaster",
+   "x": -9.9,
+   "z": 1.49,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "pilaster_127",
+   "type": "pilaster",
+   "x": 4.82,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "pilaster_128",
+   "type": "pilaster",
+   "x": -3.02,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "pilaster_129",
+   "type": "pilaster",
+   "x": 0.77,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "pilaster_130",
+   "type": "pilaster",
+   "x": -6.46,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "pilaster_131",
+   "type": "pilaster",
+   "x": -2.64,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "pilaster_132",
+   "type": "pilaster",
+   "x": 5.03,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "pilaster_133",
+   "type": "pilaster",
+   "x": -9.9,
+   "z": 6.54,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "pilaster_134",
+   "type": "pilaster",
+   "x": -6.2,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "pilaster_135",
+   "type": "pilaster",
+   "x": -4.63,
+   "z": 6.87,
+   "rot": 3.1416,
+   "inferred": false,
+   "wall": "south"
+  },
+  {
+   "id": "pilaster_136",
+   "type": "pilaster",
+   "x": -9.9,
+   "z": -1.48,
+   "rot": 1.5708,
+   "inferred": false,
+   "wall": "west"
+  },
+  {
+   "id": "pilaster_137",
+   "type": "pilaster",
+   "x": -9.7,
+   "z": -6.88,
+   "rot": 0.0,
+   "inferred": false,
+   "wall": "north"
+  },
+  {
+   "id": "stage_138",
+   "type": "stage",
+   "x": -1.9,
+   "z": -6.03,
+   "rot": 0.0,
+   "inferred": false,
+   "w": 3.2,
+   "d": 1.7,
+   "h": 0.29
+  },
+  {
+   "id": "podium_139",
+   "type": "podium",
+   "x": -0.7,
+   "z": -5.58,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "banner_vibecon_140",
+   "type": "banner_vibecon",
+   "x": 0.56,
+   "z": -6.63,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "banner_vibecon_141",
+   "type": "banner_vibecon",
+   "x": -0.63,
+   "z": -5.48,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "ac_unit_142",
+   "type": "ac_unit",
+   "x": 9.49,
+   "z": -5.33,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "ac_unit_143",
+   "type": "ac_unit",
+   "x": 8.78,
+   "z": -5.45,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "ac_unit_144",
+   "type": "ac_unit",
+   "x": -8.96,
+   "z": -6.06,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "bin_145",
+   "type": "bin",
+   "x": -2.5,
+   "z": 6.14,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "bin_146",
+   "type": "bin",
+   "x": -9.94,
+   "z": 2.12,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "bin_147",
+   "type": "bin",
+   "x": -10.12,
+   "z": 1.62,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "bin_148",
+   "type": "bin",
+   "x": -9.38,
+   "z": -3.46,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "bin_149",
+   "type": "bin",
+   "x": -9.56,
+   "z": -4.12,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "plant_150",
+   "type": "plant",
+   "x": -0.34,
+   "z": -6.84,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "projector_151",
+   "type": "projector",
+   "x": -3.76,
+   "z": -3.11,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "projector_152",
+   "type": "projector",
+   "x": 3.13,
+   "z": -4.06,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "projector_153",
+   "type": "projector",
+   "x": -4.73,
+   "z": -3.84,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "projector_154",
+   "type": "projector",
+   "x": -3.25,
+   "z": -4.29,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "bar_stool_155",
+   "type": "bar_stool",
+   "x": -6.92,
+   "z": -6.67,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "av_cart_156",
+   "type": "av_cart",
+   "x": -6.46,
+   "z": -6.48,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "av_cart_157",
+   "type": "av_cart",
+   "x": -5.16,
+   "z": -6.45,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "side_table_158",
+   "type": "side_table",
+   "x": 2.15,
+   "z": -7.24,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "side_table_159",
+   "type": "side_table",
+   "x": 1.47,
+   "z": -7.09,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "side_table_160",
+   "type": "side_table",
+   "x": 0.07,
+   "z": -7.12,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "side_table_161",
+   "type": "side_table",
+   "x": -0.32,
+   "z": -6.6,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "speaker_162",
+   "type": "speaker",
+   "x": -6.75,
+   "z": -6.76,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "speaker_163",
+   "type": "speaker",
+   "x": -3.25,
+   "z": -6.76,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "speaker_164",
+   "type": "speaker",
+   "x": 1.85,
+   "z": -6.76,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "speaker_165",
+   "type": "speaker",
+   "x": 5.35,
+   "z": -6.76,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_166",
+   "type": "table",
+   "x": -3.11,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_167",
+   "type": "table",
+   "x": -4.93,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_168",
+   "type": "table",
+   "x": -6.75,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_169",
+   "type": "table",
+   "x": 0.61,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_170",
+   "type": "table",
+   "x": 2.43,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_171",
+   "type": "table",
+   "x": 4.25,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_172",
+   "type": "table",
+   "x": 6.07,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_173",
+   "type": "table",
+   "x": 7.89,
+   "z": -3.53,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_174",
+   "type": "table",
+   "x": -3.11,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_175",
+   "type": "table",
+   "x": -4.93,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_176",
+   "type": "table",
+   "x": -6.75,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_177",
+   "type": "table",
+   "x": 0.61,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_178",
+   "type": "table",
+   "x": 2.43,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_179",
+   "type": "table",
+   "x": 4.25,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_180",
+   "type": "table",
+   "x": 6.07,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_181",
+   "type": "table",
+   "x": 7.89,
+   "z": -0.83,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_182",
+   "type": "table",
+   "x": -3.11,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_183",
+   "type": "table",
+   "x": -4.93,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_184",
+   "type": "table",
+   "x": -6.75,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_185",
+   "type": "table",
+   "x": 0.61,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_186",
+   "type": "table",
+   "x": 2.43,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_187",
+   "type": "table",
+   "x": 4.25,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_188",
+   "type": "table",
+   "x": 6.07,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_189",
+   "type": "table",
+   "x": 7.89,
+   "z": 2.27,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_190",
+   "type": "table",
+   "x": -3.11,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_191",
+   "type": "table",
+   "x": -4.93,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_192",
+   "type": "table",
+   "x": -6.75,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_193",
+   "type": "table",
+   "x": 0.61,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_194",
+   "type": "table",
+   "x": 2.43,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_195",
+   "type": "table",
+   "x": 4.25,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": false
+  },
+  {
+   "id": "table_196",
+   "type": "table",
+   "x": 6.07,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "table_197",
+   "type": "table",
+   "x": 7.89,
+   "z": 4.77,
+   "rot": 0.0,
+   "inferred": true
+  },
+  {
+   "id": "chair_198",
+   "type": "chair",
+   "x": -3.71,
+   "z": -4.19,
+   "rot": 0.0105,
+   "inferred": true
+  },
+  {
+   "id": "chair_199",
+   "type": "chair",
+   "x": -2.51,
+   "z": -4.19,
+   "rot": 0.086,
+   "inferred": true
+  },
+  {
+   "id": "chair_200",
+   "type": "chair",
+   "x": -3.71,
+   "z": -2.87,
+   "rot": 3.1944,
+   "inferred": true
+  },
+  {
+   "id": "chair_201",
+   "type": "chair",
+   "x": -3.11,
+   "z": -2.87,
+   "rot": 3.2047,
+   "inferred": true
+  },
+  {
+   "id": "chair_202",
+   "type": "chair",
+   "x": -2.51,
+   "z": -2.87,
+   "rot": 3.2274,
+   "inferred": true
+  },
+  {
+   "id": "chair_203",
+   "type": "chair",
+   "x": -5.53,
+   "z": -4.19,
+   "rot": 0.0436,
+   "inferred": true
+  },
+  {
+   "id": "chair_204",
+   "type": "chair",
+   "x": -4.93,
+   "z": -4.19,
+   "rot": 0.0683,
+   "inferred": true
+  },
+  {
+   "id": "chair_205",
+   "type": "chair",
+   "x": -4.33,
+   "z": -4.19,
+   "rot": -0.0725,
+   "inferred": true
+  },
+  {
+   "id": "chair_206",
+   "type": "chair",
+   "x": -5.53,
+   "z": -2.87,
+   "rot": 3.1555,
+   "inferred": true
+  },
+  {
+   "id": "chair_207",
+   "type": "chair",
+   "x": -4.93,
+   "z": -2.87,
+   "rot": 3.058,
+   "inferred": true
+  },
+  {
+   "id": "chair_208",
+   "type": "chair",
+   "x": -4.33,
+   "z": -2.87,
+   "rot": 3.2071,
+   "inferred": true
+  },
+  {
+   "id": "chair_209",
+   "type": "chair",
+   "x": -7.35,
+   "z": -4.19,
+   "rot": 0.0673,
+   "inferred": true
+  },
+  {
+   "id": "chair_210",
+   "type": "chair",
+   "x": -6.75,
+   "z": -4.19,
+   "rot": -0.0186,
+   "inferred": true
+  },
+  {
+   "id": "chair_211",
+   "type": "chair",
+   "x": -6.15,
+   "z": -4.19,
+   "rot": 0.0002,
+   "inferred": true
+  },
+  {
+   "id": "chair_212",
+   "type": "chair",
+   "x": -7.35,
+   "z": -2.87,
+   "rot": 3.0801,
+   "inferred": true
+  },
+  {
+   "id": "chair_213",
+   "type": "chair",
+   "x": -6.75,
+   "z": -2.87,
+   "rot": 3.0825,
+   "inferred": true
+  },
+  {
+   "id": "chair_214",
+   "type": "chair",
+   "x": -6.15,
+   "z": -2.87,
+   "rot": 3.1465,
+   "inferred": true
+  },
+  {
+   "id": "chair_215",
+   "type": "chair",
+   "x": 0.01,
+   "z": -4.19,
+   "rot": 0.0951,
+   "inferred": false
+  },
+  {
+   "id": "chair_216",
+   "type": "chair",
+   "x": 0.01,
+   "z": -2.87,
+   "rot": 3.1622,
+   "inferred": false
+  },
+  {
+   "id": "chair_217",
+   "type": "chair",
+   "x": 0.61,
+   "z": -2.87,
+   "rot": 3.0442,
+   "inferred": false
+  },
+  {
+   "id": "chair_218",
+   "type": "chair",
+   "x": 1.21,
+   "z": -2.87,
+   "rot": 3.0857,
+   "inferred": false
+  },
+  {
+   "id": "chair_219",
+   "type": "chair",
+   "x": 1.83,
+   "z": -4.19,
+   "rot": 0.0034,
+   "inferred": false
+  },
+  {
+   "id": "chair_220",
+   "type": "chair",
+   "x": 2.43,
+   "z": -4.19,
+   "rot": 0.0532,
+   "inferred": false
+  },
+  {
+   "id": "chair_221",
+   "type": "chair",
+   "x": 3.03,
+   "z": -4.19,
+   "rot": -0.0449,
+   "inferred": false
+  },
+  {
+   "id": "chair_222",
+   "type": "chair",
+   "x": 1.83,
+   "z": -2.87,
+   "rot": 3.1236,
+   "inferred": false
+  },
+  {
+   "id": "chair_223",
+   "type": "chair",
+   "x": 2.43,
+   "z": -2.87,
+   "rot": 3.0793,
+   "inferred": false
+  },
+  {
+   "id": "chair_224",
+   "type": "chair",
+   "x": 3.03,
+   "z": -2.87,
+   "rot": 3.0928,
+   "inferred": false
+  },
+  {
+   "id": "chair_225",
+   "type": "chair",
+   "x": 3.65,
+   "z": -4.19,
+   "rot": -0.0249,
+   "inferred": false
+  },
+  {
+   "id": "chair_226",
+   "type": "chair",
+   "x": 4.25,
+   "z": -4.19,
+   "rot": -0.0459,
+   "inferred": false
+  },
+  {
+   "id": "chair_227",
+   "type": "chair",
+   "x": 3.65,
+   "z": -2.87,
+   "rot": 3.1966,
+   "inferred": false
+  },
+  {
+   "id": "chair_228",
+   "type": "chair",
+   "x": 4.25,
+   "z": -2.87,
+   "rot": 3.1209,
+   "inferred": false
+  },
+  {
+   "id": "chair_229",
+   "type": "chair",
+   "x": 4.85,
+   "z": -2.87,
+   "rot": 3.1654,
+   "inferred": false
+  },
+  {
+   "id": "chair_230",
+   "type": "chair",
+   "x": 5.47,
+   "z": -4.19,
+   "rot": -0.0154,
+   "inferred": false
+  },
+  {
+   "id": "chair_231",
+   "type": "chair",
+   "x": 6.07,
+   "z": -4.19,
+   "rot": 0.0749,
+   "inferred": false
+  },
+  {
+   "id": "chair_232",
+   "type": "chair",
+   "x": 6.67,
+   "z": -4.19,
+   "rot": 0.0386,
+   "inferred": false
+  },
+  {
+   "id": "chair_233",
+   "type": "chair",
+   "x": 5.47,
+   "z": -2.87,
+   "rot": 3.1112,
+   "inferred": false
+  },
+  {
+   "id": "chair_234",
+   "type": "chair",
+   "x": 6.07,
+   "z": -2.87,
+   "rot": 3.1645,
+   "inferred": false
+  },
+  {
+   "id": "chair_235",
+   "type": "chair",
+   "x": 6.67,
+   "z": -2.87,
+   "rot": 3.1327,
+   "inferred": false
+  },
+  {
+   "id": "chair_236",
+   "type": "chair",
+   "x": 7.29,
+   "z": -4.19,
+   "rot": -0.0116,
+   "inferred": false
+  },
+  {
+   "id": "chair_237",
+   "type": "chair",
+   "x": 7.89,
+   "z": -4.19,
+   "rot": 0.0037,
+   "inferred": false
+  },
+  {
+   "id": "chair_238",
+   "type": "chair",
+   "x": 8.49,
+   "z": -4.19,
+   "rot": 0.0092,
+   "inferred": false
+  },
+  {
+   "id": "chair_239",
+   "type": "chair",
+   "x": 7.29,
+   "z": -2.87,
+   "rot": 3.0863,
+   "inferred": false
+  },
+  {
+   "id": "chair_240",
+   "type": "chair",
+   "x": 7.89,
+   "z": -2.87,
+   "rot": 3.2345,
+   "inferred": false
+  },
+  {
+   "id": "chair_241",
+   "type": "chair",
+   "x": 8.49,
+   "z": -2.87,
+   "rot": 3.2101,
+   "inferred": false
+  },
+  {
+   "id": "chair_242",
+   "type": "chair",
+   "x": -3.71,
+   "z": -1.49,
+   "rot": 0.0564,
+   "inferred": true
+  },
+  {
+   "id": "chair_243",
+   "type": "chair",
+   "x": -3.11,
+   "z": -1.49,
+   "rot": 0.0583,
+   "inferred": true
+  },
+  {
+   "id": "chair_244",
+   "type": "chair",
+   "x": -2.51,
+   "z": -1.49,
+   "rot": -0.0898,
+   "inferred": true
+  },
+  {
+   "id": "chair_245",
+   "type": "chair",
+   "x": -3.71,
+   "z": -0.17,
+   "rot": 3.2025,
+   "inferred": true
+  },
+  {
+   "id": "chair_246",
+   "type": "chair",
+   "x": -3.11,
+   "z": -0.17,
+   "rot": 3.1917,
+   "inferred": true
+  },
+  {
+   "id": "chair_247",
+   "type": "chair",
+   "x": -2.51,
+   "z": -0.17,
+   "rot": 3.0649,
+   "inferred": true
+  },
+  {
+   "id": "chair_248",
+   "type": "chair",
+   "x": -5.53,
+   "z": -1.49,
+   "rot": 0.0453,
+   "inferred": true
+  },
+  {
+   "id": "chair_249",
+   "type": "chair",
+   "x": -4.93,
+   "z": -1.49,
+   "rot": -0.0941,
+   "inferred": true
+  },
+  {
+   "id": "chair_250",
+   "type": "chair",
+   "x": -4.33,
+   "z": -1.49,
+   "rot": -0.01,
+   "inferred": true
+  },
+  {
+   "id": "chair_251",
+   "type": "chair",
+   "x": -5.53,
+   "z": -0.17,
+   "rot": 3.0892,
+   "inferred": true
+  },
+  {
+   "id": "chair_252",
+   "type": "chair",
+   "x": -4.93,
+   "z": -0.17,
+   "rot": 3.1113,
+   "inferred": true
+  },
+  {
+   "id": "chair_253",
+   "type": "chair",
+   "x": -4.33,
+   "z": -0.17,
+   "rot": 3.1918,
+   "inferred": true
+  },
+  {
+   "id": "chair_254",
+   "type": "chair",
+   "x": -7.35,
+   "z": -1.49,
+   "rot": -0.0909,
+   "inferred": true
+  },
+  {
+   "id": "chair_255",
+   "type": "chair",
+   "x": -6.75,
+   "z": -1.49,
+   "rot": 0.0259,
+   "inferred": true
+  },
+  {
+   "id": "chair_256",
+   "type": "chair",
+   "x": -6.15,
+   "z": -1.49,
+   "rot": 0.045,
+   "inferred": true
+  },
+  {
+   "id": "chair_257",
+   "type": "chair",
+   "x": -7.35,
+   "z": -0.17,
+   "rot": 3.1674,
+   "inferred": true
+  },
+  {
+   "id": "chair_258",
+   "type": "chair",
+   "x": -6.75,
+   "z": -0.17,
+   "rot": 3.2238,
+   "inferred": true
+  },
+  {
+   "id": "chair_259",
+   "type": "chair",
+   "x": -6.15,
+   "z": -0.17,
+   "rot": 3.0723,
+   "inferred": true
+  },
+  {
+   "id": "chair_260",
+   "type": "chair",
+   "x": 0.01,
+   "z": -1.49,
+   "rot": -0.095,
+   "inferred": false
+  },
+  {
+   "id": "chair_261",
+   "type": "chair",
+   "x": 0.61,
+   "z": -1.49,
+   "rot": 0.0889,
+   "inferred": false
+  },
+  {
+   "id": "chair_262",
+   "type": "chair",
+   "x": 1.21,
+   "z": -1.49,
+   "rot": -0.0236,
+   "inferred": false
+  },
+  {
+   "id": "chair_263",
+   "type": "chair",
+   "x": 0.01,
+   "z": -0.17,
+   "rot": 3.1993,
+   "inferred": false
+  },
+  {
+   "id": "chair_264",
+   "type": "chair",
+   "x": 0.61,
+   "z": -0.17,
+   "rot": 3.0437,
+   "inferred": false
+  },
+  {
+   "id": "chair_265",
+   "type": "chair",
+   "x": 1.21,
+   "z": -0.17,
+   "rot": 3.1129,
+   "inferred": false
+  },
+  {
+   "id": "chair_266",
+   "type": "chair",
+   "x": 1.83,
+   "z": -1.49,
+   "rot": -0.033,
+   "inferred": false
+  },
+  {
+   "id": "chair_267",
+   "type": "chair",
+   "x": 2.43,
+   "z": -1.49,
+   "rot": 0.0419,
+   "inferred": false
+  },
+  {
+   "id": "chair_268",
+   "type": "chair",
+   "x": 3.03,
+   "z": -1.49,
+   "rot": -0.0546,
+   "inferred": false
+  },
+  {
+   "id": "chair_269",
+   "type": "chair",
+   "x": 1.83,
+   "z": -0.17,
+   "rot": 3.2157,
+   "inferred": false
+  },
+  {
+   "id": "chair_270",
+   "type": "chair",
+   "x": 2.43,
+   "z": -0.17,
+   "rot": 3.091,
+   "inferred": false
+  },
+  {
+   "id": "chair_271",
+   "type": "chair",
+   "x": 3.03,
+   "z": -0.17,
+   "rot": 3.1352,
+   "inferred": false
+  },
+  {
+   "id": "chair_272",
+   "type": "chair",
+   "x": 3.65,
+   "z": -1.49,
+   "rot": 0.0847,
+   "inferred": false
+  },
+  {
+   "id": "chair_273",
+   "type": "chair",
+   "x": 4.25,
+   "z": -1.49,
+   "rot": -0.0738,
+   "inferred": false
+  },
+  {
+   "id": "chair_274",
+   "type": "chair",
+   "x": 4.85,
+   "z": -1.49,
+   "rot": 0.0192,
+   "inferred": false
+  },
+  {
+   "id": "chair_275",
+   "type": "chair",
+   "x": 3.65,
+   "z": -0.17,
+   "rot": 3.2376,
+   "inferred": false
+  },
+  {
+   "id": "chair_276",
+   "type": "chair",
+   "x": 4.25,
+   "z": -0.17,
+   "rot": 3.1221,
+   "inferred": false
+  },
+  {
+   "id": "chair_277",
+   "type": "chair",
+   "x": 4.85,
+   "z": -0.17,
+   "rot": 3.1987,
+   "inferred": false
+  },
+  {
+   "id": "chair_278",
+   "type": "chair",
+   "x": 5.47,
+   "z": -1.49,
+   "rot": 0.0455,
+   "inferred": false
+  },
+  {
+   "id": "chair_279",
+   "type": "chair",
+   "x": 6.07,
+   "z": -1.49,
+   "rot": 0.0293,
+   "inferred": false
+  },
+  {
+   "id": "chair_280",
+   "type": "chair",
+   "x": 6.67,
+   "z": -1.49,
+   "rot": -0.0733,
+   "inferred": false
+  },
+  {
+   "id": "chair_281",
+   "type": "chair",
+   "x": 5.47,
+   "z": -0.17,
+   "rot": 3.0559,
+   "inferred": false
+  },
+  {
+   "id": "chair_282",
+   "type": "chair",
+   "x": 6.07,
+   "z": -0.17,
+   "rot": 3.2202,
+   "inferred": false
+  },
+  {
+   "id": "chair_283",
+   "type": "chair",
+   "x": 6.67,
+   "z": -0.17,
+   "rot": 3.1333,
+   "inferred": false
+  },
+  {
+   "id": "chair_284",
+   "type": "chair",
+   "x": 7.29,
+   "z": -1.49,
+   "rot": -0.0946,
+   "inferred": false
+  },
+  {
+   "id": "chair_285",
+   "type": "chair",
+   "x": 7.89,
+   "z": -1.49,
+   "rot": -0.0332,
+   "inferred": false
+  },
+  {
+   "id": "chair_286",
+   "type": "chair",
+   "x": 8.49,
+   "z": -1.49,
+   "rot": -0.0667,
+   "inferred": false
+  },
+  {
+   "id": "chair_287",
+   "type": "chair",
+   "x": 7.29,
+   "z": -0.17,
+   "rot": 3.1361,
+   "inferred": false
+  },
+  {
+   "id": "chair_288",
+   "type": "chair",
+   "x": 7.89,
+   "z": -0.17,
+   "rot": 3.0537,
+   "inferred": false
+  },
+  {
+   "id": "chair_289",
+   "type": "chair",
+   "x": 8.49,
+   "z": -0.17,
+   "rot": 3.0821,
+   "inferred": false
+  },
+  {
+   "id": "chair_290",
+   "type": "chair",
+   "x": -3.71,
+   "z": 1.61,
+   "rot": -0.0149,
+   "inferred": false
+  },
+  {
+   "id": "chair_291",
+   "type": "chair",
+   "x": -3.11,
+   "z": 1.61,
+   "rot": 0.0273,
+   "inferred": false
+  },
+  {
+   "id": "chair_292",
+   "type": "chair",
+   "x": -2.51,
+   "z": 1.61,
+   "rot": -0.0372,
+   "inferred": false
+  },
+  {
+   "id": "chair_293",
+   "type": "chair",
+   "x": -3.71,
+   "z": 2.93,
+   "rot": 3.1256,
+   "inferred": false
+  },
+  {
+   "id": "chair_294",
+   "type": "chair",
+   "x": -3.11,
+   "z": 2.93,
+   "rot": 3.2218,
+   "inferred": false
+  },
+  {
+   "id": "chair_295",
+   "type": "chair",
+   "x": -2.51,
+   "z": 2.93,
+   "rot": 3.0486,
+   "inferred": false
+  },
+  {
+   "id": "chair_296",
+   "type": "chair",
+   "x": -5.53,
+   "z": 1.61,
+   "rot": 0.0149,
+   "inferred": false
+  },
+  {
+   "id": "chair_297",
+   "type": "chair",
+   "x": -4.93,
+   "z": 1.61,
+   "rot": -0.0296,
+   "inferred": false
+  },
+  {
+   "id": "chair_298",
+   "type": "chair",
+   "x": -4.33,
+   "z": 1.61,
+   "rot": -0.0236,
+   "inferred": false
+  },
+  {
+   "id": "chair_299",
+   "type": "chair",
+   "x": -5.53,
+   "z": 2.93,
+   "rot": 3.046,
+   "inferred": false
+  },
+  {
+   "id": "chair_300",
+   "type": "chair",
+   "x": -4.93,
+   "z": 2.93,
+   "rot": 3.1772,
+   "inferred": false
+  },
+  {
+   "id": "chair_301",
+   "type": "chair",
+   "x": -4.33,
+   "z": 2.93,
+   "rot": 3.2186,
+   "inferred": false
+  },
+  {
+   "id": "chair_302",
+   "type": "chair",
+   "x": -7.35,
+   "z": 1.61,
+   "rot": -0.0898,
+   "inferred": false
+  },
+  {
+   "id": "chair_303",
+   "type": "chair",
+   "x": -6.75,
+   "z": 1.61,
+   "rot": -0.0381,
+   "inferred": false
+  },
+  {
+   "id": "chair_304",
+   "type": "chair",
+   "x": -6.15,
+   "z": 1.61,
+   "rot": -0.0755,
+   "inferred": false
+  },
+  {
+   "id": "chair_305",
+   "type": "chair",
+   "x": -7.35,
+   "z": 2.93,
+   "rot": 3.1391,
+   "inferred": false
+  },
+  {
+   "id": "chair_306",
+   "type": "chair",
+   "x": -6.75,
+   "z": 2.93,
+   "rot": 3.0996,
+   "inferred": false
+  },
+  {
+   "id": "chair_307",
+   "type": "chair",
+   "x": -6.15,
+   "z": 2.93,
+   "rot": 3.1398,
+   "inferred": false
+  },
+  {
+   "id": "chair_308",
+   "type": "chair",
+   "x": 0.01,
+   "z": 1.61,
+   "rot": 0.086,
+   "inferred": false
+  },
+  {
+   "id": "chair_309",
+   "type": "chair",
+   "x": 0.61,
+   "z": 1.61,
+   "rot": -0.0119,
+   "inferred": false
+  },
+  {
+   "id": "chair_310",
+   "type": "chair",
+   "x": 1.21,
+   "z": 1.61,
+   "rot": 0.0869,
+   "inferred": false
+  },
+  {
+   "id": "chair_311",
+   "type": "chair",
+   "x": 0.01,
+   "z": 2.93,
+   "rot": 3.1913,
+   "inferred": false
+  },
+  {
+   "id": "chair_312",
+   "type": "chair",
+   "x": 0.61,
+   "z": 2.93,
+   "rot": 3.1563,
+   "inferred": false
+  },
+  {
+   "id": "chair_313",
+   "type": "chair",
+   "x": 1.21,
+   "z": 2.93,
+   "rot": 3.0798,
+   "inferred": false
+  },
+  {
+   "id": "chair_314",
+   "type": "chair",
+   "x": 1.83,
+   "z": 1.61,
+   "rot": 0.0994,
+   "inferred": true
+  },
+  {
+   "id": "chair_315",
+   "type": "chair",
+   "x": 2.43,
+   "z": 1.61,
+   "rot": -0.0145,
+   "inferred": true
+  },
+  {
+   "id": "chair_316",
+   "type": "chair",
+   "x": 3.03,
+   "z": 1.61,
+   "rot": 0.061,
+   "inferred": true
+  },
+  {
+   "id": "chair_317",
+   "type": "chair",
+   "x": 1.83,
+   "z": 2.93,
+   "rot": 3.2112,
+   "inferred": true
+  },
+  {
+   "id": "chair_318",
+   "type": "chair",
+   "x": 2.43,
+   "z": 2.93,
+   "rot": 3.1461,
+   "inferred": true
+  },
+  {
+   "id": "chair_319",
+   "type": "chair",
+   "x": 3.03,
+   "z": 2.93,
+   "rot": 3.2105,
+   "inferred": true
+  },
+  {
+   "id": "chair_320",
+   "type": "chair",
+   "x": 3.65,
+   "z": 1.61,
+   "rot": 0.0842,
+   "inferred": true
+  },
+  {
+   "id": "chair_321",
+   "type": "chair",
+   "x": 4.25,
+   "z": 1.61,
+   "rot": 0.0733,
+   "inferred": true
+  },
+  {
+   "id": "chair_322",
+   "type": "chair",
+   "x": 4.85,
+   "z": 1.61,
+   "rot": -0.0146,
+   "inferred": true
+  },
+  {
+   "id": "chair_323",
+   "type": "chair",
+   "x": 3.65,
+   "z": 2.93,
+   "rot": 3.1688,
+   "inferred": true
+  },
+  {
+   "id": "chair_324",
+   "type": "chair",
+   "x": 4.25,
+   "z": 2.93,
+   "rot": 3.22,
+   "inferred": true
+  },
+  {
+   "id": "chair_325",
+   "type": "chair",
+   "x": 4.85,
+   "z": 2.93,
+   "rot": 3.1055,
+   "inferred": true
+  },
+  {
+   "id": "chair_326",
+   "type": "chair",
+   "x": 5.47,
+   "z": 1.61,
+   "rot": -0.037,
+   "inferred": true
+  },
+  {
+   "id": "chair_327",
+   "type": "chair",
+   "x": 6.07,
+   "z": 1.61,
+   "rot": -0.0696,
+   "inferred": true
+  },
+  {
+   "id": "chair_328",
+   "type": "chair",
+   "x": 6.67,
+   "z": 1.61,
+   "rot": -0.0951,
+   "inferred": true
+  },
+  {
+   "id": "chair_329",
+   "type": "chair",
+   "x": 5.47,
+   "z": 2.93,
+   "rot": 3.2318,
+   "inferred": true
+  },
+  {
+   "id": "chair_330",
+   "type": "chair",
+   "x": 6.07,
+   "z": 2.93,
+   "rot": 3.1397,
+   "inferred": true
+  },
+  {
+   "id": "chair_331",
+   "type": "chair",
+   "x": 6.67,
+   "z": 2.93,
+   "rot": 3.1932,
+   "inferred": true
+  },
+  {
+   "id": "chair_332",
+   "type": "chair",
+   "x": 7.29,
+   "z": 1.61,
+   "rot": 0.0922,
+   "inferred": true
+  },
+  {
+   "id": "chair_333",
+   "type": "chair",
+   "x": 7.89,
+   "z": 1.61,
+   "rot": -0.09,
+   "inferred": true
+  },
+  {
+   "id": "chair_334",
+   "type": "chair",
+   "x": 8.49,
+   "z": 1.61,
+   "rot": 0.098,
+   "inferred": true
+  },
+  {
+   "id": "chair_335",
+   "type": "chair",
+   "x": 7.29,
+   "z": 2.93,
+   "rot": 3.1933,
+   "inferred": true
+  },
+  {
+   "id": "chair_336",
+   "type": "chair",
+   "x": 7.89,
+   "z": 2.93,
+   "rot": 3.2355,
+   "inferred": true
+  },
+  {
+   "id": "chair_337",
+   "type": "chair",
+   "x": 8.49,
+   "z": 2.93,
+   "rot": 3.1323,
+   "inferred": true
+  },
+  {
+   "id": "chair_338",
+   "type": "chair",
+   "x": -3.71,
+   "z": 4.11,
+   "rot": 0.0029,
+   "inferred": false
+  },
+  {
+   "id": "chair_339",
+   "type": "chair",
+   "x": -3.11,
+   "z": 4.11,
+   "rot": 0.0398,
+   "inferred": false
+  },
+  {
+   "id": "chair_340",
+   "type": "chair",
+   "x": -2.51,
+   "z": 4.11,
+   "rot": 0.0804,
+   "inferred": false
+  },
+  {
+   "id": "chair_341",
+   "type": "chair",
+   "x": -3.71,
+   "z": 5.43,
+   "rot": 3.1931,
+   "inferred": false
+  },
+  {
+   "id": "chair_342",
+   "type": "chair",
+   "x": -3.11,
+   "z": 5.43,
+   "rot": 3.1109,
+   "inferred": false
+  },
+  {
+   "id": "chair_343",
+   "type": "chair",
+   "x": -2.51,
+   "z": 5.43,
+   "rot": 3.1386,
+   "inferred": false
+  },
+  {
+   "id": "chair_344",
+   "type": "chair",
+   "x": -5.53,
+   "z": 4.11,
+   "rot": 0.0407,
+   "inferred": false
+  },
+  {
+   "id": "chair_345",
+   "type": "chair",
+   "x": -4.93,
+   "z": 4.11,
+   "rot": 0.0947,
+   "inferred": false
+  },
+  {
+   "id": "chair_346",
+   "type": "chair",
+   "x": -4.33,
+   "z": 4.11,
+   "rot": -0.066,
+   "inferred": false
+  },
+  {
+   "id": "chair_347",
+   "type": "chair",
+   "x": -5.53,
+   "z": 5.43,
+   "rot": 3.1835,
+   "inferred": false
+  },
+  {
+   "id": "chair_348",
+   "type": "chair",
+   "x": -4.93,
+   "z": 5.43,
+   "rot": 3.1618,
+   "inferred": false
+  },
+  {
+   "id": "chair_349",
+   "type": "chair",
+   "x": -4.33,
+   "z": 5.43,
+   "rot": 3.1432,
+   "inferred": false
+  },
+  {
+   "id": "chair_350",
+   "type": "chair",
+   "x": -7.35,
+   "z": 4.11,
+   "rot": 0.0902,
+   "inferred": false
+  },
+  {
+   "id": "chair_351",
+   "type": "chair",
+   "x": -6.75,
+   "z": 4.11,
+   "rot": 0.0938,
+   "inferred": false
+  },
+  {
+   "id": "chair_352",
+   "type": "chair",
+   "x": -6.15,
+   "z": 4.11,
+   "rot": -0.0654,
+   "inferred": false
+  },
+  {
+   "id": "chair_353",
+   "type": "chair",
+   "x": -7.35,
+   "z": 5.43,
+   "rot": 3.1375,
+   "inferred": false
+  },
+  {
+   "id": "chair_354",
+   "type": "chair",
+   "x": -6.75,
+   "z": 5.43,
+   "rot": 3.0862,
+   "inferred": false
+  },
+  {
+   "id": "chair_355",
+   "type": "chair",
+   "x": -6.15,
+   "z": 5.43,
+   "rot": 3.1579,
+   "inferred": false
+  },
+  {
+   "id": "chair_356",
+   "type": "chair",
+   "x": 0.01,
+   "z": 4.11,
+   "rot": 0.007,
+   "inferred": false
+  },
+  {
+   "id": "chair_357",
+   "type": "chair",
+   "x": 0.61,
+   "z": 4.11,
+   "rot": -0.0998,
+   "inferred": false
+  },
+  {
+   "id": "chair_358",
+   "type": "chair",
+   "x": 1.21,
+   "z": 4.11,
+   "rot": -0.0258,
+   "inferred": false
+  },
+  {
+   "id": "chair_359",
+   "type": "chair",
+   "x": 0.01,
+   "z": 5.43,
+   "rot": 3.2347,
+   "inferred": false
+  },
+  {
+   "id": "chair_360",
+   "type": "chair",
+   "x": 0.61,
+   "z": 5.43,
+   "rot": 3.0588,
+   "inferred": false
+  },
+  {
+   "id": "chair_361",
+   "type": "chair",
+   "x": 1.21,
+   "z": 5.43,
+   "rot": 3.1413,
+   "inferred": false
+  },
+  {
+   "id": "chair_362",
+   "type": "chair",
+   "x": 1.83,
+   "z": 4.11,
+   "rot": -0.0651,
+   "inferred": false
+  },
+  {
+   "id": "chair_363",
+   "type": "chair",
+   "x": 2.43,
+   "z": 4.11,
+   "rot": 0.0761,
+   "inferred": false
+  },
+  {
+   "id": "chair_364",
+   "type": "chair",
+   "x": 3.03,
+   "z": 4.11,
+   "rot": -0.05,
+   "inferred": false
+  },
+  {
+   "id": "chair_365",
+   "type": "chair",
+   "x": 1.83,
+   "z": 5.43,
+   "rot": 3.1777,
+   "inferred": false
+  },
+  {
+   "id": "chair_366",
+   "type": "chair",
+   "x": 2.43,
+   "z": 5.43,
+   "rot": 3.0618,
+   "inferred": false
+  },
+  {
+   "id": "chair_367",
+   "type": "chair",
+   "x": 3.03,
+   "z": 5.43,
+   "rot": 3.0523,
+   "inferred": false
+  },
+  {
+   "id": "chair_368",
+   "type": "chair",
+   "x": 3.65,
+   "z": 4.11,
+   "rot": 0.0845,
+   "inferred": false
+  },
+  {
+   "id": "chair_369",
+   "type": "chair",
+   "x": 4.25,
+   "z": 4.11,
+   "rot": 0.0597,
+   "inferred": false
+  },
+  {
+   "id": "chair_370",
+   "type": "chair",
+   "x": 4.85,
+   "z": 4.11,
+   "rot": -0.0952,
+   "inferred": false
+  },
+  {
+   "id": "chair_371",
+   "type": "chair",
+   "x": 3.65,
+   "z": 5.43,
+   "rot": 3.2276,
+   "inferred": false
+  },
+  {
+   "id": "chair_372",
+   "type": "chair",
+   "x": 4.25,
+   "z": 5.43,
+   "rot": 3.1341,
+   "inferred": false
+  },
+  {
+   "id": "chair_373",
+   "type": "chair",
+   "x": 4.85,
+   "z": 5.43,
+   "rot": 3.2205,
+   "inferred": false
+  },
+  {
+   "id": "chair_374",
+   "type": "chair",
+   "x": 5.47,
+   "z": 4.11,
+   "rot": 0.0523,
+   "inferred": true
+  },
+  {
+   "id": "chair_375",
+   "type": "chair",
+   "x": 6.07,
+   "z": 4.11,
+   "rot": 0.0161,
+   "inferred": true
+  },
+  {
+   "id": "chair_376",
+   "type": "chair",
+   "x": 6.67,
+   "z": 4.11,
+   "rot": -0.0658,
+   "inferred": true
+  },
+  {
+   "id": "chair_377",
+   "type": "chair",
+   "x": 5.47,
+   "z": 5.43,
+   "rot": 3.0539,
+   "inferred": true
+  },
+  {
+   "id": "chair_378",
+   "type": "chair",
+   "x": 6.07,
+   "z": 5.43,
+   "rot": 3.2357,
+   "inferred": true
+  },
+  {
+   "id": "chair_379",
+   "type": "chair",
+   "x": 6.67,
+   "z": 5.43,
+   "rot": 3.1696,
+   "inferred": true
+  },
+  {
+   "id": "chair_380",
+   "type": "chair",
+   "x": 7.29,
+   "z": 4.11,
+   "rot": 0.0618,
+   "inferred": true
+  },
+  {
+   "id": "chair_381",
+   "type": "chair",
+   "x": 7.89,
+   "z": 4.11,
+   "rot": 0.0026,
+   "inferred": true
+  },
+  {
+   "id": "chair_382",
+   "type": "chair",
+   "x": 8.49,
+   "z": 4.11,
+   "rot": -0.0622,
+   "inferred": true
+  },
+  {
+   "id": "chair_383",
+   "type": "chair",
+   "x": 7.29,
+   "z": 5.43,
+   "rot": 3.2182,
+   "inferred": true
+  },
+  {
+   "id": "chair_384",
+   "type": "chair",
+   "x": 7.89,
+   "z": 5.43,
+   "rot": 3.0821,
+   "inferred": true
+  },
+  {
+   "id": "chair_385",
+   "type": "chair",
+   "x": 8.49,
+   "z": 5.43,
+   "rot": 3.2088,
+   "inferred": true
+  }
+ ],
+ "provenance": "Reconstructed from a 2.7-min iPhone LiDAR scan (Stray Scanner) + 95 keyframes analyzed by vision agents; items marked inferred were filled by row patterns where the scan had no coverage."
+}
