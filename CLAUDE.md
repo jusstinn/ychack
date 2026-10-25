@@ -14,6 +14,12 @@ We are 2 students competing at VibeCon 2026 (YC × Emergent), Oct 24–25. **Sub
 - Synthetic data only for any personal or financial records. Stripe test mode only.
 - Credits are scarce (~2–3k total). Prefer small, specific, testable Emergent prompts.
 
+
+## ⚡ Current plan (Sat ~8:15 PM): `docs/EMERGENT_LEAN_PLAN.md`
+- **6 prompts (L1–L6)**, demo-first.
+- We provide the venue twin plus 3D models and media as **data and design assets**. The app built in Emergent imports them and does all the interactive work: the 3D view, the blueprint editor, the AI edit agent, the kits, and the landing and how-it-works pages.
+- Be transparent about this in the video. Confirm the asset question with the Emergent desk.
+
 ## Status
 
 - Idea chosen: 3D digital twin + auto-layout + quote for small event venues (see BRIEF §3).
